@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kia Rahmani</title>
+    <description>I am a first year PhD student of Computer Science @Purdue. I am mostly interested in Design, Anlysis and Verification of Programming Languages. I work with Proefssor Suresh Jagannathan. 
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 15 Apr 2016 17:47:21 -0400</pubDate>
+    <lastBuildDate>Fri, 15 Apr 2016 17:47:21 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 15 Apr 2016 16:42:29 -0400</pubDate>
+        <link>http://yourdomain.com/jekyll/update/2016/04/15/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/04/15/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Definitions VS Implementation</title>
+        <description>&lt;p&gt;Let’s dive into the problem. Consider the following code, which is a definition of a simple counter with two functions, query and incerement:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-coq&quot;&gt;Definition GCounter_State : Set := nat.
+
+Inductive GCounter : Type :=
+|ConsGCounter : GCounter_State -&amp;gt; GCounter.
+
+Definition GCounter_read (c: GCounter): GCounter_State:=
+  match c with
+    |ConsGCounter n =&amp;gt; n
+  end.
+
+Definition GCounter_inc (c: GCounter): GCounter :=
+  match c with
+    |ConsGCounter n =&amp;gt; ConsGCounter (n+1)
+  end.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We could make it even simpler:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-coq&quot;&gt;Definition GCounter&#39; := nat.
+Definition GCounter&#39;_read (c:GCounter&#39;): nat := c.  
+Definition GCounter&#39;_inc (c:GCounter&#39;): GCounter&#39; := c+1.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Consider either of the definitions above. They both specify what you (as a programmer) expect from a counter datatype; it preserves a natural number for you, and lets you to increment it.
+&lt;br /&gt;
+Now imagine you (as a language designer) are given one the above definitions and asked to equip your language with such a datatype. In an isolated system with no failure, this would be a piece of cake. 
+But what if you are asked to implement it as a replicated data object?&lt;br /&gt; 
+Considering the amzing capabalities of CRDTs (Which in my opinion, are the best things you can get, within limitation of CAP theorem, &lt;a href=&quot;https://vaughnvernon.co/?p=1012&quot;&gt;read more&lt;/a&gt;)
+you decide to implement the counter as a CRDT as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-coq&quot;&gt;Inductive GCtr_Eff: Type := |inc.
+
+Definition GCtr:Type := list GCtr_Eff.
+
+Definition GCtr_read (c:GCtr) : nat := length c.
+
+Definition GCtr_inc (c:GCtr) : GCtr := (cons inc c).
+
+Definition Gctr_resolve  (c1 : GCtr_Eff) (c2 : GCtr_Eff) :list GCtr_Eff :=
+  match (c1,c2) with
+    | (inc,inc) =&amp;gt; cons inc (cons inc nil)
+  end.
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You are done, Congradulations! &lt;br /&gt;
+But wait… this transformation is not intuitive at all. You have implemented a natueal counter as a list of objects! 
+Now you need to prove that your implementation is correct (i.e. behaves the same as the specifications given to you).
+&lt;br /&gt; How are you going to proceed?&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 12 Apr 2016 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2016/04/12/CounterImpDef.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/04/12/CounterImpDef.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
