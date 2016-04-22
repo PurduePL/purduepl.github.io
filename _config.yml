@@ -6,17 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Kia Rahmani
-email: rahmank [remove me] @ purdue.edu
+title: PL @ Purdue
+email: https://www.cs.purdue.edu
 description: > # this means to ignore newlines until "baseurl:"
-  I am a first year PhD student of Computer Science @Purdue. I am mostly interested in Design, Anlysis and Verification of Programming Languages.
-  I work with Proefssor Suresh Jagannathan. 
+  This the blog of prgramming languages group at CS department at Purdue university. 
  
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: kiarash_rahmani
-github_username:  kiarahmani
+github_username:  PurduePL
 
 # Build settings
 markdown: kramdown
