@@ -9,7 +9,7 @@
 title: PL @ Purdue
 email: https://www.cs.purdue.edu
 description: > # this means to ignore newlines until "baseurl:"
-  This the blog of prgramming languages group at CS department at Purdue university. 
+  This is the blog of prgramming languages group at CS department at Purdue university. 
  
 
 baseurl: "" # the subpath of your site, e.g. /blog
