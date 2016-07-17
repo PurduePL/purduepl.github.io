@@ -74,27 +74,29 @@
   <div class="post-content" itemprop="articleBody">
     <p>Let’s dive into the problem. Consider the following code, which is a definition of a simple counter with two functions, query and incerement:</p>
 
-<pre><code class="language-coq">Definition GCounter_State : Set := nat.
+<div class="language-coq highlighter-rouge"><pre class="highlight"><code><span class="k">Definition</span><span class="w"> </span><span class="no">GCounter_State</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Set</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">nat</span><span class="pi">.</span><span class="w">
 
-Inductive GCounter : Type :=
-|ConsGCounter : GCounter_State -&gt; GCounter.
+</span><span class="k">Inductive</span><span class="w"> </span><span class="no">GCounter</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w">
+</span><span class="o">|</span><span class="no">ConsGCounter</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">GCounter_State</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="no">GCounter</span><span class="pi">.</span><span class="w">
 
-Definition GCounter_read (c: GCounter): GCounter_State:=
-  match c with
-    |ConsGCounter n =&gt; n
-  end.
+</span><span class="k">Definition</span><span class="w"> </span><span class="no">GCounter_read</span><span class="w"> </span><span class="o">(</span><span class="no">c</span><span class="p">:</span><span class="w"> </span><span class="no">GCounter</span><span class="o">):</span><span class="w"> </span><span class="no">GCounter_State</span><span class="p">:=</span><span class="w">
+  </span><span class="kr">match</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="kp">with</span><span class="w">
+    </span><span class="o">|</span><span class="no">ConsGCounter</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="no">n</span><span class="w">
+  </span><span class="kr">end</span><span class="pi">.</span><span class="w">
 
-Definition GCounter_inc (c: GCounter): GCounter :=
-  match c with
-    |ConsGCounter n =&gt; ConsGCounter (n+1)
-  end.
-</code></pre>
+</span><span class="k">Definition</span><span class="w"> </span><span class="no">GCounter_inc</span><span class="w"> </span><span class="o">(</span><span class="no">c</span><span class="p">:</span><span class="w"> </span><span class="no">GCounter</span><span class="o">):</span><span class="w"> </span><span class="no">GCounter</span><span class="w"> </span><span class="p">:=</span><span class="w">
+  </span><span class="kr">match</span><span class="w"> </span><span class="no">c</span><span class="w"> </span><span class="kp">with</span><span class="w">
+    </span><span class="o">|</span><span class="no">ConsGCounter</span><span class="w"> </span><span class="no">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="no">ConsGCounter</span><span class="w"> </span><span class="o">(</span><span class="no">n</span><span class="o">+</span><span class="mi">1</span><span class="o">)</span><span class="w">
+  </span><span class="kr">end</span><span class="pi">.</span><span class="w">
+</span></code></pre>
+</div>
 <p>We could make it even simpler:</p>
 
-<pre><code class="language-coq">Definition GCounter' := nat.
-Definition GCounter'_read (c:GCounter'): nat := c.  
-Definition GCounter'_inc (c:GCounter'): GCounter' := c+1.
-</code></pre>
+<div class="language-coq highlighter-rouge"><pre class="highlight"><code><span class="k">Definition</span><span class="w"> </span><span class="no">GCounter'</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">nat</span><span class="pi">.</span><span class="w">
+</span><span class="k">Definition</span><span class="w"> </span><span class="no">GCounter'_read</span><span class="w"> </span><span class="o">(</span><span class="no">c</span><span class="p">:</span><span class="no">GCounter'</span><span class="o">):</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">c</span><span class="pi">.</span><span class="w">  
+</span><span class="k">Definition</span><span class="w"> </span><span class="no">GCounter'_inc</span><span class="w"> </span><span class="o">(</span><span class="no">c</span><span class="p">:</span><span class="no">GCounter'</span><span class="o">):</span><span class="w"> </span><span class="no">GCounter'</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">c</span><span class="o">+</span><span class="mi">1</span><span class="o">.</span><span class="w">
+</span></code></pre>
+</div>
 <p>Consider either of the definitions above. They both specify what you (as a programmer) expect from a counter datatype; it preserves a natural number for you, and lets you to increment it.
 <br />
 Now imagine you (as a language designer) are given one the above definitions and asked to equip your language with such a datatype. In an isolated system with no failure, this would be a piece of cake. 
@@ -102,20 +104,21 @@ But what if you are asked to implement it as a replicated data object?<br />
 Considering the amzing capabalities of CRDTs (Which in my opinion, are the best things you can get, within limitation of CAP theorem, <a href="https://vaughnvernon.co/?p=1012">read more</a>)
 you decide to implement the counter as a CRDT as follows:</p>
 
-<pre><code class="language-coq">Inductive GCtr_Eff: Type := |inc.
+<div class="language-coq highlighter-rouge"><pre class="highlight"><code><span class="k">Inductive</span><span class="w"> </span><span class="no">GCtr_Eff</span><span class="p">:</span><span class="w"> </span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="o">|</span><span class="no">inc</span><span class="pi">.</span><span class="w">
 
-Definition GCtr:Type := list GCtr_Eff.
+</span><span class="k">Definition</span><span class="w"> </span><span class="no">GCtr</span><span class="p">:</span><span class="kr">Type</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">list</span><span class="w"> </span><span class="no">GCtr_Eff</span><span class="pi">.</span><span class="w">
 
-Definition GCtr_read (c:GCtr) : nat := length c.
+</span><span class="k">Definition</span><span class="w"> </span><span class="no">GCtr_read</span><span class="w"> </span><span class="o">(</span><span class="no">c</span><span class="p">:</span><span class="no">GCtr</span><span class="o">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">nat</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="no">length</span><span class="w"> </span><span class="no">c</span><span class="pi">.</span><span class="w">
 
-Definition GCtr_inc (c:GCtr) : GCtr := (cons inc c).
+</span><span class="k">Definition</span><span class="w"> </span><span class="no">GCtr_inc</span><span class="w"> </span><span class="o">(</span><span class="no">c</span><span class="p">:</span><span class="no">GCtr</span><span class="o">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">GCtr</span><span class="w"> </span><span class="p">:=</span><span class="w"> </span><span class="o">(</span><span class="no">cons</span><span class="w"> </span><span class="no">inc</span><span class="w"> </span><span class="no">c</span><span class="o">).</span><span class="w">
 
-Definition Gctr_resolve  (c1 : GCtr_Eff) (c2 : GCtr_Eff) :list GCtr_Eff :=
-  match (c1,c2) with
-    | (inc,inc) =&gt; cons inc (cons inc nil)
-  end.
+</span><span class="k">Definition</span><span class="w"> </span><span class="no">Gctr_resolve</span><span class="w">  </span><span class="o">(</span><span class="no">c1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">GCtr_Eff</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="no">c2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">GCtr_Eff</span><span class="o">)</span><span class="w"> </span><span class="p">:</span><span class="no">list</span><span class="w"> </span><span class="no">GCtr_Eff</span><span class="w"> </span><span class="p">:=</span><span class="w">
+  </span><span class="kr">match</span><span class="w"> </span><span class="o">(</span><span class="no">c1</span><span class="o">,</span><span class="no">c2</span><span class="o">)</span><span class="w"> </span><span class="kp">with</span><span class="w">
+    </span><span class="o">|</span><span class="w"> </span><span class="o">(</span><span class="no">inc</span><span class="o">,</span><span class="no">inc</span><span class="o">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="no">cons</span><span class="w"> </span><span class="no">inc</span><span class="w"> </span><span class="o">(</span><span class="no">cons</span><span class="w"> </span><span class="no">inc</span><span class="w"> </span><span class="no">nil</span><span class="o">)</span><span class="w">
+  </span><span class="kr">end</span><span class="pi">.</span><span class="w">
 
-</code></pre>
+</span></code></pre>
+</div>
 <p>You are done, Congradulations! <br />
 But wait… this transformation is not intuitive at all. You have implemented a natueal counter as a list of objects! 
 Now you need to prove that your implementation is correct (i.e. behaves the same as the specifications given to you).
@@ -125,6 +128,9 @@ Now you need to prove that your implementation is correct (i.e. behaves the same
   </div>
 
 </article>
+
+
+
 
       </div>
     </div>
@@ -158,7 +164,7 @@ Now you need to prove that your implementation is correct (i.e. behaves the same
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>This the blog of prgramming languages group at CS department at Purdue university. 
+        <p>This is the blog of prgramming languages group at CS department at Purdue university. 
 </p>
       </div>
     </div>
