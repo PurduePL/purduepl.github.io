@@ -1,20 +1,36 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Jekyll configuration
 
-# Site settings
-title: PL @ Purdue
-email: https://www.cs.purdue.edu
-description: > # this means to ignore newlines until "baseurl:"
-  This is the blog of prgramming languages group at CS department at Purdue university. 
- 
+name: PurPL
+description: The Purdue PL Research Group
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-github_username:  PurduePL
+# url is currently only used only for the RSS feed in feed.xml
+url: http://cs.purdue.edu
 
-# Build settings
-markdown: kramdown
+# baseurl will often be '', but for a project page on gh-pages, it needs to
+# be the project name.
+# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
+#     run it like so: jekyll serve --baseurl=''
+baseurl: '/PurPLWebsite'
+
+# This can be '' to hide the Github nav button
+github: ''
+
+# Set this to your UA-# value, or '' to disable the block completely
+gaaccount: ''
+
+# Set this to your disqus shortname to enable comments. Note that the 'comments'
+# setting below must also be true. Individual posts can override 'comments' to
+# disable on a post-by-post basis
+disqus: 'tycon'
+comments: false
+
+permalink: /:year/:month/:title
+paginate: 10
+excerpt_separator: <!--more-->
+
+highlighter: rouge
+# markdown: redcarpet
+# redcarpet:
+#   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
+exclude: ['README.md', 'LICENSE', 'purplblog']

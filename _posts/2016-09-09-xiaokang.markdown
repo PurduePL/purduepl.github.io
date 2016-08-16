@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Xiaokang Qiu Faculty Card"
+category: facultycard
+date: 2016-08-09 17:00:00
+---
+
+#### [Xiaokang Qiu](http://people.csail.mit.edu/xkqiu/) ####
+
+![Xiaokang Qiu](assets/xiaokang.jpeg)
+Theories, algorithms and tools of Programming Systems, including
+program logics, decision procedures, automated deduction, program
+verification, and program synthesis.

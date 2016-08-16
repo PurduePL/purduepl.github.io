@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Join Us"
+category: joinus
+---
+
+#### Current Students ####
++ Drop by LWSN 3133 (S3 lab) for the PL reading group meeting on
+  Fridays at 2:00 PM.
++ Subscribe to the [PurPL mailing list](https://lists.purdue.edu/mailman/listinfo/purpl).
+
+
+#### Prospective Students ###
++ Apply to CS
+  [graduate](https://www.cs.purdue.edu/graduate/index.html) or
+  [undergraduate](https://www.cs.purdue.edu/future-students/index.html) program.
++ Apply to ECE [graduate](https://engineering.purdue.edu/ECE/InfoFor/ProspectiveStudents) or [undergraduate](https://engineering.purdue.edu/ECE/InfoFor/ProspectiveStudents) program.

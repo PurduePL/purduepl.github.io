@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Tiark Rompf Faculty Card"
+category: facultycard
+date: 2016-08-09 16:00:00
+---
+
+#### [Tiark Rompf](https://tiarkrompf.github.io/) ####
+
+![Tiark Rompf](assets/tiark.jpg)
+metaprogramming for performance and safety, 
+Scala, Coq,
+type systems,
+PL techniques for big data,
+machine learning, hardware,
+software-defined anything

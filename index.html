@@ -1,23 +1,57 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+<div class="container">
+  <div id="about-purpl">
+    <h3>About PurPL</h3>
+    {% for post in site.categories.aboutpurpl %}
+      {{ post.content }}
+    {% endfor %}
+  </div>
+  <div id="news">
+    <h3>News</h3>
+    <ul id="news-roll">
+      {% for post in site.categories.news %}
+      <li class="news-item">
+        {{ post.content }}
       </li>
     {% endfor %}
-  </ul>
+    </div>
+  </div>
+</div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
+<div class="container">
+  <h3 id="people">Faculty</h3>
+  <div id="faculty-cards">
+    <!-- h4>Faculty</h4 -->
+    {% assign i = 0 %}
+    {% for post in site.categories.facultycard %}
+      {% assign k = i | modulo: 4 %}
+      {% if k == 0 %}
+        <div class="container cards-container">
+      {% endif %}
+        <div class="facultycard">
+          {{ post.content}}
+        </div>
+      {% if k == 3 %}
+        </div>
+      {% endif %}
+      {% assign i = i | plus: 1 %}
+    {% endfor %}
+    {% if k != 3 %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container">
+  <h3>Post-docs and grad students</h3>
+  <ul id="student-stamps">
+    {% for post in site.categories.studentstamp %}
+      <li class="student-stamp">
+        {{ post.content }}
+      </li>
+    {% endfor %}
+  </div>
 </div>
