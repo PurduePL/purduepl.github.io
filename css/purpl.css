@@ -137,3 +137,24 @@ div#about-purpl h4 {
 div#faculty-cards {
     margin-top: 20px;
 }
+div.center-align {
+  text-align:center;
+}
+div#maglev-img-div {
+  background-image: url('{{ site.baseurl }}/assets/maglev.png');
+  float:left;
+  width:275px;
+  height:200px;
+  background-size:100%;
+}
+div.inline-img + p {
+  display:inline;
+  clear:right;
+}
+div#quelea-img-div {
+  background-image: url('{{ site.baseurl }}/assets/quelea.png');
+  float:left;
+  width:275px;
+  height:130px;
+  background-size:100%;
+}
