@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "CS590 - Independent Study Projects"
+title:  "CS590 - Individual Study Projects"
 permalink: cs690-suresh-fall16.html
 ---
 <div class="center-align">
