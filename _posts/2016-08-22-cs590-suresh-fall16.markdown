@@ -126,4 +126,5 @@ by Irmin.
 If you are interested in any of the aforementioned projects, please
 contact [Prof. Suresh
 Jagannathan](https://www.cs.purdue.edu/homes/suresh/) or [Gowtham
-Kaki](http://gowthamk.github.io/) 
+Kaki](http://gowthamk.github.io/) with the details about yourself that
+you consider to be relevant to the project.
