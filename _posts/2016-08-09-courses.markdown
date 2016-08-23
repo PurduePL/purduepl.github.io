@@ -9,3 +9,4 @@ category: courses
 | cs565 | [Programming Languages](http://catalog.purdue.edu/preview_course_nopop.php?catoid=4&coid=29962) | Graduate Regular | Ben Delaware    |
 | cs590 | [Computer-Aided Program Reasoning](https://www.cs.purdue.edu/homes/roopsha/capr.f16.html)       | Graduate Seminar | Roopsha Samanta |
 | cs590 | [Systems Security Seminar](http://nebelwelt.net/teaching/syssem/16Fsyssem.html)                 | Graduate Seminar | Mathias Payer   |
+| cs690 | [Individual Study Projects](http://purduepl.github.io/cs590-suresh-fall16.html)                 | Graduate Individual | Suresh Jagannathan |
