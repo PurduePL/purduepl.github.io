@@ -10,7 +10,7 @@ permalink: cs590-suresh-fall16.html
 
 <h3>MagLev</h3>
 
-<div class="incline-img-div" id="maglev-img-div">
+<div class="inline-img-div" id="maglev-img-div">
 </div>
 MagLev is a symbolic execution engine for Ruby-on-Rails. It is written
 as a Ruby library (a gem) that runs Rails web applications on symbolic
@@ -47,7 +47,7 @@ applying them to the real-world applications.
 
 <h3>Quelea</h3>
 
-<div class="incline-img-div" id="quelea-img-div">
+<div class="inline-img-div" id="quelea-img-div">
 </div>
 
 In pursuit of high scalability and _always-on_ experience, large scale
@@ -56,7 +56,7 @@ web services, such as Facebook and Amazon, have embraced
 [storage](http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
 [systems](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf)
 with weak consistency guarantees. The widespread adoption of
-cloud-based deployment model (i.e., depoloying applications via
+cloud-based deployment model (i.e., deploying applications via
 Amazon's EC2 or Google's Compute Engine) has incentivized the use of
 weakly consistent data stores even for small-to-medium scale web
 applications. Unfortunately, programming with such stores is
@@ -69,7 +69,7 @@ programming framework
 that simplifies the task of developing highly scalable web
 applications on the top of eventually consistent NoSQL stores, such as
 Cassandra. The utility of Quelea is demonstrated by the wealth of
-sample applications written on top of Quelea, such as a Twitter-like
+applications written on top of Quelea, such as a Twitter-like
 Microblog and an eBay-like auction site. Quelea is
 [open-sourced](https://github.com/kayceesrk/Quelea), and version 1.0.0
 is available on [Hackage](https://hackage.haskell.org/package/Quelea).
@@ -90,9 +90,40 @@ An independent study on Quelea is a good opportunity to work on the
 above problems, while gaining advanced skills in Distributed Systems,
 Databases and PL. 
 
+<h3>Irmin</h3>
+
+<div class="inline-img-div" id="irmin-img-div">
+</div>
+
+Git version control is a widely used technology to manage concurrent
+revisions to the source code, and to track the history of changes.
+Can Git be used to manage, not just the source code, but also the
+data accessed by concurrent processes? This is the essential idea
+underlying [Irmin](https://mirage.io/blog/introducing-irmin). Irmin is
+a library to persist and synchronize distributed data structures both
+on-disk and in-memory. It enables a style of programming very similar
+to the Git workflow, where distributed nodes fork, fetch, merge and
+push data between each other. The general idea is that you want every
+active node to get a local (partial) copy of a global database and
+always be very explicit about how and when data is shared and
+migrated. 
+
+Irmin is a subject of active research at
+[Cambridge University OCaml
+Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/), and is part of an
+umbrella of projects that includes [Unikernels](http://unikernel.org/) and 
+[Mirage OS](https://mirage.io/). 
+
+An independent study focused on Irmin is a great opportunity to
+explore unconventional ways of engineering a NoSQL store or an
+Internet-of-Things (IoT) based on the Git-based data model facilitated
+by Irmin. 
+<br />
+<br />
+
 <h3>Contact</h3>
 
-If you are a student interested in any of the aforementioned projects,
-please contact [Prof. Suresh
+If you are interested in any of the aforementioned projects, please
+contact [Prof. Suresh
 Jagannathan](https://www.cs.purdue.edu/homes/suresh/) or [Gowtham
 Kaki](http://gowthamk.github.io/) 

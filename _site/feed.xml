@@ -67,6 +67,151 @@
 			</item>
 		
 			<item>
+				<title>CS590 - Independent Study Projects</title>
+				<description>&lt;div class=&quot;center-align&quot;&gt;
+  &lt;h2&gt;CS590/CS690 - Projects&lt;/h2&gt;
+  &lt;h3&gt;Instructor: Suresh Jagannathan&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;MagLev&lt;/h3&gt;
+
+&lt;div class=&quot;inline-img-div&quot; id=&quot;maglev-img-div&quot;&gt;
+&lt;/div&gt;
+&lt;p&gt;MagLev is a symbolic execution engine for Ruby-on-Rails. It is written
+as a Ruby library (a gem) that runs Rails web applications on symbolic
+inputs (instead of concrete inputs) and records the execution in form
+of an abstract program that can be analyzed offline. A symbolic
+execution of a program captures its behavior with respect to its
+inputs, thus helps us analyze the program without having to analyze
+its source code. For example, if a program calls &lt;code&gt;subString&lt;/code&gt; method on
+a symbolic string object provided to it as an input, then we know that
+the program calls &lt;code&gt;subString&lt;/code&gt; method on all its string inputs. By
+performing enough such symbolic executions, we can thus analyze the
+program completely without having to build sophisticated static
+analyses on its source code. The novelty of MagLev is that it coaxes
+Ruby’s concrete interpreter (MRI) to also accept symbolic inputs, thus
+getting symbolic execution effectively for free. More about MagLev in
+this &lt;a href=&quot;/docs/maglev.pdf&quot;&gt;short paper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;MagLev has been under development for few months now, and we do have a
+working prototype. However, there are still some important problems to
+be solved before MagLev is fit to be used on real web applications.
+For example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;MagLev does not yet have a robust approach of dealing with
+higher-order functions, such as &lt;code&gt;map&lt;/code&gt; and &lt;code&gt;each&lt;/code&gt;, which are used
+heavily in Rails applications to iterate over collections.&lt;/li&gt;
+  &lt;li&gt;MagLev forks Unix processes to explore various control-flow paths
+that branch on a symbolic input. The approach works quite well for
+small-to-medium size web applications, but its scalability for
+large application is still an open question.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An independent study on MagLev is a good opportunity to work on the
+above problems, while learning advanced PL and compiler techniques by
+applying them to the real-world applications.&lt;/p&gt;
+
+&lt;h3&gt;Quelea&lt;/h3&gt;
+
+&lt;div class=&quot;inline-img-div&quot; id=&quot;quelea-img-div&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In pursuit of high scalability and &lt;em&gt;always-on&lt;/em&gt; experience, large scale
+web services, such as Facebook and Amazon, have embraced
+&lt;a href=&quot;http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf&quot;&gt;unconventional&lt;/a&gt;
+&lt;a href=&quot;http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf&quot;&gt;storage&lt;/a&gt;
+&lt;a href=&quot;https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf&quot;&gt;systems&lt;/a&gt;
+with weak consistency guarantees. The widespread adoption of
+cloud-based deployment model (i.e., deploying applications via
+Amazon’s EC2 or Google’s Compute Engine) has incentivized the use of
+weakly consistent data stores even for small-to-medium scale web
+applications. Unfortunately, programming with such stores is
+significantly more complicated than programming with conventional
+relational databases, and much of this complexity can be attributed to
+the lack of sufficient programming abstractions and concurrency
+control mechanisms that provide strong enough guarantees. To address
+this problem, we built &lt;a href=&quot;http://gowthamk.github.io/Quelea/&quot;&gt;Quelea&lt;/a&gt;, a
+programming framework
+that simplifies the task of developing highly scalable web
+applications on the top of eventually consistent NoSQL stores, such as
+Cassandra. The utility of Quelea is demonstrated by the wealth of
+applications written on top of Quelea, such as a Twitter-like
+Microblog and an eBay-like auction site. Quelea is
+&lt;a href=&quot;https://github.com/kayceesrk/Quelea&quot;&gt;open-sourced&lt;/a&gt;, and version 1.0.0
+is available on &lt;a href=&quot;https://hackage.haskell.org/package/Quelea&quot;&gt;Hackage&lt;/a&gt;.
+Quelea is under active development, and we are currently working on
+including the support for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fine-grained consistency guarantees, such as
+&lt;a href=&quot;https://docs.oracle.com/cd/E17276_01/html/gsg_db_rep/C/rywc.html&quot;&gt;Read-Your-Writes&lt;/a&gt;, and &lt;a href=&quot;https://en.wikipedia.org/wiki/Consistency_model#Monotonic_read_consistency&quot;&gt;Monotonic Reads&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Approximate invariants, such as &lt;em&gt;an item cannot be
+oversold by 2% of the available stock&lt;/em&gt;, or &lt;em&gt;the value of a video
+view counter should never be more than 1% off from the actual
+count&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Consistency inference, i.e., automatically inferring appropriate
+consistency levels for various operations so as to preserve program
+invariants.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An independent study on Quelea is a good opportunity to work on the
+above problems, while gaining advanced skills in Distributed Systems,
+Databases and PL. &lt;/p&gt;
+
+&lt;h3&gt;Irmin&lt;/h3&gt;
+
+&lt;div class=&quot;inline-img-div&quot; id=&quot;irmin-img-div&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Git version control is a widely used technology to manage concurrent
+revisions to the source code, and to track the history of changes.
+Can Git be used to manage, not just the source code, but also the
+data accessed by concurrent processes? This is the essential idea
+underlying &lt;a href=&quot;https://mirage.io/blog/introducing-irmin&quot;&gt;Irmin&lt;/a&gt;. Irmin is
+a library to persist and synchronize distributed data structures both
+on-disk and in-memory. It enables a style of programming very similar
+to the Git workflow, where distributed nodes fork, fetch, merge and
+push data between each other. The general idea is that you want every
+active node to get a local (partial) copy of a global database and
+always be very explicit about how and when data is shared and
+migrated. &lt;/p&gt;
+
+&lt;p&gt;Irmin is a subject of active research at
+&lt;a href=&quot;http://www.cl.cam.ac.uk/projects/ocamllabs/&quot;&gt;Cambridge University OCaml
+Labs&lt;/a&gt;, and is part of an
+umbrella of projects that includes &lt;a href=&quot;http://unikernel.org/&quot;&gt;Unikernels&lt;/a&gt; and 
+&lt;a href=&quot;https://mirage.io/&quot;&gt;Mirage OS&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;An independent study focused on Irmin is a great opportunity to
+explore unconventional ways of engineering a NoSQL store or an
+Internet-of-Things (IoT) based on the Git-based data model facilitated
+by Irmin. 
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Contact&lt;/h3&gt;
+
+&lt;p&gt;If you are interested in any of the aforementioned projects, please
+contact &lt;a href=&quot;https://www.cs.purdue.edu/homes/suresh/&quot;&gt;Prof. Suresh
+Jagannathan&lt;/a&gt; or &lt;a href=&quot;http://gowthamk.github.io/&quot;&gt;Gowtham
+Kaki&lt;/a&gt; &lt;/p&gt;
+</description>
+				<pubDate>Mon, 22 Aug 2016 00:00:00 -0400</pubDate>
+				<link>http://cs.purdue.edu/cs590-suresh-fall16.html</link>
+				<guid isPermaLink="true">http://cs.purdue.edu/cs590-suresh-fall16.html</guid>
+			</item>
+		
+			<item>
+				<title>News</title>
+				<description>&lt;p&gt;&lt;strong&gt;[08-19-2016]&lt;/strong&gt; The inaugural PurPL Lunch will be next Thursday, August 25th, from noon to 1PM in Lawson 3102AB. RSVP &lt;a href=&quot;https://goo.gl/6DTYSj&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 19 Aug 2016 00:00:00 -0400</pubDate>
+				<link>http://cs.purdue.edu/2016/08/news</link>
+				<guid isPermaLink="true">http://cs.purdue.edu/2016/08/news</guid>
+			</item>
+		
+			<item>
 				<title>News</title>
 				<description>&lt;p&gt;&lt;strong&gt;[08-15-2016]&lt;/strong&gt; PurPL welcomes three new faculty this Fall 2016: &lt;a href=&quot;http://people.csail.mit.edu/bendy/&quot;&gt;Ben Delaware&lt;/a&gt;, 
 &lt;a href=&quot;https://www.cs.purdue.edu/homes/roopsha/&quot;&gt;Roopsha Samanta&lt;/a&gt; and &lt;a href=&quot;http://people.csail.mit.edu/xkqiu/&quot;&gt;Xiaokang Qiu&lt;/a&gt;.&lt;/p&gt;
@@ -97,41 +242,6 @@ Procedures, Coq.&lt;/p&gt;
 				<pubDate>Tue, 09 Aug 2016 19:00:00 -0400</pubDate>
 				<link>http://cs.purdue.edu/2016/08/bendelaware</link>
 				<guid isPermaLink="true">http://cs.purdue.edu/2016/08/bendelaware</guid>
-			</item>
-		
-			<item>
-				<title>Suresh Jagannathan Faculty Card</title>
-				<description>&lt;h4 id=&quot;suresh-jagannathanhttpswwwcspurdueeduhomessuresh&quot;&gt;&lt;a href=&quot;https://www.cs.purdue.edu/homes/suresh/&quot;&gt;Suresh Jagannathan&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/suresh.png&quot; alt=&quot;Suresh Jagannathan&quot; /&gt;
-Functional Programming, Program Verification, Weak and Eventual
-Consistency, Program Analysis via Machine Learning, Memory Models,
-Verified Compilation.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://gowthamk.github.io/Quelea&quot;&gt;Quelea&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/rowangithub/DOrder&quot;&gt;DOrder&lt;/a&gt;,
-&lt;a href=&quot;http://multimlton.cs.purdue.edu/mML/Welcome.html&quot;&gt;MultiMLton&lt;/a&gt;.
-&lt;!-- [CompCertTSO](http://www.cl.cam.ac.uk/~pes20/CompCertTSO/doc/),
-[Catalyst](https://github.com/gowthamk/catalyst). --&gt;&lt;/p&gt;
-</description>
-				<pubDate>Tue, 09 Aug 2016 18:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/08/suresh</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/08/suresh</guid>
-			</item>
-		
-			<item>
-				<title>Milind Kulkarni Faculty Card</title>
-				<description>&lt;h4 id=&quot;milind-kulkarnihttpsengineeringpurdueedumilind&quot;&gt;&lt;a href=&quot;https://engineering.purdue.edu/~milind/&quot;&gt;Milind Kulkarni&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/milind.jpeg&quot; alt=&quot;Milind Kulkarni&quot; /&gt;
-Automatically optimizing irregular applications,
-Optimizing computational science applications by exploiting semantics,
-Detecting and diagnosing bugs in large-scale distributed systems,
-Effective computation offloading.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 09 Aug 2016 17:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/08/milind</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/08/milind</guid>
 			</item>
 		
 	</channel>
