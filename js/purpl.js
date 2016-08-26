@@ -1,1 +1,1 @@
-$("div#courses-table table").addClass("table table-striped table-bordered");
+$("div.striped-table table").addClass("table table-striped table-bordered");
