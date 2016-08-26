@@ -4,6 +4,6 @@ title:  "Kirshanthan Sundararajah"
 category: studentstamp
 ---
 <a href="https://scholar.google.com/citations?user=knUrjrMAAAAJ&hl=en">
-<img src="assets/krish.jpg" alt="Kirshanthan Sundararajah">
-<span class="student-name">Kirshanthan Sundararajah</span>
+<img src="assets/krish.jpg" alt="Kirshanthan">
+<span class="student-name">Kirshanthan</span>
 </a>
