@@ -55,6 +55,18 @@
 			</item>
 		
 			<item>
+				<title>Kirshanthan Sundararajah</title>
+				<description>&lt;p&gt;&lt;a href=&quot;https://scholar.google.com/citations?user=knUrjrMAAAAJ&amp;amp;hl=en&quot;&gt;
+&lt;img src=&quot;assets/krish.jpg&quot; alt=&quot;Kirshanthan&quot; /&gt;
+&lt;span class=&quot;student-name&quot;&gt;Kirshanthan&lt;/span&gt;
+&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
+				<link>http://cs.purdue.edu/2016/10/Krish</link>
+				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/Krish</guid>
+			</item>
+		
+			<item>
 				<title>Gowtham Kaki</title>
 				<description>&lt;p&gt;&lt;a href=&quot;https://github.com/kiarahmani&quot;&gt;
 &lt;img src=&quot;assets/kia.jpg&quot; alt=&quot;Kia Rahmani&quot; /&gt;
@@ -230,23 +242,6 @@ you consider to be relevant to the project.&lt;/p&gt;
 				<pubDate>Sat, 13 Aug 2016 06:00:00 -0400</pubDate>
 				<link>http://cs.purdue.edu/2016/08/news</link>
 				<guid isPermaLink="true">http://cs.purdue.edu/2016/08/news</guid>
-			</item>
-		
-			<item>
-				<title>Ben Delaware Faculty Card</title>
-				<description>&lt;h4 id=&quot;ben-delawarehttppeoplecsailmitedubendy&quot;&gt;&lt;a href=&quot;http://people.csail.mit.edu/bendy/&quot;&gt;Ben Delaware&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;assets/bendelaware.png&quot; alt=&quot;Ben Delaware&quot; /&gt;
-Program synthesis and verification,
-Coq,
-Verified systems software,
-Mechanized reasoning,
-Decision procedures,
-Advanced modularity.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 09 Aug 2016 19:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/08/bendelaware</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/08/bendelaware</guid>
 			</item>
 		
 	</channel>
