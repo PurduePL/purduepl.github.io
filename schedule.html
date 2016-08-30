@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<div class="container">
+  <div id="schedule-info">
+    {% for post in site.categories.schedule %}
+      {{ post.content }}
+    {% endfor %}
+  </div>
+</div>
+
