@@ -20,17 +20,18 @@ a#purpl-banner {
 }
 div#purpl-title {
   font-size: 2em;
-  width:370px;
+  width:500px;
   margin:2px auto;
-  padding-left:17px;
+  padding-left:60px;
 }
 span.purple{
   color:#9216AB;
 }
 div.purpl-navbar {
   /* width:700px; */
-  width:400px;
+  width:700px;
   margin: 2px auto;
+  padding-left:60px;
   overflow:auto;
 }
 ul.purpl-nav {
@@ -54,7 +55,7 @@ div#news-roll {
   /*border: 1px solid #A9A9A9;*/
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-right: 5px;
+  padding-right: 10px;
   padding-left: -5px;
 }
 div.cards-container {

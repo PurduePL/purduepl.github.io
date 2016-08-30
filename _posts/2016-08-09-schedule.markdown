@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Schedule"
+category: schedule
+---
+
+#### September 1, 2016 ####
++ Speaker: Leo Osvald
++ Title: 
++ Abstract
+
+
