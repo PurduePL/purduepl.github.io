@@ -2,8 +2,8 @@
 layout: default
 ---
 <div class="container">
-    <h3>Courses</h3>
-    <div class="striped-table">
+    <h1>Courses</h1>
+    <div id="courses-table">
     {% for post in site.categories.courses %}
       {{ post.content }}
     {% endfor %}

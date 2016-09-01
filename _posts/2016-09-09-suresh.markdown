@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Suresh Jagannathan Faculty Card"
+title:  "Suresh Jagannathan"
 category: facultycard
 date: 2016-08-09 22:00:00
+img: assets/suresh.png
+href: https://www.cs.purdue.edu/homes/suresh/
 ---
 
-#### [Suresh Jagannathan](https://www.cs.purdue.edu/homes/suresh/) ####
-
-![Suresh Jagannathan](assets/suresh.png)
 Functional Programming, Program Verification, Weak and Eventual
 Consistency, Program Analysis via Machine Learning, Memory Models,
 Verified Compilation.
