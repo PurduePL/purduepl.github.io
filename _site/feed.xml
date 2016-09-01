@@ -181,7 +181,7 @@ invariants.&lt;/li&gt;
 
 &lt;p&gt;An independent study on Quelea is a good opportunity to work on the
 above problems, while gaining advanced skills in Distributed Systems,
-Databases and PL. &lt;/p&gt;
+Databases and PL.&lt;/p&gt;
 
 &lt;h3&gt;Irmin&lt;/h3&gt;
 
@@ -199,13 +199,13 @@ to the Git workflow, where distributed nodes fork, fetch, merge and
 push data between each other. The general idea is that you want every
 active node to get a local (partial) copy of a global database and
 always be very explicit about how and when data is shared and
-migrated. &lt;/p&gt;
+migrated.&lt;/p&gt;
 
 &lt;p&gt;Irmin is a subject of active research at
 &lt;a href=&quot;http://www.cl.cam.ac.uk/projects/ocamllabs/&quot;&gt;Cambridge University OCaml
 Labs&lt;/a&gt;, and is part of an
 umbrella of projects that includes &lt;a href=&quot;http://unikernel.org/&quot;&gt;Unikernels&lt;/a&gt; and 
-&lt;a href=&quot;https://mirage.io/&quot;&gt;Mirage OS&lt;/a&gt;. &lt;/p&gt;
+&lt;a href=&quot;https://mirage.io/&quot;&gt;Mirage OS&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;An independent study focused on Irmin is a great opportunity to
 explore unconventional ways of engineering a NoSQL store or an

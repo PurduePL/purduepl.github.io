@@ -1,169 +1,543 @@
----
-title: CSS stylesheet
----
-body{
-  width:1100px;
-  margin:auto;
+* {
+  margin: 0;
+  padding: 0;
 }
-div#purpl-header{
-  display:block;
-  clear:right;
+div, article, section, header, footer, nav, figure, li {
+  position: relative;
 }
-a#purpl-banner {
-  /*float:left;*/
-  display:block;
-  background-image: url("{{ site.baseurl }}/assets/banner.png");
-  width:350px;
-  height:100px;
-  background-size:100%;
-  margin: 2px auto;
+cards {
+  position: relative;
+  overflow: scroll;
+  width: auto;
+  height: auto;
 }
-div#purpl-title {
-  font-size: 2em;
-  width:500px;
-  margin:2px auto;
-  padding-left:60px;
+.group:after {
+  display: block;
+  height: 0;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  visibility: hidden;
 }
-span.purple{
-  color:#9216AB;
+* {
+box-sizing: border-box;
 }
-div.purpl-navbar {
-  /* width:700px; */
-  width:700px;
-  margin: 2px auto;
-  padding-left:60px;
-  overflow:auto;
+::-moz-selection {
+  background: #333;
+  color: #fff;
 }
-ul.purpl-nav {
-  list-style-type:none;
-  font-size: 1.5em;
+html {
+  min-width: 1200px;
 }
-li.purpl-navitem {
-  float:left;
-  margin:0px 20px;
+body, input, textarea {
+  color: #333;
 }
-div#about-purpl {
-  font-size: 1.1em;
-  float:left;
-  display:inline-block;
-  width:700px;
-  padding: 0px 5px;
+body {
+  font-family: "tablet-gothic", verdana, arial, sans-serif;
+  font-family: 'Helvetica Neue', sans-serif; 
+
 }
-div#news-roll {
-  height:350px;
-  overflow-y:scroll;
-  /*border: 1px solid #A9A9A9;*/
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
-  padding-left: -5px;
+h2, h3 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-family: 'Helvetica Neue', sans-serif; 
+  color: #111; 
+  font-size: 275px; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: center; 
 }
-div.cards-container {
-  padding-left:30px;
-  margin-bottom:30px;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
+h1 {
+  background: #2d2d2d;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-left: -15%;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: .1em;
+  text-shadow: 
+    -1px -1px 1px #161616, 
+    2px 2px 1px #363636;
+}
+h2 {
+  color: #333;
+  font-weight: 900;
+  font-size: 6em;
+  letter-spacing: 1px;
+  line-height: 1em;
+}
+h3 {
+  font-size: 2.25em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 0.5em 0 0.25em 0;
+}
+a {
+  color: #7a259a;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+a:hover {
+  color: #341929;
+  text-decoration: none;
+}
+section.intro-content div.about p a {
+  color: #fff;
+  font-size: 1.2em;
+}
+p, li {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+}
+h4 {
+  color: #71315a;
+ }
+section.intro-content {
+  margin-top: -4.5%;
+}
+section.intro-content div.about p{
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #965980;
+}
+em, strong {
+  font-style: normal;
+  font-weight: 400;
+}
+html {
+  background: linear-gradient(to left, #232526 , #5b5c5e);
+  padding: 5%;
+}
+body {
+  background-image: url("../assets/cubes.png");
+}
+section.intro-content {
+  width: 70%;
+}
+div.page {
+  z-index : 2;
+  margin-bottom: 50px;
+  width: auto;
+  height: auto;
+}
+section.intro-content div.about p a {
+  color: #fff;
+}
+section.intro-content {
+  padding: 5%;
+}
+div.purpl-header {
+  height: auto;
+  width: auto;
+  margin-top: -2%;
+}
+div.purpl-header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  height: 450px;
+  width: auto;
+}
+div.acro {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 50px;
+  padding-bottom: 10px;
+  margin-top: -10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  height:70px; 
+  color: #2c2c2c;
+  letter-spacing: .05em;
+  text-shadow: 
+  4px 4px 0px #f4f4f4, 
+  6px 6px 0px rgba(0, 0, 0, 0.1);
+}
+section.intro-content div.about {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  margin-left: -30%;
+  padding: 2% 5% 2% 30%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+div.texture-container{
+  height: 50px;
+  margin-right: -5.5%;
+  margin-left: -5.5%;
+  background-color:#556;
+  background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), 
+  linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+  background-size:80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
+div.logo-container {
+  margin-right: 5.5%;
+  margin-top: -12%;
+  margin-left: 5.5%;
+  padding: 10% 0% 0% 0%;
+  height: auto;
+}
+
+aside.news a {
+  color: #fbcf59;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+aside.news a:hover {
+  color: #ffbf11;
+}
+aside.news h2 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  word-wrap: break-word;
+  font-size: 5vw;
+  text-shadow: -1px -1px 1px #270a38, 2px 2px 1px #af5970;
+  margin-top: -8%;
+  color: #1a0526;
+}
+
+/*sidebar*/
+aside.news {
+word-wrap: break-word;
+  background:
+  linear-gradient(
+    #270a38,
+    transparent
+  ),
+  linear-gradient(
+    90deg,
+    #792b41,
+    transparent
+  ),
+  linear-gradient(
+    -90deg,
+    #9b4258,
+    transparent
+  );
+  
+  background-blend-mode: screen;
+  color: #f9fafb;
+  padding: 2%; 
+  margin-right: -2%;
+  box-shadow: 1px 1px 5px #888888;
+  overflow: hidden;  
+  position: absolute;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  right: 0; 
+  top: 7%;
+  width: 38%;
+  height: auto;
+  font-size: 1.2em;
+  margin-top: 33%;
+}
+
+/* faculty */
+/*div.cards h1{
+  margin-left: 40px;
+  text-transform: uppercase;
+}*/
+div.faculty-info p:first-of-type {
+  margin-top: 15px;
+}
+div.faculty-info p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #62a69f;
+}
+div.cards-left{
+  float: left;
+  width: 45%;
+  margin-left:2.5%;
+}
+div.cards-right {
+  float: right;
+  width: 45%;
+
+}
+div.faculty-pic{
+  float: left;
+  width: auto;
+  margin-left:40px;
+  margin-top:-8px;
+}
+div.faculty-info {
+  float: right;
+  width: 59%;
+  margin-top: 30px;
+  padding-left: 0px;
+  margin-right: 30px;
+  height:auto;
+}
+
+div.cards {
+  /*padding-left:120px;*/
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: auto;
+  height: auto;
+}
+div.cards-title h1 {
+  margin-left: -80px;
+  text-transform: uppercase;
+}
+div.cards-title {
+  height: 120px;
+}
+/*
+div.cards-row {
+  padding-left: 100px;
+  padding-right: 100px;
+  width: auto;
+  height: auto;
+}*/
 div.facultycard {
-  width: 220px;
-  height: 350px;
-  float:left;
-  padding: 0px 4px; 
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  background-color:white;
-  -webkit-box-shadow: #B3B3B3 0px 0px 5px 5px;
-  -moz-box-shadow: #B3B3B3 0px 0px 5px 5px;
-  box-shadow: #B3B3B3 0px 0px 5px 5px;
-  overflow:hidden;
-  margin-right:30px;
+  width: auto;
+  height: auto;
+/*  height: 250px;
+  width: 700px;*/
+  float: left;
+  padding: 5px 5px;
+  overflow: hidden;
+  margin-right: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  margin-top: 30px;
 }
-
 div.facultycard h4 {
-  text-align:center;
+  padding-top: 15px; 
+  text-transform: uppercase;
 }
-
-div.facultycard p {
-  text-align:center;
-}
-
 div.facultycard img {
-  width:150px;
-  height:150px;
+  width: 150px;
+  height: 150px;
   display: block;
   margin: auto;
-  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-ul#student-stamps {
-  list-style-type:none;
-  list-style-position:inside;
-  width:90%;
+div.about, div.facultycard, div.container {
+  box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
-li.student-stamp {
-  float:left;
+
+/* students cards */
+.students-container {
+  background: hsla(0,0%,0%,.1);
+  width: 100%;
+  width: 50%;
+  margin: auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.9), 0 3px 6px rgba(0,0,0,0.23);
+}
+.student-card {
+  background: hsla(0,0%,0%,.1);
+  margin: 1em;
+  min-width: 100px;
+  max-width:200px;
+  padding: 1em;
+  display: flex;
+  display: inline-block;  
+  text-align: center;
+  background-image:
+  radial-gradient(
+    circle at bottom right,
+    #dfdbd6,
+    #cfc7c1 90%
+  );
+  -moz-box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+.student-card img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-bottom: 10px;
+}
+.student-card a {
+ font-size: 18px;
+}
+
+/* nav */
+div.purpl-nav {
+  height: 35px;
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   text-align:center;
-  position:relative;
-  overflow:hidden;
 }
-li.student-stamp :hover {
-  text-decoration:underline;
+
+/* buttons */
+.button {
+  color: #592f51;
+  border-color: #592f51;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
-li.student-stamp img {
-  width: 120px;
-  height:120px;
+.button::after {
+  background: #592f51;
 }
-span.student-name {
-  position: absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  z-index:100;
-  font-weight:bold;
-  padding:10px;
-  background-color:rgba(0, 0, 0, 0.4);
-  line-height: 0.5;
+.button::after {
+  width: 300%;
 }
-ul#student-stamps p {
-  margin:0px;
+.button:hover {
+  color: #592f51;
 }
+.button:hover::after {
+  width: 0;
+}
+[class*="button"] {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 2px solid #592f51;
+  color: #604f5e; 
+}
+[class*="button"]:hover, [class*="button"].active {
+  color: $buttonpurple;
+}
+[class*="button"], [class*="button"]:hover {
+    -webkit-transition: color 0.5s  ease-in-out;
+    transition: color 0.5s  ease-in-out;
+}
+[class*="button"] {
+    position: relative;
+    z-index: 1;
+    -webkit-transition-delay: 0.2s !important;
+            transition-delay: 0.2s !important;
+    overflow: hidden;
+}
+[class*="button"]::after, [class*="button"]::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+.button::after {
+  width: 300%;
+}
+.button:hover {
+  color: #d2d2d3;
+}
+.button:hover::after {
+  width: 0;
+}
+.button::after {
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+}
+.button:hover::after, .button.active::after {
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  width: 100%;
+}
+:checked + .button::after, 
+.button.active::after {
+  width: 300%;
+}
+
+/* join us */ 
+div.container {
+  text-align: left;
+  display: block;
+  background: rgba(255, 255, 255, 0.9);
+  padding-bottom: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  width: auto;
+  height: auto;
+  font-size: 20px; 
+  color: #62a69f;
+}
+div.joinus h4 {
+  font-size: 25px;
+  font-weight: bold; 
+}
+div.joinus h1 {
+  margin-left: -5%;
+}
+div.joinus ul {
+  margin-left: 8%;
+  margin-bottom: 1%;
+}
+/* courses */
 div#courses-table {
   width:90%;
   margin:auto;
+  margin-bottom:5%;
+  font-size: 20px;
 }
-div#joinus-info {
-  margin-left:30px;
+div#courses-table table {
 }
-div#about-purpl h4 {
-  font-weight: normal;
+div#courses-table table th {
+  padding: 8px;
 }
-div#faculty-cards {
-    margin-top: 20px;
+div#courses-table table tr {
 }
-div.center-align {
-  text-align:center;
+div#courses-table table td {
+  padding: 8px;
 }
-div#maglev-img-div {
-  background-image: url('{{ site.baseurl }}/assets/maglev.png');
-  float:left;
-  width:275px;
-  height:200px;
-  background-size:100%;
+/*
+table.table {
+  font-size:15px;
+  border-width: 1px;
+  border-color: #999999;
+  border-collapse: collapse;
 }
-div.inline-img + p {
-  display:inline;
-  clear:right;
+table.table th {
+  background-color:#ccc4c0;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #9b9b9b;
 }
-div#quelea-img-div {
-  background-image: url('{{ site.baseurl }}/assets/quelea.png');
-  float:left;
-  width:275px;
-  height:130px;
-  background-size:100%;
+table.table tr {
+  background-color:#ececec;
 }
-div#irmin-img-div {
-  background-image: url('{{ site.baseurl }}/assets/irmin.png');
-  float:left;
-  width:210px;
-  height:230px;
-  background-size:100%;
-  margin-right:20px;
-}
+table.table td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #9b9b9b;
+}*/

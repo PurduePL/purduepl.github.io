@@ -13,52 +13,360 @@
 </head>
 
 <body>
-
-<div id="purpl-header">
-    <a id="purpl-banner" href=""></a>
-    <div id="purpl-title">
-      <span class="purple">Pur</span>due <span class="purple">PL</span> Research Group.
+  <div class="page">  
+    <div class = "logo-container">
+      <div class="purpl-header" id="header">
+        <img src="assets/banner.png" alt="logo";">
+      </div>  
+      <div class = "acro">
+        <p> Purdue PL Research Group </p>
+      </div>
     </div>
-    <div class="purpl-navbar">
-        <ul class="purpl-nav">
-          <li class="purpl-navitem">
-            <a href="/index.html#people">People</a>
-          </li>
-          <!-- li class="purpl-navitem">
-            <a href="/research.html">Research</a>
-          </li -->
-          <li class="purpl-navitem">
-            <a href="/courses.html">Courses</a>
-          </li>
-          <!-- li class="purpl-navitem">
-            <a href="/resources.html">Resources</a>
-          </li -->
-          <li class="purpl-navitem">
-            <a href="/joinus.html">Join Us</a>
-          </li>
-          <li class="purpl-navitem">
-            <a href="/schedule.html">Schedule</a>
-          </li>
-        </ul>
+    <div class="purpl-nav">
+      <a class="button" href="/index.html#people">People</a>
+      <a class="button" href="/courses.html">Courses</a>
+<!--  <a class="button" href="/resources.html">Resources</a> -->
+      <a class="button" href="/joinus.html">Join Us</a>
+      <a class="button" href="/schedule.html">Schedule</a>
     </div>
-</div>
-<br />
 
 
-<div class="content">
-    <div class="container">
-  <div id="about-purpl">
-    <h3>About PurPL</h3>
+    <section class="intro-content" id="introduction">
+  <div class="about" id="about-purpl">
     
+      <h1>About</h1>
       <h4 id="faculty-2-departments-1-mission-infinite-possibilites-pl-research-at-purdue">10 Faculty. 2 Departments. 1 Mission. Infinite Possibilites: PL Research at Purdue!</h4>
 
-<p>PurPL is the cross-departmental umbrella group for programming languages research at Purdue University. PurPL research groups push the boundaries of every area in programming languages, software engineering, formal methods, and systems: PL theory, design, and implementation, language-based security, compiler optimizations, verification, program synthesis, and more. But we do more than fundamental research: we bring PL ideas to bear on a wide range of areas, including big data, security, education, and computational science. </p>
+<p>PurPL is the cross-departmental umbrella group for programming languages research at Purdue University. PurPL research groups push the boundaries of every area in programming languages, software engineering, formal methods, and systems: PL theory, design, and implementation, language-based security, compiler optimizations, verification, program synthesis, and more. But we do more than fundamental research: we bring PL ideas to bear on a wide range of areas, including big data, security, education, and computational science.</p>
 
     
   </div>
-  <div id="news">
-    <h3>News</h3>
-    <ul id="news-roll">
+</section> <!-- end of logo and introduction area -->
+
+
+<!-- faculty -->
+
+<div class= "cards" id="cards-container" role="main">
+  <div class="cards-title" id="row-title" role="main">
+    <h1>Faculty</h1>
+  </div>
+
+<!-- can we loop over 0,1 instead to avoid duplication? -->
+  <div class="cards-left" id="cards-container" role="main">
+    
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/bendelaware.png" alt="Ben Delaware" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="http://people.csail.mit.edu/bendy/" class="button">Ben Delaware</a>
+        <p>Program synthesis and verification,
+Coq,
+Verified systems software,
+Mechanized reasoning,
+Decision procedures,
+Advanced modularity.</p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/milind.jpeg" alt="Milind Kulkarni" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="https://engineering.purdue.edu/~milind/" class="button">Milind Kulkarni</a>
+        <p>Automatically optimizing irregular applications,
+Optimizing computational science applications by exploiting semantics,
+Detecting and diagnosing bugs in large-scale distributed systems,
+Effective computation offloading.</p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/midkiff.jpg" alt="Samuel Midkiff" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="https://engineering.purdue.edu/~smidkiff/" class="button">Samuel Midkiff</a>
+        <p>Optimizing compilers, Interaction between compilers and other system
+software – in particular virtual machines, Relaxed memory models,
+Energy-aware compilers.</p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/xiaokang.jpeg" alt="Xiaokang Qiu" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="http://people.csail.mit.edu/xkqiu/" class="button">Xiaokang Qiu</a>
+        <p>Theories, algorithms and tools of Programming Systems, including
+program logics, decision procedures, automated deduction, program
+verification, and program synthesis.</p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/roopsha.jpg" alt="Roopsha Samanta" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="https://www.cs.purdue.edu/homes/roopsha/" class="button">Roopsha Samanta</a>
+        <p>Program verification, analysis, repair and synthesis.</p>
+
+<p>Current projects: computer-aided concurrent programming,
+reasoning about robustness of systems,
+program repair and synthesis for education.</p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+  </div>
+  <div class="cards-right" id="cards-container" role="main">
+    
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/suresh.png" alt="Suresh Jagannathan" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="https://www.cs.purdue.edu/homes/suresh/" class="button">Suresh Jagannathan</a>
+        <p>Functional Programming, Program Verification, Weak and Eventual
+Consistency, Program Analysis via Machine Learning, Memory Models,
+Verified Compilation.</p>
+
+<p><a href="http://gowthamk.github.io/Quelea">Quelea</a>,
+<a href="https://github.com/rowangithub/DOrder">DOrder</a>,
+<a href="http://multimlton.cs.purdue.edu/mML/Welcome.html">MultiMLton</a>.
+<!-- [CompCertTSO](http://www.cl.cam.ac.uk/~pes20/CompCertTSO/doc/),
+[Catalyst](https://github.com/gowthamk/catalyst). --></p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/zhiyuanli.jpg" alt="Zhiyuan Li" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="https://www.cs.purdue.edu/homes/ci/" class="button">Zhiyuan Li</a>
+        <p>Program analysis, transformation and run-time management for
+high-performance computing and general-purpose multicore computing.
+Reliable software on networked embedded systems.</p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/mathias.jpg" alt="Mathias Payer" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="https://www.nebelwelt.net/" class="button">Mathias Payer</a>
+        <p>System security; 
+Memory safety and type safety for C/C++;
+Language-based security;
+Static and dynamic binary program analysis;
+Safe runtime systems.</p>
+
+<p><a href="http://hexhive.github.io/">HexHive Group</a></p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/tiark.jpg" alt="Tiark Rompf" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="https://tiarkrompf.github.io/" class="button">Tiark Rompf</a>
+        <p>Metaprogramming for performance and safety, 
+Scala, Coq,
+type systems,
+PL techniques for big data,
+machine learning, hardware,
+software-defined anything</p>
+
+      </div>
+    </div>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+    <div class="facultycard" id="faculty-card" role="article">
+      <div class="faculty-pic">
+        <p><br><img src="assets/xiangyu.jpg" alt="Xiangyu Zhang" /></p>
+      </div>
+      <div class="faculty-info">
+            <a href="https://www.cs.purdue.edu/homes/xyzhang/" class="button">Xiangyu Zhang</a>
+        <p>Dynamic, static and binary program analysis, 
+Debugging, 
+System security, 
+Forensics, 
+Android and iOS security, and 
+Improving effectiveness and robustness of data processing.</p>
+
+      </div>
+    </div>
+      
+      
+    
+  </div>
+</div>
+
+<!-- post docs and grad students -->
+
+<div class="cards-title" id="row-title" role="main">
+      <h1>Post-docs and grad students</h1>
+</div>
+
+<div class="student-container" layout layout-wrap layout-padding layout-align="center">  
+  
+    <div class="student-card">
+      <p><a href="http://xuankanglin.com/About-Me/">
+  <img src="assets/xuankang.jpg" alt="Xuankang Lin" />
+  <span class="student-name">Xuankang Lin</span>
+</a></p>
+
+    </div>
+  
+    <div class="student-card">
+      <p><a href="https://scholar.google.com/citations?user=KiT5oNUAAAAJ&amp;hl=en">
+  <img src="assets/kartiknagar.jpg" alt="Kartik Nagar" />
+  <span class="student-name">Kartik Nagar</span>
+</a></p>
+
+    </div>
+  
+    <div class="student-card">
+      <p><a href="http://gowthamk.github.io/">
+  <img src="assets/gowtham.jpg" alt="Gowtham Kaki" />
+  <span class="student-name">Gowtham Kaki</span>
+</a></p>
+
+    </div>
+  
+    <div class="student-card">
+      <p><a href="https://github.com/gupta-suyash">
+  <img src="assets/suyash.png" alt="Suyash Gupta" />
+  <span class="student-name">Suyash Gupta</span>
+</a></p>
+
+    </div>
+  
+    <div class="student-card">
+      <p><a href="https://scholar.google.com/citations?user=knUrjrMAAAAJ&amp;hl=en">
+<img src="assets/krish.jpg" alt="Kirshanthan" />
+<span class="student-name">Kirshanthan</span>
+</a></p>
+
+    </div>
+  
+    <div class="student-card">
+      <p><a href="https://github.com/kiarahmani">
+<img src="assets/kia.jpg" alt="Kia Rahmani" />
+<span class="student-name">Kia Rahmani</span>
+</a></p>
+
+    </div>
+  
+    <div class="student-card">
+      <p><a href="http://jmd1011.github.io/">
+  <img src="assets/JamesDecker.jpg" alt="James Decker" />
+  <span class="student-name">James Decker</span>
+</a></p>
+
+    </div>
+  
+</div>
+
+
+<!-- news -->  
+
+<aside class="news" role="complementary">
+  <div class="wrapper">
+    <h2>news</h2>
+        <!--<h1>News</h1>-->
       
       <li class="news-item">
         <p><strong>[08-19-2016]</strong> The inaugural PurPL Lunch will be next Thursday, August 25th, from noon to 1PM in Lawson 3102AB. RSVP <a href="https://goo.gl/6DTYSj">here</a>.</p>
@@ -77,260 +385,13 @@
 
       </li>
     
-    </div>
   </div>
-</div>
+</aside>
 
 
-<div class="container">
-  <h3 id="people">Faculty</h3>
-  <div id="faculty-cards">
-    <!-- h4>Faculty</h4 -->
-    
-    
-      
-      
-        <div class="container cards-container">
-      
-        <div class="facultycard">
-          <h4 id="ben-delawarehttppeoplecsailmitedubendy"><a href="http://people.csail.mit.edu/bendy/">Ben Delaware</a></h4>
 
-<p><img src="assets/bendelaware.png" alt="Ben Delaware" />
-Program synthesis and verification,
-Coq,
-Verified systems software,
-Mechanized reasoning,
-Decision procedures,
-Advanced modularity.</p>
 
-        </div>
-      
-      
-    
-      
-      
-        <div class="facultycard">
-          <h4 id="suresh-jagannathanhttpswwwcspurdueeduhomessuresh"><a href="https://www.cs.purdue.edu/homes/suresh/">Suresh Jagannathan</a></h4>
 
-<p><img src="assets/suresh.png" alt="Suresh Jagannathan" />
-Functional Programming, Program Verification, Weak and Eventual
-Consistency, Program Analysis via Machine Learning, Memory Models,
-Verified Compilation.</p>
-
-<p><a href="http://gowthamk.github.io/Quelea">Quelea</a>,
-<a href="https://github.com/rowangithub/DOrder">DOrder</a>,
-<a href="http://multimlton.cs.purdue.edu/mML/Welcome.html">MultiMLton</a>.
-<!-- [CompCertTSO](http://www.cl.cam.ac.uk/~pes20/CompCertTSO/doc/),
-[Catalyst](https://github.com/gowthamk/catalyst). --></p>
-
-        </div>
-      
-      
-    
-      
-      
-        <div class="facultycard">
-          <h4 id="milind-kulkarnihttpsengineeringpurdueedumilind"><a href="https://engineering.purdue.edu/~milind/">Milind Kulkarni</a></h4>
-
-<p><img src="assets/milind.jpeg" alt="Milind Kulkarni" />
-Automatically optimizing irregular applications,
-Optimizing computational science applications by exploiting semantics,
-Detecting and diagnosing bugs in large-scale distributed systems,
-Effective computation offloading.</p>
-
-        </div>
-      
-      
-    
-      
-      
-        <div class="facultycard">
-          <h4 id="zhiyuan-lihttpswwwcspurdueeduhomesci"><a href="https://www.cs.purdue.edu/homes/ci/">Zhiyuan Li</a></h4>
-
-<p><img src="assets/zhiyuanli.jpg" alt="Zhiyuan Li" /></p>
-
-<p>Program analysis, transformation and run-time management for
-high-performance computing and general-purpose multicore computing.
-Reliable software on networked embedded systems.</p>
-
-        </div>
-      
-        </div>
-      
-      
-    
-      
-      
-        <div class="container cards-container">
-      
-        <div class="facultycard">
-          <h4 id="samuel-midkiffhttpsengineeringpurdueedusmidkiff"><a href="https://engineering.purdue.edu/~smidkiff/">Samuel Midkiff</a></h4>
-
-<p><img src="assets/midkiff.jpg" alt="Samuel Midkiff" />
-Optimizing compilers, Interaction between compilers and other system
-software – in particular virtual machines, Relaxed memory models,
-Energy-aware compilers. </p>
-
-        </div>
-      
-      
-    
-      
-      
-        <div class="facultycard">
-          <h4 id="mathias-payerhttpswwwnebelweltnet"><a href="https://www.nebelwelt.net/">Mathias Payer</a></h4>
-
-<p><img src="assets/mathias.jpg" alt="Mathias Payer" />
-System security; 
-Memory safety and type safety for C/C++;
-Language-based security;
-Static and dynamic binary program analysis;
-Safe runtime systems.</p>
-
-<p><a href="http://hexhive.github.io/">HexHive Group</a></p>
-
-        </div>
-      
-      
-    
-      
-      
-        <div class="facultycard">
-          <h4 id="xiaokang-qiuhttppeoplecsailmiteduxkqiu"><a href="http://people.csail.mit.edu/xkqiu/">Xiaokang Qiu</a></h4>
-
-<p><img src="assets/xiaokang.jpeg" alt="Xiaokang Qiu" />
-Theories, algorithms and tools of Programming Systems, including
-program logics, decision procedures, automated deduction, program
-verification, and program synthesis.</p>
-
-        </div>
-      
-      
-    
-      
-      
-        <div class="facultycard">
-          <h4 id="tiark-rompfhttpstiarkrompfgithubio"><a href="https://tiarkrompf.github.io/">Tiark Rompf</a></h4>
-
-<p><img src="assets/tiark.jpg" alt="Tiark Rompf" />
-metaprogramming for performance and safety, 
-Scala, Coq,
-type systems,
-PL techniques for big data,
-machine learning, hardware,
-software-defined anything</p>
-
-        </div>
-      
-        </div>
-      
-      
-    
-      
-      
-        <div class="container cards-container">
-      
-        <div class="facultycard">
-          <h4 id="roopsha-samantahttpswwwcspurdueeduhomesroopsha"><a href="https://www.cs.purdue.edu/homes/roopsha/">Roopsha Samanta</a></h4>
-
-<p><img src="assets/roopsha.jpg" alt="Roopsha Samanta" />
-Program verification, analysis, repair and synthesis. </p>
-
-<p>Current projects: computer-aided concurrent programming,
-reasoning about robustness of systems,
-program repair and synthesis for education.</p>
-
-        </div>
-      
-      
-    
-      
-      
-        <div class="facultycard">
-          <h4 id="xiangyu-zhanghttpswwwcspurdueeduhomesxyzhang"><a href="https://www.cs.purdue.edu/homes/xyzhang/">Xiangyu Zhang</a></h4>
-
-<p><img src="assets/xiangyu.jpg" alt="Xiangyu Zhang" />
-Dynamic, static and binary program analysis, 
-Debugging, 
-System security, 
-Forensics, 
-Android and iOS security, and 
-Improving effectiveness and robustness of data processing.</p>
-
-        </div>
-      
-      
-    
-    
-      </div>
-    
-  </div>
-</div>
-
-<div class="container">
-  <h3>Post-docs and grad students</h3>
-  <ul id="student-stamps">
-    
-      <li class="student-stamp">
-        <p><a href="http://xuankanglin.com/About-Me/">
-  <img src="assets/xuankang.jpg" alt="Xuankang Lin" />
-  <span class="student-name">Xuankang Lin</span>
-</a></p>
-
-      </li>
-    
-      <li class="student-stamp">
-        <p><a href="https://scholar.google.com/citations?user=KiT5oNUAAAAJ&amp;hl=en">
-  <img src="assets/kartiknagar.jpg" alt="Kartik Nagar" />
-  <span class="student-name">Kartik Nagar</span>
-</a></p>
-
-      </li>
-    
-      <li class="student-stamp">
-        <p><a href="http://gowthamk.github.io/">
-  <img src="assets/gowtham.jpg" alt="Gowtham Kaki" />
-  <span class="student-name">Gowtham Kaki</span>
-</a></p>
-
-      </li>
-    
-      <li class="student-stamp">
-        <p><a href="https://github.com/gupta-suyash">
-  <img src="assets/suyash.png" alt="Suyash Gupta" />
-  <span class="student-name">Suyash Gupta</span>
-</a></p>
-
-      </li>
-    
-      <li class="student-stamp">
-        <p><a href="https://scholar.google.com/citations?user=knUrjrMAAAAJ&amp;hl=en">
-<img src="assets/krish.jpg" alt="Kirshanthan" />
-<span class="student-name">Kirshanthan</span>
-</a></p>
-
-      </li>
-    
-      <li class="student-stamp">
-        <p><a href="https://github.com/kiarahmani">
-<img src="assets/kia.jpg" alt="Kia Rahmani" />
-<span class="student-name">Kia Rahmani</span>
-</a></p>
-
-      </li>
-    
-      <li class="student-stamp">
-        <p><a href="http://jmd1011.github.io/">
-  <img src="assets/JamesDecker.jpg" alt="James Decker" />
-  <span class="student-name">James Decker</span>
-</a></p>
-
-      </li>
-    
-  </div>
-</div>
-
-</div>
 
 
 
