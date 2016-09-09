@@ -23,3 +23,96 @@ We implement our system as an extension of Scala, and present several case studi
 
 **Abstract**: 
 GPGPUs deliver high speedup for regular applications while remaining energy efficient. In recent years, there has been much focus on tuning irregular, task-parallel applications and/or the GPU architecture in order to achieve similar benefits for irregular applications running on GPUs. While most of the previous works have focused on minimizing the effect of control and memory divergence, which are prominent in irregular applications and which degrade the performance, there has been less attention paid to decreasing cache pressure and hence improving performance of applications given the small cache sizes on GPUs. In this paper we tackle two problems. First we extract data parallelism from irregular task parallel applications, which we do by subdividing each task into sub tasks at the CPU side and sending these sub tasks to the GPU for execution. By doing so we take advantage of the massive parallelism provided by the GPU. Second, to mitigate the memory demands of many tasks that access irregular data structures, we schedule these subtasks in a way to minimize the memory footprint of each warp running on the GPU. We use our framework with 3 task-parallel algorithms and show that we can achieve significant speedups over optimized GPU code.
+
+#### September 15, 2016 ####
+**Speaker**: TBA
+
+**Title**: TBA
+
+**Abstract**:
+TBA
+
+#### September 22, 2016 ####
+**Speakers**: Ruby Tahboub and Gegory Essertel
+
+**Title**: TBA
+
+**Abstract**:
+TBA
+
+### September 29, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+## October 6, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+#### October 13, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+#### October 20, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+#### October 27, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+#### November 3, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+#### November 10, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+#### November 17, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+#### November 24, 2016 ####
+**Speaker**: N/A - Thanksgiving
+
+**Title**: N/A
+
+**Abstract**: N/A
+
+#### December 1, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
+
+#### December 8, 2016 ####
+**Speaker**: Vacant
+
+**Title**: TBA
+
+**Abstract**: TBA
