@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-**[09-01-2016]** Jad Hbeika previews his upcoming LCPC paper on [Locality-aware Task-parallel Execution](https://engineering.purdue.edu/~milind/publications.php#lcpc2016a) at this week's PurPL Lunch.
+**[09-08-2016]** Jad Hbeika previews his upcoming LCPC paper on [Locality-aware Task-parallel Execution](https://engineering.purdue.edu/~milind/publications.php#lcpc2016a) at this week's PurPL Lunch.
