@@ -25,12 +25,14 @@ We implement our system as an extension of Scala, and present several case studi
 GPGPUs deliver high speedup for regular applications while remaining energy efficient. In recent years, there has been much focus on tuning irregular, task-parallel applications and/or the GPU architecture in order to achieve similar benefits for irregular applications running on GPUs. While most of the previous works have focused on minimizing the effect of control and memory divergence, which are prominent in irregular applications and which degrade the performance, there has been less attention paid to decreasing cache pressure and hence improving performance of applications given the small cache sizes on GPUs. In this paper we tackle two problems. First we extract data parallelism from irregular task parallel applications, which we do by subdividing each task into sub tasks at the CPU side and sending these sub tasks to the GPU for execution. By doing so we take advantage of the massive parallelism provided by the GPU. Second, to mitigate the memory demands of many tasks that access irregular data structures, we schedule these subtasks in a way to minimize the memory footprint of each warp running on the GPU. We use our framework with 3 task-parallel algorithms and show that we can achieve significant speedups over optimized GPU code.
 
 #### September 15, 2016 ####
-**Speaker**: TBA
+**Speaker**: Suyash Gupta
 
-**Title**: TBA
+**Title**: IMSuite: A benchmark suite for simulating distributed algorithms
 
 **Abstract**:
-TBA
+Considering the diverse nature of real-world distributed applications that makes it hard to identify a representative subset of distributed benchmarks, we focus on their underlying distributed algorithms. We present and characterize a new kernel benchmark suite (named IMSuite) that simulates some of the classical distributed algorithms in task parallel languages. We present multiple variations of our kernels, broadly categorized under two heads: (a) varying synchronization primitives (with and without fine grain synchronization primitives); and (b) varying forms of parallelization (data parallel and recursive task parallel). Our characterization covers interesting aspects of distributed applications such as distribution of remote communication requests, number of synchronization, task creation, task termination and atomic operations. We study the behavior (execution time) of our kernels by varying the problem size, the number of compute threads, and the input configurations. We also present an involved set of input generators and output validators.
+
+Paper link: http://www.sciencedirect.com/science/article/pii/S0743731514002032
 
 #### September 22, 2016 ####
 **Speakers**: Ruby Tahboub and Gegory Essertel
