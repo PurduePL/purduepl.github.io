@@ -37,10 +37,13 @@ Paper link: http://www.sciencedirect.com/science/article/pii/S0743731514002032
 #### September 22, 2016 ####
 **Speakers**: Ruby Tahboub and Gegory Essertel
 
-**Title**: TBA
+**Title**: Flare: Scale up Apache Spark with Native Compilation and Set Your Data on Fire!
 
 **Abstract**:
-TBA
+The need for modern data analytics to combine relational, procedural, and map-reduce-style functional processing is widely recognized. State-of-the-art 
+systems like Spark have recognized the need to add SQL front-ends and relational query optimization. 
+
+But how good are these relational extensions when scaled-up on modern hardware? We present the first comparative evaluation of Spark SQL on the standard TPC-H benchmark and show that there isa significant performance gap to best-of-breed relational query engines. We present Flare, a new back-end for Spark SQL that brings performance closer to the best SQL engines, without giving up the added expressiveness of Spark. Flare leverages the fact that Spark SQL is entirely implemented in Scala, and maps Spark's internal query plans to Delite, an existing general-purpose compiler framework for embedded DSLs, also implemented in Scala.
 
 #### September 29, 2016 ####
 **Speaker**: Vacant
