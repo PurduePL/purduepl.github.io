@@ -79,9 +79,11 @@ layout: index
     <h2>news</h2>
         <!--<h1>News</h1>-->
       {% for post in site.categories.news %}
-      <li class="news-item">
-        {{ post.content }}
-      </li>
+      <div id="news_items">
+          <li class="news-item">
+            {{ post.content }}
+          </li>
+      </div>
     {% endfor %}
   </div>
 </aside>

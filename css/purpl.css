@@ -334,6 +334,16 @@ div.facultycard h4 {
   padding-top: 15px; 
   text-transform: uppercase;
 }
+
+div.wrapper {
+    max-height: 550px;
+}
+
+div#news_items {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
 div.facultycard img {
   width: 150px;
   height: 150px;
