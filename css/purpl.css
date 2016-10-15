@@ -63,7 +63,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
-  color: #202020;
+  color: rgba(255, 255, 255, 0.9);
   background-color: #2d2d2d;
   letter-spacing: .1em;
   text-shadow: 
