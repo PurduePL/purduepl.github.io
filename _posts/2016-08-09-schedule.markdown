@@ -46,32 +46,58 @@ systems like Spark have recognized the need to add SQL front-ends and relational
 But how good are these relational extensions when scaled-up on modern hardware? We present the first comparative evaluation of Spark SQL on the standard TPC-H benchmark and show that there isa significant performance gap to best-of-breed relational query engines. We present Flare, a new back-end for Spark SQL that brings performance closer to the best SQL engines, without giving up the added expressiveness of Spark. Flare leverages the fact that Spark SQL is entirely implemented in Scala, and maps Spark's internal query plans to Delite, an existing general-purpose compiler framework for embedded DSLs, also implemented in Scala.
 
 #### September 29, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Yonghwi Kwon
 
-**Title**: TBA
+**Title**: LDX: Causality Inference by Lightweight Dual Execution
 
-**Abstract**: TBA
+**Abstract**: 
+Causality inference, such as dynamic taint anslysis, has many applications
+(e.g., information leak detection). It determines whether
+an event e is causally dependent on a preceding event c during execution.
+We develop a new causality inference engine LDX. Given
+an execution, it spawns a slave execution, in which it mutates c
+and observes whether any change is induced at e. To preclude nondeterminism,
+LDX couples the executions by sharing syscall outcomes.
+To handle path differences induced by the perturbation, we
+develop a novel on-the-fly execution alignment scheme that maintains
+a counter to reflect the progress of execution. The scheme
+relies on program analysis and compiler transformation. LDX can
+effectively detect information leak and security attacks with an average
+overhead of 6.08% while running the master and the slave
+concurrently on seperate CPUs, much lower than existing systems
+that require instruction level monitoring. Furthermore, it has much
+better accuracy in causality inference.
 
 #### October 6, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Xiao Wang
 
-**Title**: TBA
+**Title**: High Performance Model Based Image Reconstruction
 
-**Abstract**: TBA
+**Abstract**: 
+Computed Tomography (CT) Image Reconstruction is an important technique used in a wide range of applications, ranging from explosive detection, medical imaging to scientific imaging. Among available reconstruction methods, Model Based Iterative Reconstruction (MBIR) produces higher quality images and allows for the use of more general CT scanner geometries than is possible with more commonly used methods. However, the high computational cost of MBIR often makes it impractical in applications for which it would otherwise be ideal. 
+
+This talk describes how our understanding in physical geometry, numerical algorithm and computer architecture can transform the highly irregular and intrinsically sequential tomographic application into a highly parallel one.
+
+This talk also describes a novel organization of the scanner data into super-voxels (SV) that, combined with a super-voxel buffer (SVB), dramatically increase locality and prefetching, enable parallelism across SVs and lead to an average speedup of 187X on 20 cores. 
+
+This application is an example of algorithm that appears to be irregular, but has sufficient regularity that with careful tuning it can achieve large speedups on both a single-core and multiple cores.   Currently, this tuning is almost entirely manual and expressed in OpenMP and MPI.  Having programming language and compiler support to aid in the tuning of this and many other applications would be of significant benefit.
 
 #### October 13, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Terry Ching-Hsiang Hsu
 
-**Title**: TBA
+**Title**: Enforcing Least Privilege Memory Views for Multithreaded Applications
 
-**Abstract**: TBA
+**Abstract**: 
+Failing to properly isolate components in the same address space has resulted in a substantial amount of vulnerabilities. Enforcing the least privilege principle for memory accesses can selectively isolate software components to restrict attack surface and prevent unintended cross-component memory corruption. However, the boundaries and interactions between software components are hard to reason about and existing approaches have failed to stop attackers from exploiting vulnerabilities caused by poor isolation. We present the secure memory views (SMV) model: a practical and efficient model for secure and selective memory isolation in monolithic multithreaded applications. SMV is a third generation privilege separation technique that offers explicit access control of memory and allows concurrent threads within the same process to partially share or fully isolate their memory space in a controlled and parallel manner following application requirements. An evaluation of our prototype in the Linux kernel (TCB less than 1,800 LOC) shows negligible runtime performance overhead in real-world applications including Cherokee web server (less than 0.69%), Apache httpd web server (less than 0.93%), and Mozilla Firefox web browser (less than 1.89%) with at most 12 LOC changes.
+Link to paper: https://www.cs.purdue.edu/homes/hsu62/ccs16_smv.pdf
 
 #### October 20, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Yuseok Jeon
 
-**Title**: TBA
+**Title**: TypeSan: Practical Type Confusion Detection
 
-**Abstract**: TBA
+**Abstract**: 
+Typecasting is a fundamental concept in C++ to convert a pointer from one object type into another. However, downcasting has critical security implications due to potentially different object memory layouts. Due to missing type safety in C++, a downcasted pointer can violate a programmer’s intended pointer semantics, allowing an attacker to corrupt the underlying memory in a type-unsafe fashion. This vulnerability class is receiving increasing attention and is known as type confusion. Several existing approaches detect different forms of type confusion, but these solutions are limited due to both high run-time performance overhead and low detection coverage. This paper presents TypeSan, a practical type-confusion detector which provides both low run-time overhead and high detection coverage. TypeSan relies on an efficient per-object metadata storage service based on a compact memory shadowing scheme. Our experimental results confirm that TypeSan is practical, even when explicitly checking almost all the relevant typecasts in a given C++ program. Compared to the state of the art, TypeSan yields orders of magnitude higher coverage at 4–10 times lower performance overhead on SPEC and 2 times on Firefox. 
 
 #### October 27, 2016 ####
 **Speaker**: Vacant
@@ -109,14 +135,14 @@ But how good are these relational extensions when scaled-up on modern hardware? 
 **Abstract**: N/A
 
 #### December 1, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Nathan Burrow
 
 **Title**: TBA
 
 **Abstract**: TBA
 
 #### December 8, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Fei Wang
 
 **Title**: TBA
 
