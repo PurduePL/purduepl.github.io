@@ -100,18 +100,18 @@ Link to paper: https://www.cs.purdue.edu/homes/hsu62/ccs16_smv.pdf
 Typecasting is a fundamental concept in C++ to convert a pointer from one object type into another. However, downcasting has critical security implications due to potentially different object memory layouts. Due to missing type safety in C++, a downcasted pointer can violate a programmer’s intended pointer semantics, allowing an attacker to corrupt the underlying memory in a type-unsafe fashion. This vulnerability class is receiving increasing attention and is known as type confusion. Several existing approaches detect different forms of type confusion, but these solutions are limited due to both high run-time performance overhead and low detection coverage. This paper presents TypeSan, a practical type-confusion detector which provides both low run-time overhead and high detection coverage. TypeSan relies on an efficient per-object metadata storage service based on a compact memory shadowing scheme. Our experimental results confirm that TypeSan is practical, even when explicitly checking almost all the relevant typecasts in a given C++ program. Compared to the state of the art, TypeSan yields orders of magnitude higher coverage at 4–10 times lower performance overhead on SPEC and 2 times on Firefox. 
 
 #### October 27, 2016 ####
-**Speaker**: Vacant
+**Speaker**: James Decker
 
-**Title**: TBA
+**Title**: TrumPy: A Proposal for Higher Performance Computing in Python through Ignorance
 
 **Abstract**: TBA
 
 #### November 3, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Roopsha Samanta
 
-**Title**: TBA
+**Title**: Prepping for the Job Hunt
 
-**Abstract**: TBA
+**Abstract**: Dr. Samanta will speak about good practices before and after graduation for entering professional academia.
 
 #### November 10, 2016 ####
 **Speaker**: Vacant
