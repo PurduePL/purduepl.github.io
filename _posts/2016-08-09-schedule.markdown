@@ -111,21 +111,24 @@ Typecasting is a fundamental concept in C++ to convert a pointer from one object
 
 **Title**: Prepping for the Job Hunt
 
-**Abstract**: Dr. Samanta will speak about good practices before and after graduation for entering professional academia.
+**Abstract**: 
+Dr. Samanta will speak about good practices before and after graduation for entering professional academia.
 
 #### November 10, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Gregory Essertel
 
-**Title**: TBA
+**Title**: SPLASH 2016: A Synopsis
 
-**Abstract**: TBA
+**Abstract**:
+Greg will recap the keynotes which were presented at SPLASH 2016.
 
 #### November 17, 2016 ####
-**Speaker**: Vacant
+**Speaker**: Xilun Wu
 
-**Title**: TBA
+**Title**: EmptyHeaded: A Relational Engine for Graph Processing
 
-**Abstract**: TBA
+**Abstract**:
+This Thursday I will introduce you to a recent research in data management. The group led by Christopher Ré invents a high-performance graph processing engine (named EmptyHeaded) offering high-level programming interface while being faster than low-level engines on graph pattern queries and competitive on other common graph benchmarks. The core of this engine is, a novel query compiler based on GHD (Generalized Hypertree Decomposition) instead of Relational Algebra, a code generator converting GHD into optimized C++ code, and the EmptyHeaded execution engine which selects appropriate the data layout and parallel intersection algorithms for generated code based on the characteristics of data such as density skew and cardinality skew. I will go into details of these three parts. The novelty of this paper comes from the emergence of a worst-case optimal join algorithm and the corresponding query plan optimization (data management), the application of code generation technique in query compilation (compiler), and the progress of parallel set intersection algorithm (parallel computing). I hope this case can bring some inspirations for our PL or DB research.
 
 #### November 24, 2016 ####
 **Speaker**: N/A - Thanksgiving
