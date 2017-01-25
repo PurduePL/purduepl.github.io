@@ -15,7 +15,7 @@ layout: index
     <ul>
       {% for post in site.categories.news %}
       <li class="news-item">
-      <time>
+      <time datetime="{{ post.date}}">
       {{ post.date | date: "%b %d" }}
       </time>
       {{ post.content }}
