@@ -1,94 +1,65 @@
 ---
 layout: index
 ---
-<section class="intro-content" id="introduction">
-  <div class="about" id="about-purpl">
+
+<div class="container">
+  <div id="about">
     {% for post in site.categories.aboutpurpl %}
-      <h1>{{ post.title }}</h1>
       {{ post.content }}
     {% endfor %}
   </div>
-</section> <!-- end of logo and introduction area -->
 
-
-<!-- faculty -->
-
-<div class= "cards" id="cards-container" role="main">
-  <div class="cards-title" id="row-title" role="main">
-    <h1>Faculty</h1>
-  </div>
-
-<!-- can we loop over 0,1 instead to avoid duplication? -->
-  <div class="cards-left" id="cards-container" role="main">
-    {% assign i = 0 %}
-    {% for post in site.categories.facultycard %}
-      {% assign k = i | modulo: 2 %}
-      {% if k == 0 %}
-    <div class="facultycard" id="faculty-card" role="article">
-      <div class="faculty-pic">
-        <p><br><img src="{{ post.img }}" alt="{{ post.title }}" /></p>
-      </div>
-      <div class="faculty-info">
-            <a href="{{ post.href }}" class="button">{{ post.title }}</a>
-        {{ post.content}}
-      </div>
-    </div>
-      {% endif %}
-      {% assign i = i | plus: 1 %}
-    {% endfor %}
-  </div>
-  <div class="cards-right" id="cards-container" role="main">
-    {% assign i = 0 %}
-    {% for post in site.categories.facultycard %}
-      {% assign k = i | modulo: 2 %}
-      {% if k == 1 %}
-    <div class="facultycard" id="faculty-card" role="article">
-      <div class="faculty-pic">
-        <p><br><img src="{{ post.img }}" alt="{{ post.title }}" /></p>
-      </div>
-      <div class="faculty-info">
-            <a href="{{ post.href }}" class="button">{{ post.title }}</a>
-        {{ post.content}}
-      </div>
-    </div>
-      {% endif %}
-      {% assign i = i | plus: 1 %}
-    {% endfor %}
-  </div>
-</div>
-
-<!-- post docs and grad students -->
-
-<div class="cards-title" id="row-title" role="main">
-      <h1>Post-docs and grad students</h1>
-</div>
-
-<div class="student-container" layout layout-wrap layout-padding layout-align="center">  
-  {% for post in site.categories.studentstamp %}
-    <div class="student-card">
-      {{ post.content }}
-    </div>
-  {% endfor %}
-</div>
-
-
-<!-- news -->  
-
-<aside class="news" role="complementary">
-  <div class="wrapper">
-    <h2>news</h2>
-        <!--<h1>News</h1>-->
-              <div id="news_items">
+  <div class="wrapper" id="news">
+    <h1>News</h1>
+  <div id="news_items">
+    <ul>
       {% for post in site.categories.news %}
-          <li class="news-item">
-            {{ post.content }}
-          </li>
-      
-    {% endfor %}
-    </div>
+      <li class="news-item">
+      <time>
+      {{ post.date | date: "%b %d" }}
+      </time>
+      {{ post.content }}
+      </li>
+      {% endfor %}
+      <li id="more" style="display:none"><a href="?more">See all News posts</a></li>
+    </ul>
   </div>
-</aside>
+  </div>
 
+  <div class= "cards" id="cards-container">
 
+    <!-- faculty -->
+  <div class="cards-title" id="people">
+    <h1>Faculty</h1>
+    <ul class="photo-list">
+      {% assign i = 0 %}
+      {% for post in site.categories.facultycard %}
+      <li>
+      <a href="{{ post.href }}">
+      <img src="{{ post.img }}" alt="{{ post.title }}" />
+      <span class="photo-caption">{{ post.title }}</span>
+      </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 
+  <!-- post docs and grad students -->
+  <div class="cards-title">
+    <h1 style="margin-top: 15px">Grad Students</h1>
+    <ul class="photo-list">
+      {% assign i = 0 %}
+      {% for post in site.categories.studentstamp %}
+      <li>
+      <a href="{{ post.href }}">
+      <img src="{{ post.img }}" alt="{{ post.title }}" />
+      <span class="photo-caption">{{ post.title }}</span>
+      </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 
+</div>
+
+<!-- news -->

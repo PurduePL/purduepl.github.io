@@ -5,5 +5,5 @@ category: news
 date: 2016-08-13 10:00:00
 ---
 
-**[08-15-2016]** Roopsha Samanta is offering a new graduate seminar on
+Roopsha Samanta is offering a new graduate seminar on
 [Computer-Aided Program Reasoning](https://www.cs.purdue.edu/homes/roopsha/capr.f16.html).

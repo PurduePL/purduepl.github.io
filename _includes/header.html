@@ -9,23 +9,51 @@
     <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}/css/purpl.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/css/purpl.css" rel="stylesheet">
+
+<script>
+    function show_more(evt) {
+    lis = document.querySelectorAll("#news_items li");
+    for (var i = 0; i < lis.length; i++) {lis[i].style.display = "block"}
+    document.getElementById("more").style.display = "none";
+    evt.preventDefault();
+    return false;
+    }
+
+    function show_less() {
+    lis = document.querySelectorAll("#news_items li");
+    for (var i = 5; i < lis.length; i++) {lis[i].style.display = "none"}
+    document.getElementById("more").style.display = "block";
+    }
+
+    function onload() {
+    show_less();
+    var more = document.querySelector("#more a");
+    more.addEventListener("click", show_more);
+    }
+
+    window.addEventListener("DOMContentLoaded", onload);
+  </script>
+
 </head>
 
 <body>
-  <div class="page">  
-    <div class = "logo-container">
-      <div class="purpl-header" id="header">
-        <img src="assets/banner.png" alt="logo";">
-      </div>  
-      <div class = "acro">
-        <p> Purdue PL Research Group </p>
+  <div class="page">
+    <div class="purpl-header" id="header">
+      <div class = "logo-container">
+	<img src="assets/banner.png" alt="logo";">
+      </div>
+      <div class="logo-title">
+	<p class="acro">
+	  <span class="acronym">Pur</span>due University
+	  <span class="acronym">P</span>rogramming
+	  <span class="acronym">L</span>anguages Group</p>
       </div>
     </div>
-    <div class="purpl-nav">
-      <a class="button" href="{{ site.baseurl }}/index.html#people">People</a>
-      <a class="button" href="{{ site.baseurl }}/courses.html">Courses</a>
-<!--  <a class="button" href="{{ site.baseurl }}/resources.html">Resources</a> -->
-      <a class="button" href="{{ site.baseurl }}/joinus.html">Join Us</a>
-      <a class="button" href="{{ site.baseurl }}/schedule.html">Schedule</a>
+      <div class="purpl-nav">
+	<a class="button" href="{{ site.baseurl }}/index.html#news">News</a>
+	<a class="button" href="{{ site.baseurl }}/index.html#people">People</a>
+	<a class="button" href="{{ site.baseurl }}/research.html">Research</a>
+	<a class="button" href="{{ site.baseurl }}/courses.html">Courses</a>
+	<a class="button" href="{{ site.baseurl }}/seminars.html">Seminars</a>
     </div>

@@ -2,6 +2,8 @@
 layout: post
 title:  "Kirshanthan Sundararajah"
 category: studentstamp
+href: https://scholar.google.com/citations?user=knUrjrMAAAAJ&hl=en
+img: assets/krish.jpg
 ---
 <a href="https://scholar.google.com/citations?user=knUrjrMAAAAJ&hl=en">
 <img src="assets/krish.jpg" alt="Kirshanthan">

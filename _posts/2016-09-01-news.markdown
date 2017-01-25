@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-**[09-01-2016]** Leo Osvald presents his work on [Affordable 2nd Class Values](http://cs.purdue.edu/~rompf/papers/osvald-oopsla16.pdf) at this week's PurPL Lunch.
+ Leo Osvald presents his work on [Affordable 2nd Class Values](http://cs.purdue.edu/~rompf/papers/osvald-oopsla16.pdf) at this week's PurPL Lunch.

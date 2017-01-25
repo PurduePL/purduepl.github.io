@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-**[09-15-2016]** Mahsa Najafzadeh will give a seminar about her work on the analysis and co-design of weakly-consistent applications next Tuesday, September 20th, at 2PM in HAAS 101.
+Mahsa Najafzadeh will give a seminar about her work on the analysis and co-design of weakly-consistent applications next Tuesday, September 20th, at 2PM in HAAS 101.
