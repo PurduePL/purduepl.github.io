@@ -4,7 +4,7 @@ layout: default
 <div class="container" id="joinus-container">
   <h1 style="margin-left:-50pt">Upcoming Seminars</h1>
   <table id="seminar-schedule"  style="margin-bottom:20pt">
-    {% assign curDate = site.time | date: '%s' | minus: 2 | date:'%s' %}
+    {% assign curDate = site.time | date: '%s' | minus: 172800 | date:'%s' %}
     {% for post in site.categories.seminar reversed %}
     {% assign postStartDate = post.date | date: '%s' %}
     {% if postStartDate >= curDate%}
