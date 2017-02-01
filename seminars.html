@@ -1,6 +1,57 @@
 ---
 layout: default
 ---
-<div class="container" id="joinus-container" role="main">
-  <h1>Coming Soon!</h1>
+<div class="container" id="joinus-container">
+  <h1 style="margin-left:-50pt">Upcoming Seminars</h1>
+  <table id="seminar-schedule"  style="margin-bottom:20pt">
+    {% assign curDate = site.time | date: '%s' %}
+    {% for post in site.categories.seminar reversed %}
+    {% assign postStartDate = post.date | date: '%s' %}
+    {% if postStartDate >= curDate %}
+    <tr>
+      <td style="width: 11%">
+	<time datetime="{{ post.date | | date: "%Y"}}">
+	{{ post.date | date: "%b %d" }}
+	</time>
+      </td>
+      <td style="width: 30%">
+	{{ post.speaker }}
+      </td>
+      <td style="width: 38%" >
+	{{ post.title }}
+      </td>
+      <td style="width: 21%">
+	{{ post.location }}
+      </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </table>
+
+  <h1 style="margin-left:-50pt">Past Seminars</h1>
+  <table id="seminar-schedule">
+    {% assign curDate = site.time | date: '%s' %}
+    {% for post in site.categories.seminar %}
+    {% assign postStartDate = post.date | date: '%s' %}
+    {% if postStartDate < curDate %}
+    <tr>
+      <td style="width: 11%">
+	<time datetime="{{ post.date | | date: "%Y"}}">
+	{{ post.date | date: "%b %d" }}
+	</time>
+      </td>
+      <td style="width: 30%">
+	{{ post.speaker }}
+      </td>
+      <td style="width: 38%" >
+	{{ post.title }}
+      </td>
+      <td style="width: 21%">
+	{{ post.location }}
+      </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </table>
+
 </div>
