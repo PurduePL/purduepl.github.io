@@ -7,6 +7,33 @@
 		<atom:link href="http://cs.purdue.edu/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>TBA</title>
+				<description>
+</description>
+				<pubDate>Wed, 08 Feb 2017 00:00:00 -0500</pubDate>
+				<link>http://cs.purdue.edu/2017/02/seminar</link>
+				<guid isPermaLink="true">http://cs.purdue.edu/2017/02/seminar</guid>
+			</item>
+		
+			<item>
+				<title>POPL 2017</title>
+				<description>
+</description>
+				<pubDate>Wed, 01 Feb 2017 00:00:00 -0500</pubDate>
+				<link>http://cs.purdue.edu/2017/02/seminar</link>
+				<guid isPermaLink="true">http://cs.purdue.edu/2017/02/seminar</guid>
+			</item>
+		
+			<item>
+				<title>Spring Semester Kickoff</title>
+				<description>
+</description>
+				<pubDate>Wed, 25 Jan 2017 00:00:00 -0500</pubDate>
+				<link>http://cs.purdue.edu/2017/01/seminar</link>
+				<guid isPermaLink="true">http://cs.purdue.edu/2017/01/seminar</guid>
+			</item>
+		
+			<item>
 				<title>Ruby Tahboub</title>
 				<description>&lt;p&gt;&lt;a href=&quot;https://www.cs.purdue.edu/homes/rtahboub/&quot;&gt;
 &lt;img src=&quot;assets/ruby.png&quot; alt=&quot;Ruby Tahboub&quot; /&gt;
@@ -88,42 +115,6 @@
 				<pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
 				<link>http://cs.purdue.edu/2016/10/gowthamkaki</link>
 				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/gowthamkaki</guid>
-			</item>
-		
-			<item>
-				<title>Suyash Gupta</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://github.com/gupta-suyash&quot;&gt;
-  &lt;img src=&quot;assets/suyash.png&quot; alt=&quot;Suyash Gupta&quot; /&gt;
-  &lt;span class=&quot;student-name&quot;&gt;Suyash Gupta&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-				<pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/SuyashGupta</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/SuyashGupta</guid>
-			</item>
-		
-			<item>
-				<title>Laith Sakka</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://sites.google.com/site/sakkalaith/&quot;&gt;
-&lt;img src=&quot;assets/laith.jpg&quot; alt=&quot;Laith Sakka&quot; /&gt;
-&lt;span class=&quot;student-name&quot;&gt;Laith Sakka&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-				<pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/Laith</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/Laith</guid>
-			</item>
-		
-			<item>
-				<title>Kirshanthan Sundararajah</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://scholar.google.com/citations?user=knUrjrMAAAAJ&amp;amp;hl=en&quot;&gt;
-&lt;img src=&quot;assets/krish.jpg&quot; alt=&quot;Kirshanthan&quot; /&gt;
-&lt;span class=&quot;student-name&quot;&gt;Kirshanthan&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-				<pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/Krish</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/Krish</guid>
 			</item>
 		
 	</channel>
