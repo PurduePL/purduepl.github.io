@@ -1,7 +1,7 @@
 ---
 layout: post
-speaker: "Nathan H Burow"
-title:  "Context Flow Integrity"
+speaker: "Leo Osvald"
+title:  "TBA"
 location: "LWSN 3102A/B"
 category: seminar
 ---
