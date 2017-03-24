@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-Mahsa Najafzadeh will give a seminar about her work on the analysis and co-design of weakly-consistent applications next Tuesday, September 20th, at 2PM in HAAS 101.
+[Zach Tatlock](https://homes.cs.washington.edu/~ztatlock/), professor at University of Washington and Purdue alumni, will be giving a PurPL seminar on April 12th!

@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-Mahsa Najafzadeh will give a seminar about her work on the analysis and co-design of weakly-consistent applications next Tuesday, September 20th, at 2PM in HAAS 101.
+Ben paper with collaborators at MIT and CMU on proof assistants as the ultimate DSL implementation engine accepted to [SNAPL 2017](http://snapl.org/2017/index.html).
