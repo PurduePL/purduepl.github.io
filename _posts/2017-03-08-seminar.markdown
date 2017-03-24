@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "News"
-category: news
+speaker: "Krish"
+title:  "Locality Transformations for Nested Recursive Iteration Spaces"
+location: "MSEE 239"
+category: seminar
 ---
-
-Mahsa Najafzadeh will give a seminar about her work on the analysis and co-design of weakly-consistent applications next Tuesday, September 20th, at 2PM in HAAS 101.
