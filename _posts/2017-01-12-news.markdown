@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "News"
+category: news
+---
+
+Tiark's papers on Type Soundness Proofs with Definitional Interpreters and LMS-Verify are both accepted to [POPL 2017](http://conf.researchr.org/home/POPL-2017).
