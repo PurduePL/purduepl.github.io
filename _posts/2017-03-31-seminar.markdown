@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "James and Greg"
+title:  "TBA"
+location: "LWSN 3102"
+category: seminar
+---
