@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PurPL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+<link href="/css/purpl.css" rel="stylesheet">
+
+<script>
+    function show_more(evt) {
+    lis = document.querySelectorAll("#news_items li");
+    for (var i = 0; i < lis.length; i++) {lis[i].style.display = "block"}
+    document.getElementById("more").style.display = "none";
+    evt.preventDefault();
+    return false;
+    }
+
+    function show_less() {
+    lis = document.querySelectorAll("#news_items li");
+    for (var i = 5; i < lis.length; i++) {lis[i].style.display = "none"}
+    document.getElementById("more").style.display = "block";
+    }
+
+    function onload() {
+    show_less();
+    var more = document.querySelector("#more a");
+    more.addEventListener("click", show_more);
+    }
+
+    window.addEventListener("DOMContentLoaded", onload);
+  </script>
+
+</head>
+
+<body>
+  <div class="page">
+    <div class="purpl-header" id="header">
+    <div class = "logo-container">
+      <a href="/index.html">
+        <img src="assets/banner.png" alt="logo">
+      </a>
+      </div>
+      <div class="logo-title">
+	<a href="/index.html">
+	<p class="acro">
+	  <span class="acronym">Pur</span>due University
+	  <span class="acronym">P</span>rogramming
+	<span class="acronym">L</span>anguages Group</p>
+	</a>
+      </div>
+    </div>
+      <div class="purpl-nav">
+	<a class="button" href="/index.html#news">News</a>
+	<a class="button" href="/index.html#people">People</a>
+	<a class="button" href="/research.html">Research</a>
+	<a class="button" href="/courses.html">Courses</a>
+	<a class="button" href="/seminars.html">Seminars</a>
+    </div>
+
+
+<div class="content">
+    <div class="container">
+  <h1 style="margin-left:-50pt">Visit Day 2017</h1>
+  <br />
+  <br />
+  <table >
+    <tr>
+      <th> Time </th>
+      <th> Event </th>
+    </tr>
+    <tr>
+      <td> 8:45-9:45 </td>
+      <td> Breakfast at Greyhouse </td>
+    </tr>
+    <tr>
+      <td> 10:00-11:30 </td>
+      <td> One-on-one meetings with professors
+	<br />
+	(Record your preferences  <a
+	href="https://docs.google.com/forms/d/e/1FAIpQLSdcYf1i4FD4r6KZxlipxFhQtFYuQGuYPxt25gCBWiwIqeJsZQ/viewform?usp=sf_link">here</a>)
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-right:20px"> 11:30-12:00 </td>
+      <td> Presentation from graduate coordinator </td>
+    </tr>
+    <tr>
+      <td> 12:00-1:15 </td>
+      <td> PurPL Lunch Seminar</td>
+    </tr>
+    <tr>
+      <td> 1:15-2:15 </td>
+      <td> Campus and Lawson tour with current students, additional one-on-one meetings with professors </td>
+    </tr>
+    <tr>
+      <td> 2:15-3:00 </td>
+      <td> Roundtable with current graduate students </td>
+    </tr>
+    <tr>
+      <td> 3:00-4:00 </td>
+      <td> CS Department Social Hour</td>
+    </tr>
+    <tr>
+      <td> 4:00-5:00 </td>
+      <td> Hang out in graduate labs, and additional one-on-one meetings widh professors as necessary</tr>
+    </tr>
+    <tr>
+      <td> 5:00-XXX </td>
+      <td> Supper with professors and current graduate students</td>
+    </tr>
+  </table>
+</div>
+<script src="/js/purpl.js"></script>
+
+</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
+

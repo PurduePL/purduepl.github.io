@@ -575,27 +575,24 @@ div#courses-table table td {
   padding: 8px;
 }
 
-
-
-/*
-table.table {
+table {
   font-size:15px;
-  border-width: 1px;
-  border-color: #999999;
+  border-width: 2px;
+  border-color: #7a259a;
   border-collapse: collapse;
 }
-table.table th {
+table th {
   background-color:#ccc4c0;
-  border-width: 1px;
+  border-width: 2px;
   padding: 8px;
   border-style: solid;
   border-color: #9b9b9b;
 }
-table.table tr {
-  background-color:#ececec;
+table tr {
+
 }
-table.table td {
-  border-width: 1px;
+table td {
+  border-width: 2px;
   padding: 8px;
   border-style: solid;
   border-color: #9b9b9b;
