@@ -95,10 +95,11 @@ ul.photo-list img {
 
 ul.photo-list li {
     width: 120px;
-    height: 120px;
+    height: 160px;
     padding: 0px;
     float: left;
     list-style: none;
+    margin: 1pt;
 }
 
 ul.photo-list a .photo-caption {
@@ -114,6 +115,46 @@ ul.photo-list a .photo-caption {
     position: absolute;
     z-index: 100;
     line-height: 1.0;
+    height: 40px;
+    vertical-align: middle;
+}
+
+ul.name-list {
+    padding-top: 15px;
+    width: 368px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+ul.name-list img {
+    width: 120px;
+    height: 120px;
+}
+
+ul.name-list li {
+    width: 120px;
+    height: 40px;
+    padding: 0px;
+    float: left;
+    list-style: none;
+    margin: 1pt;
+}
+
+ul.name-list a .photo-caption {
+    background-color: rgba(30, 0, 45, .65);
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    font-size: 75%;
+    padding: .25em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 100;
+    line-height: 1.0;
+    height: 40px;
+    vertical-align: middle;
 }
 
 h2 {
@@ -424,6 +465,7 @@ div.wrapper h1 {
 div#news_items {
     max-height: 450px;
     overflow-y: auto;
+    padding-top: 20px;
 }
 
 div.facultycard img {

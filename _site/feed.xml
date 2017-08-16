@@ -3,118 +3,100 @@
 	<channel>
 		<title>PurPL</title>
 		<description>The Purdue PL Research Group</description>
-		<link>http://cs.purdue.edu</link>
-		<atom:link href="http://cs.purdue.edu/feed.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Nikhil Hegde</title>
+				<description>&lt;p&gt;&lt;a href=&quot;https://hegden.gitbub.io&quot;&gt;
+&lt;img src=&quot;assets/nikhil.jpg&quot; alt=&quot;Nikhil&quot; /&gt;
+&lt;span class=&quot;student-name&quot;&gt;Nikhil&lt;/span&gt;
+&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Mon, 01 May 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/05/Nikhil</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/05/Nikhil</guid>
+			</item>
 		
 			<item>
 				<title>TBA</title>
 				<description>
 </description>
-				<pubDate>Wed, 08 Feb 2017 00:00:00 -0500</pubDate>
-				<link>http://cs.purdue.edu/2017/02/seminar</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2017/02/seminar</guid>
+				<pubDate>Wed, 19 Apr 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/04/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/seminar</guid>
 			</item>
 		
 			<item>
-				<title>POPL 2017</title>
+				<title>TBA</title>
 				<description>
 </description>
-				<pubDate>Wed, 01 Feb 2017 00:00:00 -0500</pubDate>
-				<link>http://cs.purdue.edu/2017/02/seminar</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2017/02/seminar</guid>
+				<pubDate>Wed, 12 Apr 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/04/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/seminar</guid>
 			</item>
 		
 			<item>
-				<title>Spring Semester Kickoff</title>
+				<title>News</title>
+				<description>&lt;p&gt;&lt;a href=&quot;https://homes.cs.washington.edu/~ztatlock/&quot;&gt;Zach Tatlock&lt;/a&gt;, professor at University of Washington and Purdue alumni, will be giving a PurPL seminar on April 12th!&lt;/p&gt;
+</description>
+				<pubDate>Wed, 12 Apr 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/04/news</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/news</guid>
+			</item>
+		
+			<item>
+				<title>Dependent Types for Scala</title>
 				<description>
 </description>
-				<pubDate>Wed, 25 Jan 2017 00:00:00 -0500</pubDate>
-				<link>http://cs.purdue.edu/2017/01/seminar</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2017/01/seminar</guid>
+				<pubDate>Wed, 05 Apr 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/04/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/04/seminar</guid>
 			</item>
 		
 			<item>
-				<title>Ruby Tahboub</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://www.cs.purdue.edu/homes/rtahboub/&quot;&gt;
-&lt;img src=&quot;assets/ruby.png&quot; alt=&quot;Ruby Tahboub&quot; /&gt;
-  &lt;span class=&quot;student-name&quot;&gt;Ruby Tahboub&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
+				<title>TBA</title>
+				<description>
 </description>
-				<pubDate>Mon, 17 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/RubyTahboub</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/RubyTahboub</guid>
+				<pubDate>Fri, 31 Mar 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/03/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/03/seminar</guid>
 			</item>
 		
 			<item>
-				<title>Terry Hsu</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://www.cs.purdue.edu/homes/hsu62/&quot;&gt;
-  &lt;img src=&quot;assets/terryhsu.jpg&quot; alt=&quot;Terry Hsu&quot; /&gt;
-  &lt;span class=&quot;student-name&quot;&gt;Terry Hsu&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
+				<title>News</title>
+				<description>&lt;p&gt;Ben’s paper with collaborators at MIT and CMU on proof assistants as the ultimate DSL implementation engine accepted to &lt;a href=&quot;http://snapl.org/2017/index.html&quot;&gt;SNAPL 2017&lt;/a&gt;.&lt;/p&gt;
 </description>
-				<pubDate>Thu, 13 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/terryhsu</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/terryhsu</guid>
+				<pubDate>Thu, 23 Mar 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/03/news</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/03/news</guid>
 			</item>
 		
 			<item>
-				<title>Scott A Carr</title>
-				<description>&lt;p&gt;&lt;a href=&quot;http://scottandrewcarr.com/&quot;&gt;
-&lt;img src=&quot;assets/ScottCarr.jpg&quot; alt=&quot;Scott A Carr&quot; /&gt;
-  &lt;span class=&quot;student-name&quot;&gt;Scott A Carr&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
+				<title>Locality Transformations for Nested Recursive Iteration Spaces</title>
+				<description>
 </description>
-				<pubDate>Wed, 12 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/scottcarr</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/scottcarr</guid>
+				<pubDate>Wed, 08 Mar 2017 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/2017/03/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/03/seminar</guid>
 			</item>
 		
 			<item>
-				<title>Gregory Essertel</title>
-				<description>&lt;p&gt;&lt;a href=&quot;http://jmd1011.github.io/&quot;&gt;
-&lt;img src=&quot;assets/gregory_essertel.jpg&quot; alt=&quot;Gregory Essertel&quot; /&gt;
-  &lt;span class=&quot;student-name&quot;&gt;Gregory Essertel&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
+				<title>News</title>
+				<description>&lt;p&gt;Tiark receives a &lt;a href=&quot;https://research.google.com/research-outreach.html#/research-outreach/faculty-engagement/faculty-research-awards&quot;&gt;Google Faculty Research Award&lt;/a&gt;.&lt;/p&gt;
 </description>
-				<pubDate>Wed, 12 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/gregoryessertel</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/gregoryessertel</guid>
+				<pubDate>Wed, 08 Mar 2017 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/2017/03/news</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/03/news</guid>
 			</item>
 		
 			<item>
-				<title>Xuankang Lin</title>
-				<description>&lt;p&gt;&lt;a href=&quot;http://xuankanglin.com/About-Me/&quot;&gt;
-&lt;img src=&quot;assets/xuankang.jpg&quot; alt=&quot;Xuankang Lin&quot; /&gt;
-  &lt;span class=&quot;student-name&quot;&gt;Xuankang Lin&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
+				<title>TBA</title>
+				<description>
 </description>
-				<pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/xuankanglin</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/xuankanglin</guid>
-			</item>
-		
-			<item>
-				<title>Kartik Nagar</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://scholar.google.com/citations?user=KiT5oNUAAAAJ&amp;amp;hl=en&quot;&gt;
-&lt;img src=&quot;assets/kartiknagar.jpg&quot; alt=&quot;Kartik Nagar&quot; /&gt;
-  &lt;span class=&quot;student-name&quot;&gt;Kartik Nagar&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-				<pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/kartiknagar</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/kartiknagar</guid>
-			</item>
-		
-			<item>
-				<title>Gowtham Kaki</title>
-				<description>&lt;p&gt;&lt;a href=&quot;http://gowthamk.github.io/&quot;&gt;
-  &lt;img src=&quot;assets/gowtham.jpg&quot; alt=&quot;Gowtham Kaki&quot; /&gt;
-  &lt;span class=&quot;student-name&quot;&gt;Gowtham Kaki&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-				<pubDate>Mon, 10 Oct 2016 00:00:00 -0400</pubDate>
-				<link>http://cs.purdue.edu/2016/10/gowthamkaki</link>
-				<guid isPermaLink="true">http://cs.purdue.edu/2016/10/gowthamkaki</guid>
+				<pubDate>Wed, 01 Mar 2017 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/2017/03/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/03/seminar</guid>
 			</item>
 		
 	</channel>

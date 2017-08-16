@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Zhiyuan Li"
+firstname: "Zhiyuan"
+lastname: "Li"
 category: facultycard
 date: 2016-08-09 20:00:00
 img: assets/zhiyuanli.jpg
