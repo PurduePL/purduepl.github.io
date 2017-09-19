@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Cyrus Omar"
+title:  "Toward Semantic Foundations for Live Programming Environments"
+location: "LWSN 3102A/B"
+category: seminar
+---
