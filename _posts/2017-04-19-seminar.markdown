@@ -1,7 +1,7 @@
 ---
 layout: post
 speaker: "Suyash"
-title:  "TBA"
-location: "TBA"
+title:  "Optimizing Recursive Task Parallel Programs"
+location: "LWSN 3102A/B"
 category: seminar
 ---
