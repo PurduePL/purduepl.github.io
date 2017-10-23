@@ -1,7 +1,7 @@
 ---
 layout: post
-speaker: "Open"
-title:  "Open"
+speaker: "Dan Zheng"
+title:  "DLVM: A Compiler Framework for Deep Learning DSLs"
 location: "WANG 1004"
 category: seminar
 ---

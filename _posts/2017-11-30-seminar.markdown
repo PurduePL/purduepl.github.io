@@ -1,7 +1,7 @@
 ---
 layout: post
-speaker: "Open"
-title:  "Open"
+speaker: "Thomas Wahl"
+title:  "TBA"
 location: "LWSN 3102A/B"
 category: seminar
 ---
