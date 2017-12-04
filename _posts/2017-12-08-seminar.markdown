@@ -1,7 +1,7 @@
 ---
 layout: post
-speaker: "Open"
-title:  "Open"
+speaker: "Shengwei An"
+title:  "Robust Example-based Synthesis"
 location: "WANG 1004"
 category: seminar
 ---
