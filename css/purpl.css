@@ -158,19 +158,23 @@ ul.name-list a .photo-caption {
 }
 
 h2 {
+    text-align: left;
   color: #333;
-  font-weight: 900;
-  font-size: 6em;
-  letter-spacing: 1px;
-  line-height: 1em;
-}
-h3 {
-  font-size: 2.25em;
   font-weight: 200;
+  font-size: 1.5em;
   letter-spacing: 1px;
   line-height: 1em;
-  padding: 0.5em 0 0.25em 0;
 }
+
+h3 {
+    text-align: left;
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin-top: 5pt;
+}
+
 a {
   color: #7a259a;
   text-decoration: none;
@@ -186,18 +190,36 @@ section.intro-content div.about p a {
   color: #fff;
   font-size: 1.2em;
 }
+
 p, li {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5em;
   padding: 0.5em 0;
 }
+
+div#research-container p {
+    font-size: .75em;
+    text-align: justify;
+    padding-left: 1.25em;
+    padding-right: .75em;
+    margin-bottom: 0;
+}
+
+div#research-container li {
+    font-size: .75em;
+    text-align: left;
+    padding: 0.1em 0;
+    margin-left: 1.25em;
+}
+
 h4 {
   color: #71315a;
  }
 section.intro-content {
   margin-top: -4.5%;
 }
+
 div#about p{
     font-size: 16px;
     font-family: "tablet-gothic", verdana, arial, sans-serif;
@@ -639,3 +661,7 @@ table td {
   border-style: solid;
   border-color: #9b9b9b;
 }*/
+
+.timeline-Tweet-media {
+    display : none
+}

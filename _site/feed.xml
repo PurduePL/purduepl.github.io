@@ -7,96 +7,93 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Nikhil Hegde</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://hegden.gitbub.io&quot;&gt;
-&lt;img src=&quot;assets/nikhil.jpg&quot; alt=&quot;Nikhil&quot; /&gt;
-&lt;span class=&quot;student-name&quot;&gt;Nikhil&lt;/span&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-				<pubDate>Mon, 01 May 2017 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/2017/05/Nikhil</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/05/Nikhil</guid>
-			</item>
-		
-			<item>
 				<title>TBA</title>
 				<description>
 </description>
-				<pubDate>Wed, 19 Apr 2017 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/2017/04/seminar</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/04/seminar</guid>
+				<pubDate>Thu, 30 Nov 2017 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/2017/11/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/11/seminar</guid>
 			</item>
 		
 			<item>
-				<title>TBA</title>
+				<title>DLVM: A Compiler Framework for Deep Learning DSLs</title>
 				<description>
 </description>
-				<pubDate>Wed, 12 Apr 2017 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/2017/04/seminar</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/04/seminar</guid>
+				<pubDate>Fri, 10 Nov 2017 00:00:00 -0500</pubDate>
+				<link>http://localhost:4000/2017/11/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/11/seminar</guid>
 			</item>
 		
 			<item>
-				<title>News</title>
-				<description>&lt;p&gt;&lt;a href=&quot;https://homes.cs.washington.edu/~ztatlock/&quot;&gt;Zach Tatlock&lt;/a&gt;, professor at University of Washington and Purdue alumni, will be giving a PurPL seminar on April 12th!&lt;/p&gt;
-</description>
-				<pubDate>Wed, 12 Apr 2017 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/2017/04/news</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/04/news</guid>
-			</item>
-		
-			<item>
-				<title>Dependent Types for Scala</title>
+				<title>Verifiable C, a logic and tool for deductive verification of the correctness of C programs</title>
 				<description>
 </description>
-				<pubDate>Wed, 05 Apr 2017 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/2017/04/seminar</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/04/seminar</guid>
+				<pubDate>Wed, 01 Nov 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/11/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/11/seminar</guid>
 			</item>
 		
 			<item>
-				<title>TBA</title>
+				<title>Ongoing Work Roundtable</title>
 				<description>
 </description>
-				<pubDate>Fri, 31 Mar 2017 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/2017/03/seminar</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/03/seminar</guid>
+				<pubDate>Fri, 27 Oct 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/10/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/10/seminar</guid>
 			</item>
 		
 			<item>
-				<title>News</title>
-				<description>&lt;p&gt;Ben’s paper with collaborators at MIT and CMU on proof assistants as the ultimate DSL implementation engine accepted to &lt;a href=&quot;http://snapl.org/2017/index.html&quot;&gt;SNAPL 2017&lt;/a&gt;.&lt;/p&gt;
-</description>
-				<pubDate>Thu, 23 Mar 2017 00:00:00 -0400</pubDate>
-				<link>http://localhost:4000/2017/03/news</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/03/news</guid>
-			</item>
-		
-			<item>
-				<title>Locality Transformations for Nested Recursive Iteration Spaces</title>
+				<title>Flare: A Brief Look into Optimizing UDFs in Spark</title>
 				<description>
 </description>
-				<pubDate>Wed, 08 Mar 2017 00:00:00 -0500</pubDate>
-				<link>http://localhost:4000/2017/03/seminar</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/03/seminar</guid>
+				<pubDate>Fri, 20 Oct 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/10/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/10/seminar</guid>
 			</item>
 		
 			<item>
-				<title>News</title>
-				<description>&lt;p&gt;Tiark receives a &lt;a href=&quot;https://research.google.com/research-outreach.html#/research-outreach/faculty-engagement/faculty-research-awards&quot;&gt;Google Faculty Research Award&lt;/a&gt;.&lt;/p&gt;
-</description>
-				<pubDate>Wed, 08 Mar 2017 00:00:00 -0500</pubDate>
-				<link>http://localhost:4000/2017/03/news</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/03/news</guid>
-			</item>
-		
-			<item>
-				<title>TBA</title>
+				<title>DRYADSYNTH : A Concolic SyGuS Solver</title>
 				<description>
 </description>
-				<pubDate>Wed, 01 Mar 2017 00:00:00 -0500</pubDate>
-				<link>http://localhost:4000/2017/03/seminar</link>
-				<guid isPermaLink="true">http://localhost:4000/2017/03/seminar</guid>
+				<pubDate>Fri, 13 Oct 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/10/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/10/seminar</guid>
+			</item>
+		
+			<item>
+				<title>Tree Fuser: A Framework for Analyzing and Fusing General Recursive Tree Traversals</title>
+				<description>
+</description>
+				<pubDate>Fri, 06 Oct 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/10/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/10/seminar</guid>
+			</item>
+		
+			<item>
+				<title>Toward Semantic Foundations for Live Programming Environments</title>
+				<description>
+</description>
+				<pubDate>Fri, 29 Sep 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/09/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/09/seminar</guid>
+			</item>
+		
+			<item>
+				<title>A Decidable Logic for Tree Data-Structures with Measurements</title>
+				<description>
+</description>
+				<pubDate>Fri, 22 Sep 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/09/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/09/seminar</guid>
+			</item>
+		
+			<item>
+				<title>The Case for Quantum Computing: Basics Techniques and Applications</title>
+				<description>
+</description>
+				<pubDate>Fri, 15 Sep 2017 00:00:00 -0400</pubDate>
+				<link>http://localhost:4000/2017/09/seminar</link>
+				<guid isPermaLink="true">http://localhost:4000/2017/09/seminar</guid>
 			</item>
 		
 	</channel>

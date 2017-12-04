@@ -1,6 +1,200 @@
 ---
 layout: default
 ---
-<div class="container" id="joinus-container" role="main">
-  <h1 style="margin-left:-50pt">Coming Soon!</h1>
+<div class="container" id="research-container" role="main">
+
+  <h1>Research Highlights</h1>
+
+  <h2>Programming Eventually Consistent Data Stores</h2>
+
+<p>Geo-distributed web applications often favor high availability over
+  strong consistency. In response to this bias, modern-day replicated
+  data stores often eschew sequential consistency in favor of weaker
+  eventual consistency (EC) data semantics. While most operations
+  supported by a typical web application can be engineered, with
+  sufficient care, to function under EC, there are oftentimes critical
+  operations that require stronger consistency
+  guarantees. Unfortunately, existing approaches to tunable
+  consistency suffers from poorly-defined implementation-specific
+  semantics, often expressed at a level of abstraction far removed
+  from the application. The Quelea project addresses these concerns by
+  defining a declarative programming model for EC data stores that
+  abstracts the actual implementation of the data store via high-level
+  programming and system-level models that are agnostic to a specific
+  implementation. By using Quelea, programmers can reason in terms of
+  an abstract model of the data store, and develop applications by
+  defining and composing high-level replicated data types. Any EC
+  key-value store can support Quelea by implementing a thin shim layer
+  and a choosen set of high-level consistency guarantees on top of its
+  existing low-level interface. </p>
+
+  <h3>Representative publications:</h3>
+  <ul>
+    <li><a
+    href="http://www.cs.purdue.edu/homes/suresh/papers/ieeetde16.pdf">
+    Representation Without Taxation: A Uniform, Low-Overhead
+    High-Level Interface to Eventually Consistent Key-Value Stores
+    </a>
+    </li>
+    <li><a href="(http://www.cs.purdue.edu/homes/suresh/papers/pldi15.pdf">
+    Declarative Programming Over Eventually Consistent Data Stores
+    </a></li>
+  </ul>
+
+  <h2>Automatically optimizing irregular applications</h2>
+
+  <p>This project focuses on developing frameworks to automatically
+  analyze, transform and tune irregular applications, which operate
+  over pointer-based data structures, to improve their locality,
+  parallelism and performance. While irregular applications seemingly
+  have little commonality, this project is premised on the insight
+  that at higher levels of abstractions, there are common behaviors in
+  irregular applications that can be exploited to develop automatic
+  transformations to enhance performance.</p>
+
+    <h3>Representative publications:</h3>
+  <ul>
+    <li>
+    <a
+    href="https://engineering.purdue.edu/~milind/publications.php#oopsla2017">Locality
+    Transformations for Nested Recursive Iteration Spaces
+    </a>
+
+    </li>
+    <li><a href="https://engineering.purdue.edu/~milind/publications.php#asplos2017">TreeFusor:
+    A Framework for Analyzing and Fusing General
+    Recursive Tree Traversals
+    </a>
+    </li>
+  </ul>
+
+  <h2>Quantitative Program Repair for Education</h2>
+  <p>Can we build effective tools for personalized feedback and
+  evaluation of assignments based on inferring "optimal" repairs for
+  student solutions? Can we learn appropriate objective functions,
+  program distances and error models to use for repair from existing
+  databases of assignments? In this project, we are investigating the
+  use of quantitative program repair, along with machine learning, for
+  automated feedback and grading. </p>
+
+  <h3>Representative publications:</h3>
+  <ul>
+    <li>
+    <a
+  href="https://www.cs.purdue.edu/homes/roopsha/papers/costrepair.pdf">Cost-Aware
+    Automatic Program Repair
+    </a>
+
+    </li>
+    <li><a
+    href="https://www.cs.purdue.edu/homes/roopsha/papers/qlose.pdf">Qlose:
+    Program Repair with Quantitative Objectives
+    </a>
+
+    </li>
+  </ul>
+
+  <h2>Lightweight Modular Staging</h2>
+  <p>Recent years have seen a surge of interest in staging and
+  generative programming, driven by the increasing difficulty of
+  making high-level code run fast on modern hardware. While the
+  mechanics of program generation are relatively well understood, we
+  have only begun to understand how to develop systems in a generative
+  way. The Lightweight Modular Staging (LMS) platform forms the core
+  of a research agenda to make generative programming more widely
+  accessible, through powerful libraries and a growing selection of
+  case studies that illuminate design patterns and crystallize best
+  practices for high-level and effective generative programming. As an
+  example, LMS has been applied to speed up data processing and query
+  engines. The most recent work in this direction is Flare, an
+  accelerator back-end for Apache Spark that achieves order of
+  magnitude speedups by compiling SQL and data frame queries to native
+  code. </p>
+
+  <h3>Representative publications:</h3>
+  <ul>
+    <li>
+    <a
+    href="https://www.cs.purdue.edu/homes/rompf/papers/amin-popl18.pdf">
+    Collapsing Towers of Interpreters
+    </a>
+    </li>
+    <li><a
+  href="(http://drops.dagstuhl.de/opus/volltexte/2015/5029/pdf/19.pdf">Go
+    Meta! A Case for Generative Programming and DSLs in  Performance Critical Systems
+    </a>
+    </li>
+  </ul>
+
+  <h2>Deductive Synthesis of Correct-by-Construction Programs</h2>
+
+  <p>The goal of program synthesis is to automatically produce the
+  implementation of a program from a high-level specification its
+  behavior. Fiat is a synthesis framework for the Coq proof assistant
+  that combines foundational ideas from programming language and
+  formal methods to build an automated refinement system from first
+  principles capable produces correct-by-construction sofware with a
+  minimal trusted code base. Starting from high-level specifications
+  in Coq’s rich logic, Fiat helps users interactively construct an
+  executable implementation. Every step in the process is justified by
+  a machine-checked refinement proof which, when composed together,
+  certifies that the derived implementation meets the original
+  specification. The framework provides libraries of domain-specific
+  specification languages and reusable refinement tactics for guiding
+  the search for an implementation, leveraging Coq’s powerful Ltac
+  metaprogramming language to achieve a high degree of
+  automation. Each refinement step is certified by Coq, allowing users
+  to freely incorporate their own implementation strategies into a
+  derivation without compromising the guarantees of its
+  correctness.</p>
+
+    <h3>Representative publications:</h3>
+  <ul>
+    <li>
+    <a
+    href="https://www.cs.purdue.edu/homes/bendy/Fiat/fiat-snapl.pdf">The
+    End of History? Using a Proof Assistant to Replace Language
+    Design with Library Design
+    </a>
+    </li>
+    <li>
+    <a href="https://www.cs.purdue.edu/homes/bendy/Fiat/FiatByteString.pdf">Using
+    Coq to Write Fast and Correct Haskell
+    </a>
+    </li>
+  </ul>
+
+  <h2>Program verification via Natural Proofs</h2>
+
+  <p>Reliability is critical for system software, such as OS kernels
+  and mobile browsers, as well as applications such as office software
+  and mail clients. The correctness of these programs, especially for
+  security, is highly desirable, as they should provide a trustworthy
+  platform for higher-level applications and the
+  end-users. Unfortunately, due to its inherent complexity, the
+  verification process of these programs is typically
+  manual/semi-automatic, tedious, and painful. Natural proofs help to
+  automate the reasoning behind these verification tasks and decrease
+  the dependence on manual help.  As a sound but incomplete
+  verification technique, the essence of natural proofs is to identify
+  and automate a fixed set of simple but useful proof tactics, and
+  algorithmically search for a proof that only uses these tactics. Due
+  to the simplicity and usefulness of these tactics, the search
+  process is decidable, very efficient and tends to be successful.</p>
+
+  <h3>Representative publications:</h3>
+  <ul>
+    <li>
+    <a href="(https://doi.org/10.1145/2491956.2462169">Natural proofs
+    for structure, data, and
+    separation.
+    </a>
+    </li>
+    <li><a href="(https://dl.acm.org/authorize?N40673">Natural
+    synthesis of provably-correct data-structure
+    manipulations.
+    </a>
+    </li>
+  </ul>
+
 </div>
