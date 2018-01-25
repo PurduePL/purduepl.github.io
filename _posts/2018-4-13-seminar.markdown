@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Open"
+title:  "Open"
+location: "TBD"
+category: seminar
+---
