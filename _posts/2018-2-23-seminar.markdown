@@ -1,7 +1,7 @@
 ---
 layout: post
-speaker: "Open"
-title:  "Open"
+speaker: "Cancelled"
+title:  "Cancelled"
 location: "LWSN 3102A/B"
 category: seminar
 ---
