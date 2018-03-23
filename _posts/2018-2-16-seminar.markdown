@@ -1,7 +1,7 @@
 ---
 layout: post
-speaker: "Open"
-title:  "Open"
+speaker: "Kenneth Adam Miller"
+title:  "Probabilistically Convergent Minimal Superset Disassembly"
 location: "WANG 1004"
 category: seminar
 ---
