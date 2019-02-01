@@ -37,11 +37,11 @@ layout: index
     <h1>Faculty</h1>
     <ul class="photo-list">
       {% assign i = 0 %}
-      {% for post in site.categories.facultycard %}
+      {% for professor in site.professors reversed %}
       <li>
-      <a href="{{ post.href }}">
-      <img src="{{ post.img }}" alt="{{ post.title }}" />
-      <span class="photo-caption">{{ post.firstname }}<br /> {{ post.lastname}}</span>
+      <a href="{{ professor.href }}">
+      <img src="{{ professor.img }}" alt="{{ professor.title }}" />
+      <span class="photo-caption">{{ professor.firstname }}<br /> {{ professor.lastname}}</span>
       </a>
       </li>
       {% endfor %}
@@ -53,11 +53,11 @@ layout: index
     <h1 style="margin-top: 15px">Grad Students</h1>
     <ul class="name-list">
       {% assign i = 0 %}
-      {% for post in site.categories.studentstamp %}
+      {% for student in site.students %}
       <li>
-      <a href="{{ post.href }}">
-      <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
-      <span class="photo-caption">{{ post.title }}</span>
+      <a href="{{ student.href }}">
+      <!-- <img src="{{ post.img }}" alt="{{ student.title }}" /> -->
+      <span class="photo-caption">{{ student.title }}</span>
       </a>
       </li>
       {% endfor %}
