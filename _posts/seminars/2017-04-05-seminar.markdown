@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Fei"
-title:  "Dependent Types for Scala"
-location: "LWSN 3102"
-category: seminar
----

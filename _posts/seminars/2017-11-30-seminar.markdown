@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Thomas Wahl"
-title:  "Stabilizing Numeric Programs against Platform Uncertainties"
-location: "LWSN 3102A/B"
-category: seminar
----

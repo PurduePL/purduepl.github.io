@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "James and Greg"
-title:  "Flare: Optimizing UDFs in Spark"
-location: "LWSN 3102A/B"
-category: seminar
----

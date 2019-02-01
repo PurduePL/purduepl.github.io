@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Krish"
-title:  "Locality Transformations for Nested Recursive Iteration Spaces"
-location: "MSEE 239"
-category: seminar
----

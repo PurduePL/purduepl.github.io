@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Nikhil Hegde"
-title:  "SPIRIT: A Framework for Creating  Distributed Recursive Tree Applications"
-location: "EE 317"
-category: seminar
----

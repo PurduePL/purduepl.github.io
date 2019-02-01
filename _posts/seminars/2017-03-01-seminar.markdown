@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Leo Osvald"
-title:  "Gentrification Gone too Far? Affordable 2nd-Class Values for Fun and (Co-)Effect"
-location: "LWSN 3102A/B"
-category: seminar
----

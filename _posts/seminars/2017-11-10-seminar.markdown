@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Dan Zheng"
-title:  "DLVM: A Compiler Framework for Deep Learning DSLs"
-location: "WANG 1004"
-category: seminar
----

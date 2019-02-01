@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Gowtham Kaki"
-title:  "Mergeable Types"
-location: "LWSN 3102A/B"
-category: seminar
----

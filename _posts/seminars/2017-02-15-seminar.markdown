@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Kia Rahmani"
-title:  "Synthesis of Runtime Systems for Weak Consistency Enforcement"
-location: "LWSN 3102A/B"
-category: seminar
----

@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Ben Delaware"
-title:  "Spring 2018 Kickoff"
-location: "LWSN 3102A/B"
-category: seminar
----

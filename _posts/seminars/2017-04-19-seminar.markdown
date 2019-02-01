@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Suyash"
-title:  "Optimizing Recursive Task Parallel Programs"
-location: "LWSN 3102A/B"
-category: seminar
----

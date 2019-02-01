@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Laith Sakka"
-title:  "Tree Fuser: A Framework for Analyzing and Fusing General Recursive Tree Traversals"
-location: "LWSN 3102A/B"
-category: seminar
----

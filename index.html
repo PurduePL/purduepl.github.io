@@ -41,7 +41,8 @@ layout: index
       <li>
       <a href="{{ professor.href }}">
       <img src="{{ professor.img }}" alt="{{ professor.title }}" />
-      <span class="photo-caption">{{ professor.firstname }}<br /> {{ professor.lastname}}</span>
+      <span class="photo-caption">{{ professor.firstname }}<br /> {{ professor.lastname}}
+      </span>
       </a>
       </li>
       {% endfor %}
@@ -56,7 +57,7 @@ layout: index
       {% for student in site.students %}
       <li>
       <a href="{{ student.href }}">
-      <!-- <img src="{{ post.img }}" alt="{{ student.title }}" /> -->
+      <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
       <span class="photo-caption">{{ student.title }}</span>
       </a>
       </li>

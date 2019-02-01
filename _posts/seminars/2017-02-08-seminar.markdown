@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Scott Carr"
-title:  "Optimizations in the Rust Compiler"
-location: "EE 317"
-category: seminar
----

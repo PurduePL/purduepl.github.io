@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Kenneth Adam Miller"
-title:  "The Case for Quantum Computing: Basics Techniques and Applications"
-location: "LWSN 3102A/B"
-category: seminar
----

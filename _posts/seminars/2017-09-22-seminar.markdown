@@ -1,7 +1,0 @@
----
-layout: post
-speaker: "Yanjun Wang"
-title:  "A Decidable Logic for Tree Data-Structures with Measurements"
-location: "WANG 1004"
-category: seminar
----
