@@ -2,7 +2,7 @@
 layout: post
 title:  "Gregory Essertel"
 category: studentstamp
-href: http://jmd1011.github.io/
+#href: http://jmd1011.github.io/
 img: assets/gregory_essertel.jpg
 ---
 <a href="http://jmd1011.github.io/">

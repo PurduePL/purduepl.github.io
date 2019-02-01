@@ -2,7 +2,7 @@
 layout: post
 title:  "Nouraldin Jaber"
 category: studentstamp
-img: assets/JamesDecker.jpg
+#img: assets/JamesDecker.jpg
 href: http://jmd1011.github.io/
 ---
 <a href="http://jmd1011.github.io/">

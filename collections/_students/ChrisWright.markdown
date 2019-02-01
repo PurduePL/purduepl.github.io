@@ -3,7 +3,7 @@ layout: post
 title:  "Chris Wright"
 category: studentstamp
 img: assets/JamesDecker.jpg
-href: http://jmd1011.github.io/
+#href: http://jmd1011.github.io/
 ---
 <a href="http://jmd1011.github.io/">
   <img src="assets/JamesDecker.jpg" alt="James Decker">
