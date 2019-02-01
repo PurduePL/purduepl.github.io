@@ -3,7 +3,7 @@ layout: post
 title:  "Kia Rahmani"
 category: studentstamp
 img: assets/kia.jpg
-href: https://github.com/kiarahmani
+href: https://kiarahmani.github.io/
 ---
 <a href="https://github.com/kiarahmani">
 <img src="assets/kia.jpg" alt="Kia Rahmani">

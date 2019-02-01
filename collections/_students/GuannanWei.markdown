@@ -3,7 +3,7 @@ layout: post
 title:  "Guannan Wei"
 category: studentstamp
 img: assets/JamesDecker.jpg
-#href: http://jmd1011.github.io/
+href: http://continuation.passing.style
 ---
 <a href="http://jmd1011.github.io/">
   <img src="assets/JamesDecker.jpg" alt="James Decker">
