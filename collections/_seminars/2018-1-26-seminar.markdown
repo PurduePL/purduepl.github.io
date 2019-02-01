@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Guannan Wei"
+title:  "Precise Reasoning with Structured Heaps and Collective Operations à la Map/Reduce"
+location: "LWSN 3102A/B"
+category: seminar
+---

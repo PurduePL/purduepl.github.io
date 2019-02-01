@@ -38,4 +38,6 @@ exclude: ['README.md', 'LICENSE', 'purplblog']
 collections:
   - students
   - professors
+  - courses
+  - seminars
 collections_dir: collections

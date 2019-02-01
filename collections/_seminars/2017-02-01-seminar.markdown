@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Tiark, Ben, Roopsha"
+title:  "POPL 2017"
+location: "LWSN 3102A/B"
+category: seminar
+---

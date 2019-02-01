@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Ben"
+title:  "Spring Semester Kickoff"
+location: "HAAS 111"
+category: seminar
+---

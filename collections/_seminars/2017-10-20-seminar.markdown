@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "James Decker"
+title:  "Flare: A Brief Look into Optimizing UDFs in Spark"
+location: "LWSN 3102A/B"
+category: seminar
+---

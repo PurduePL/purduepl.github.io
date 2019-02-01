@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Everybody"
+title:  "Ongoing Work Roundtable"
+location: "WANG 1004"
+category: seminar
+---

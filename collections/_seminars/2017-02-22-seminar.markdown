@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Nathan H Burow"
+title:  "Context Flow Integrity"
+location: "LWSN 3102A/B"
+category: seminar
+---

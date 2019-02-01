@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Zach Tatlock"
+title:  "Automated Formal Verification for Border Gateway Protocol Configurations"
+location: "LWSN 3102"
+category: seminar
+---

@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Cancelled"
+title:  "Cancelled"
+location: "LWSN 3102A/B"
+category: seminar
+---

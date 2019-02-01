@@ -1,0 +1,7 @@
+---
+layout: post
+speaker: "Kanjing Huang"
+title:  "DRYADSYNTH : A Concolic SyGuS Solver"
+location: "WANG 1004"
+category: seminar
+---
