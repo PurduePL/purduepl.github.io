@@ -49,6 +49,12 @@ div.logo-container {
     float: left;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h2, h3 {
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   font-family: 'Helvetica Neue', sans-serif;
@@ -609,13 +615,33 @@ div.joinus ul {
   border-width: 1px;
 }
 
+#seminar-schedule-old {
+  width:100%;
+  margin:auto;
+  margin-top: 15pt;
+  font-size: 16px;
+  border: solid;
+  border-width: 1px;
+}
+
 #seminar-schedule td {
+    padding: 8px;
+    border: solid;
+    border-width: 1px;
+}
+#seminar-schedule-old td {
     padding: 8px;
     border: solid;
     border-width: 1px;
 }
 
 #seminar-schedule time {
+    font-size: 16px;
+    color: #7a259a;
+    font-weight: 700;
+}
+
+#seminar-schedule-old time {
     font-size: 16px;
     color: #7a259a;
     font-weight: 700;
