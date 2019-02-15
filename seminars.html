@@ -38,7 +38,18 @@ layout: default
     {% assign curDate = site.time | date: '%s' %}
     {% for post in site.seminars reversed %}
     {% assign postStartDate = post.date | date: '%s' %}
-    {% if postStartDate < curDate %}
+    {% assign postYear = post.date | date: '%Y' | to_integer %}
+    {% assign postMonth = post.date | date: '%m' | to_integer %}
+    {% assign lastYear = site.time | date: '%Y' | minus: 1 %}
+    {% assign month = site.time | date: '%m' | to_integer %}
+    {% if month < 8 %}
+    {% assign startMonth = 0 %}
+    {% assign endMonth = 7 %}
+    {% else %}
+    {% assign startMonth = 8 %}
+    {% assign endMonth = 12 %}
+    {% endif %}
+    {% if postStartDate < curDate and postYear >= lastYear and postMonth > startMonth and postMonth < endMonth %}
     <tr>
       <td style="width: 11%">
 	<time datetime="{{ post.date | | date: "%Y"}}">
@@ -49,7 +60,7 @@ layout: default
 	{{ post.speaker }}
       </td>
       <td style="width: 38%" >
-	{{ post.title }}
+	      {{ post.title }}
       </td>
       <td style="width: 21%">
 	{{ post.location }}
@@ -58,5 +69,49 @@ layout: default
     {% endif %}
     {% endfor %}
   </table>
+
+
+</div>
+
+
+<div class="container" id="joinus-container">
+	<img id="table-collapse-img"
+	src="assets/maximize.png" onclick='show(1);' alt="show-table" class="center">
+<table id="seminar-schedule-old" style="display:table">
+	{% assign curDate = site.time | date: '%s' %}
+	{% for post in site.seminars reversed %}
+	{% assign postStartDate = post.date | date: '%s' %}
+	{% assign postYear = post.date | date: '%Y' | to_integer %}
+	{% assign postMonth = post.date | date: '%m' | to_integer %}
+	{% assign lastYear = site.time | date: '%Y' | minus: 1 %}
+	{% assign pastYear = site.time | date: '%Y' | minus: 2 %}
+	{% assign month = site.time | date: '%m' | to_integer %}
+	{% if month < 8 %}
+	{% assign startMonth = 0 %}
+	{% assign endMonth = 7 %}
+	{% else %}
+	{% assign startMonth = 8 %}
+	{% assign endMonth = 12 %}
+	{% endif %}
+	{% if postYear < pastYear or lastYear and postMonth <= startMonth or postMonth >= endMonth%}
+       <tr>
+	       <td style="width: 16%">
+		       <time datetime="{{ post.date | | date: "%Y"}}">
+			       {{ post.date | date: "'%y %b %d" }}
+		       </time>
+	       </td>
+	       <td style="width: 30%">
+		       {{ post.speaker }}
+	       </td>
+	       <td style="width: 38%" >
+		       {{ post.title }}
+	       </td>
+		       <td style="width: 21%">
+			       {{ post.location }}
+		       </td>
+       </tr>
+       {% endif %}
+       {% endfor %}
+</table>
 
 </div>
