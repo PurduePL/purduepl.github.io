@@ -1,5 +1,5 @@
 ---
 title:  "Kirshanthan Sundararajah"
-#href: https://kirshanthans.github.io
+href: https://kirshanthans.github.io
 img: assets/krish.jpg
 ---
