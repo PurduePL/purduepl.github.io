@@ -77,7 +77,7 @@ layout: default
 <div class="container" id="joinus-container">
 	<img id="table-collapse-img"
 	src="assets/maximize.png" onclick='show(1);' alt="show-table" class="center">
-<table id="seminar-schedule-old" style="display:table">
+<table id="seminar-schedule-old" style="display:none">
 	{% assign curDate = site.time | date: '%s' %}
 	{% for post in site.seminars reversed %}
 	{% assign postStartDate = post.date | date: '%s' %}
