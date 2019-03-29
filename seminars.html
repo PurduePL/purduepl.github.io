@@ -49,29 +49,23 @@ layout: default
     {% assign startMonth = 8 %}
     {% assign endMonth = 12 %}
     {% endif %}
-    {% if postStartDate < curDate %}
-      {% assign or_test = true *}
-    {% endif %}
-    {% if postYear >= lastYear and postMonth > startMonth and postMonth < endMonth %}
-      {% assign or_test = true *}
-    {% endif %}
-    {% if or_test %}
-      <tr>
-          <td style="width: 11%">
-              <time datetime="{{ post.date | | date: "%Y"}}">
-                  {{ post.date | date: "%b %d" }}
-              </time>
-          </td>
-          <td style="width: 30%">
-              {{ post.speaker }}
-          </td>
-          <td style="width: 38%" >
-              <a href="{{ post.url | prepend: site.baseurl }}.html" title="{{ post.title }}">{{ post.title }}</a>
-          </td>
-          <td style="width: 21%">
-	            {{ post.location }}
-          </td>
-      </tr>
+    {% if postStartDate < curDate and postYear >= lastYear and postMonth > startMonth and postMonth < endMonth %}
+    <tr>
+      <td style="width: 11%">
+	<time datetime="{{ post.date | | date: "%Y"}}">
+	{{ post.date | date: "%b %d" }}
+	</time>
+      </td>
+      <td style="width: 30%">
+	{{ post.speaker }}
+      </td>
+      <td style="width: 38%" >
+	      {{ post.title }}
+      </td>
+      <td style="width: 21%">
+	{{ post.location }}
+      </td>
+    </tr>
     {% endif %}
     {% endfor %}
   </table>
@@ -92,7 +86,7 @@ layout: default
 	{% assign lastYear = site.time | date: '%Y' | minus: 1 %}
 	{% assign pastYear = site.time | date: '%Y' | minus: 2 %}
 	{% assign month = site.time | date: '%m' | to_integer %}
-	{% if month > 7 %}
+	{% if month < 8 %}
 	{% assign startMonth = 0 %}
 	{% assign endMonth = 7 %}
 	{% else %}
