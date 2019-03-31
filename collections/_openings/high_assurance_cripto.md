@@ -13,4 +13,4 @@ advanced cryptographic techniques, and in particular, to develop a comprehensive
 set of design tools, programming languages, and verification tools to enable
 advances in the security and performance of such systems.
 
-More details can be found [here]({{ site.url }}/assets/postdoc-ad.pdf).
+More details can be found [here](assets/postdoc-ad.pdf).
