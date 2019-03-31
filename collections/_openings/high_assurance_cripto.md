@@ -1,5 +1,5 @@
 ---
-title: High-assurance Cryptography for Secure Distributed Applications.
+title: High-Assurance Cryptography for Secure Distributed Applications
 position: 2
 ---
 
