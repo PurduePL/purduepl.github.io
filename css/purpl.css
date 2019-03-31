@@ -240,10 +240,10 @@ div#about p{
 
 
 div#Openings p{
-    font-size: 18px;
+    font-size: 24px;
     font-family: "tablet-gothic", verdana, arial, sans-serif;
     font-weight: 100;
-    text-align: justify;
+    text-align: center;
     margin: 0;
     padding-left: 10pt;
     padding-right: 10pt;
@@ -266,7 +266,8 @@ div.opening {
     margin-right: 2%;
     width: auto;
     height: auto;
-    background-color: rgba(40, 10, 55, .85);
+    background-color: rgba(126, 24, 57, .95);
+    border-style: solid;
 }
 
 em, strong {
