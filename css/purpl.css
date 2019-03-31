@@ -244,12 +244,16 @@ div#Openings p{
     font-family: "tablet-gothic", verdana, arial, sans-serif;
     font-weight: 100;
     text-align: justify;
+    margin: 0;
+    padding-left: 10pt;
+    padding-right: 10pt;
 }
 
-div.opening h1 {
+div.opening p {
     margin-left: -80px;
     text-transform: uppercase;
 }
+
 div.opening {
     /* padding-left: 120px; */
     text-align: left;
@@ -259,6 +263,7 @@ div.opening {
     margin-right: 2%;
     width: auto;
     height: auto;
+    background-color: rgba(40, 10, 55, .85);
 }
 
 em, strong {
