@@ -40,4 +40,5 @@ collections:
   - professors
   - courses
   - seminars
+  - openings
 collections_dir: collections

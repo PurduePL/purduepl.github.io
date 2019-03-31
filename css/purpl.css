@@ -197,6 +197,11 @@ section.intro-content div.about p a {
   font-size: 1.2em;
 }
 
+section.intro-content div.openings p a {
+    color: #fff;
+    font-size: 1.2em;
+}
+
 p, li {
   font-size: 1em;
   font-weight: 400;
@@ -231,6 +236,29 @@ div#about p{
     font-family: "tablet-gothic", verdana, arial, sans-serif;
     font-weight: 100;
     text-align: justify;
+}
+
+
+div#Openings p{
+    font-size: 18px;
+    font-family: "tablet-gothic", verdana, arial, sans-serif;
+    font-weight: 100;
+    text-align: justify;
+}
+
+div.opening h1 {
+    margin-left: -80px;
+    text-transform: uppercase;
+}
+div.opening {
+    /* padding-left: 120px; */
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: auto;
+    height: auto;
 }
 
 em, strong {

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<div class="container" id="research-container" role="main">
+    <h1>Openings</h1>
+    {% assign posts = site.openings | sort: 'position' %}
+    {% for post in posts %}
+    <h2> {{post.title}} </h2>
+    <p>{{ post.content }}</p>
+    {% endfor %}
+</div>
