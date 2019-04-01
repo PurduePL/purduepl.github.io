@@ -41,4 +41,5 @@ collections:
   - courses
   - seminars
   - openings
+  - individualpostdoc
 collections_dir: collections
