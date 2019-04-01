@@ -224,6 +224,22 @@ div#research-container li {
     margin-left: 1.25em;
 }
 
+div#openings-container p {
+    font-size: .75em;
+    text-align: left;
+    padding-left: 1.25em;
+    padding-right: .75em;
+    margin-bottom: 0;
+}
+
+div#openings-container li {
+    font-size: .75em;
+    text-align: left;
+    padding: 0.1em 0;
+    margin-left: 1.25em;
+}
+
+
 h4 {
   color: #71315a;
  }
