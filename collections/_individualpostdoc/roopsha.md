@@ -1,5 +1,5 @@
 ---
-title: Roopsha Samantha
+title: Roopsha Samanta
 position: 1
 ---
 
