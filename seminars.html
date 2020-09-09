@@ -13,14 +13,14 @@ layout: default
     {% for post in site.seminars %}
     {% assign postStartDate = post.date | date: '%s' %}
     {% if postStartDate >= curDate%}
-    <tr>
+    <tr {% if post.invited %} class="invited" {% endif %}>
       <td style="width: 11%">
 	<time datetime="{{ post.date | | date: "%Y"}}">
 	{{ post.date | date: "%b %d" }}
 	</time>
       </td>
       <td style="width: 30%">
-	{{ post.speaker }}
+	{{ post.speaker }} {% if post.invited %}*{% endif %}
       </td>
       <td style="width: 38%" >
 	{{ post.title }}
@@ -32,6 +32,7 @@ layout: default
     {% endif %}
     {% endfor %}
   </table>
+  <div class="seminar-footer">* Invited Talk</div>
 
   <h1 style="margin-left:-50pt">Past Seminars</h1>
   <table id="seminar-schedule">
