@@ -35,11 +35,14 @@ highlighter: rouge
 
 exclude: ['README.md', 'LICENSE', 'purplblog']
 
+future: true
+
 collections:
-  - students
-  - professors
-  - courses
-  - seminars
-  - openings
-  - individualpostdoc
+  students:
+  professors:
+  courses:
+  seminars:
+    output: true
+  openings:
+  individualpostdoc:
 collections_dir: collections

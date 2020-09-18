@@ -1,46 +1,18 @@
-{% include header.html %}
-
-<div class="container container-left">
-    <div class="row">
-        <div class="col-md-3 hidden-xs">
-            {% include sidebar.html %}
-        </div>
-        <div class="col-md-9">
-          <div class="article">
-            <div class="well">
-                <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }} - {{ page.title }}</a></h1>
-            <div class="post-content">
-            {{ content }}
-            </div>
-            {% if site.comments %}
-              <div id="disqus_thread"></div>
-              <script type="text/javascript">
-                  /* * * CONFIGURATION VARIABLES * * */
-                  var disqus_shortname = 'tycon';
-                  
-                  /* * * DON'T EDIT BELOW THIS LINE * * */
-                  (function() {
-                      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                  })();
-              </script>
-              <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-            {% endif %}
-            </div>
-          </div>
-          <div class="pagination">
-              {% if page.next %}
-                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post</a>
-              {% endif %}
-              {% if page.previous %}
-                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">Older Post</a>
-              {% endif %}
-</div>
-
-        </div>
+---
+layout: default
+---
+<div class="container" id="joinus-container">
+  <h1 style="margin-left:-50pt">{{ page.title }}</h1>
+  <div class="post-content">
+    <div class="abstract-header">
+      {{ page.speaker }}<br>
+      {{ page.date | date: "%B %-d, %Y"}}<br>
+      {{ page.location }}
     </div>
+    {{ content }}
+    {% if page.bio %}
+    <h2>About {{ page.speaker }}</h2>
+    {{ page.bio | markdownify }}
+    {% endif %}
+  </div>
 </div>
-
-{% include disqus-comments.html %}
-{% include footer.html %}
