@@ -23,7 +23,13 @@ layout: default
 	{{ post.speaker }} {% if post.invited %}*{% endif %}
       </td>
       <td style="width: 38%" >
-	{{ post.title }}
+        {% if post.link_abstract %}
+        <a class="post-link" href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+        {% else %}
+          {{ post.title }}
+        {% endif %}
       </td>
       <td style="width: 21%">
 	{{ post.location }}
@@ -36,7 +42,7 @@ layout: default
 
   <h1 style="margin-left:-50pt">Past Seminars</h1>
   <table id="seminar-schedule">
-    {% assign curDate = site.time | date: '%s' %}
+    {% assign curDate = site.time | date: '%s' | minus: 172800 | date:'%s' % %}
     {% for post in site.seminars reversed %}
     {% assign postStartDate = post.date | date: '%s' %}
     {% assign postYear = post.date | date: '%Y' | to_integer %}
@@ -61,7 +67,13 @@ layout: default
 	{{ post.speaker }}
       </td>
       <td style="width: 38%" >
-	      {{ post.title }}
+        {% if post.link_abstract %}
+        <a class="post-link" href="{{ post.url }}">
+	        {{ post.title }}
+        </a>
+        {% else %}
+          {{ post.title }}
+        {% endif %}
       </td>
       <td style="width: 21%">
 	{{ post.location }}

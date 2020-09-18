@@ -755,3 +755,9 @@ table td {
 .timeline-Tweet-media {
     display : none
 }
+
+div.abstract-header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
