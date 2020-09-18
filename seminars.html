@@ -9,7 +9,7 @@ layout: default
   </p>
   <h1 style="margin-left:-50pt">Upcoming Seminars</h1>
   <table id="seminar-schedule"  style="margin-bottom:20pt">
-    {% assign curDate = site.time | date: '%s' | minus: 172800 | date:'%s' %}
+    {% assign curDate = site.time | date: '%s' | minus: 46800 | date:'%s' %}
     {% for post in site.seminars %}
     {% assign postStartDate = post.date | date: '%s' %}
     {% if postStartDate >= curDate%}
@@ -42,7 +42,7 @@ layout: default
 
   <h1 style="margin-left:-50pt">Past Seminars</h1>
   <table id="seminar-schedule">
-    {% assign curDate = site.time | date: '%s' | minus: 172800 | date:'%s' % %}
+    {% assign curDate = site.time | date: '%s' | minus: 46800 | date:'%s' % %}
     {% for post in site.seminars reversed %}
     {% assign postStartDate = post.date | date: '%s' %}
     {% assign postYear = post.date | date: '%Y' | to_integer %}
@@ -57,7 +57,7 @@ layout: default
     {% assign endMonth = 12 %}
     {% endif %}
     {% if postStartDate < curDate and postYear >= lastYear and postMonth > startMonth and postMonth < endMonth %}
-    <tr>
+    <tr {% if post.invited %} class="invited" {% endif %}>
       <td style="width: 11%">
 	<time datetime="{{ post.date | | date: "%Y"}}">
 	{{ post.date | date: "%b %d" }}
