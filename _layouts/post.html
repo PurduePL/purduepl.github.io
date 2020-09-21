@@ -9,6 +9,12 @@ layout: default
       {{ page.date | date: "%B %-d, %Y"}}<br>
       {{ page.location }}
     </div>
+    {% if page.youtube_embed %}
+    <center>
+      <iframe width="560" height="315" src="{{ page.youtube_embed }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h2>Abstract</h2> <!-- Only show "Abstract" header after a video embedding. -->
+    </center>
+    {% endif %}
     {{ content }}
     {% if page.bio %}
     <h2>About {{ page.speaker }}</h2>
