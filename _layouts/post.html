@@ -8,6 +8,9 @@ layout: default
       {{ page.speaker }}<br>
       {{ page.date | date: "%B %-d, %Y"}}<br>
       {{ page.location }}
+      {% assign curDate = site.time | date: '%s' | minus: 46800 | date:'%s' %}
+      {% assign startDate = page.date | date: '%s' %}
+      {% if page.vc_link and startDate >= curDate %} (<a href="{{ page.vc_link }}">join in</a>){% endif %}
     </div>
     {% if page.youtube_embed %}
     <center>
