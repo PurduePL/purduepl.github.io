@@ -32,7 +32,10 @@ layout: default
         {% endif %}
       </td>
       <td style="width: 21%">
-	{{ post.location }}
+  {{ post.location }}
+  {% if post.vc_link %}
+    (<a href="{{ post.vc_link }}">join</a>)
+  {% endif %}
       </td>
     </tr>
     {% endif %}
