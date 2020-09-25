@@ -4,22 +4,31 @@ layout: default
 <div class="container" id="joinus-container">
   <h1 style="margin-left:-50pt">{{ page.title }}</h1>
   <div class="post-content">
+
     <div class="abstract-header">
       {{ page.speaker }}<br>
       {{ page.date | date: "%B %-d, %Y"}}<br>
-      {{ page.location }}
-      {% assign curDate = site.time | date: '%s' | minus: 46800 | date:'%s' %}
+      {% assign curDate = site.time | date: '%s' | minus: 46800 | date: '%s' %}
       {% assign startDate = page.date | date: '%s' %}
-      {% if page.vc_link and startDate >= curDate %} (<a href="{{ page.vc_link }}">join in</a>){% endif %}
+      {% if startDate >= curDate %}
+        {% if page.time %}{{ page.time }}<br>{% endif %}
+        {% if page.location %}
+          {{ page.location }}
+          {% if page.vc_link %} (<a href="{{ page.vc_link }}">join in</a>){% endif %}
+        {% endif %}
+      {% endif %}
     </div>
+
     {% if page.youtube_embed %}
-    <center>
+    <center style="margin-top:15pt">
       <iframe width="560" height="315" src="{{ page.youtube_embed }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <h2>Abstract</h2> <!-- Only show "Abstract" header after a video embedding. -->
     </center>
+    <h2>Abstract</h2> <!-- Only show "Abstract" header below a video embedding. -->
     {% endif %}
+
     {{ content }}
     {% if page.bio %}
+
     <h2>About {{ page.speaker }}</h2>
     {{ page.bio | markdownify }}
     {% endif %}
