@@ -8,7 +8,7 @@ layout: default
     <div class="abstract-header">
       {{ page.speaker }}<br>
       {{ page.date | date: "%B %-d, %Y"}}<br>
-      {% assign curDate = site.time | date: '%s' | minus: 46800 | date: '%s' %}
+      {% assign curDate = site.time | date: '%s' | minus: 86400 | date: '%s' %}
       {% assign startDate = page.date | date: '%s' %}
       {% if startDate >= curDate %}
         {% if page.time %}{{ page.time }}<br>{% endif %}
