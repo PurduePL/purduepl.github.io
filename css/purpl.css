@@ -286,10 +286,6 @@ div.opening {
     border-style: solid;
 }
 
-em, strong {
-  font-style: normal;
-  font-weight: 400;
-}
 html {
   background: linear-gradient( #270a38, transparent ), linear-gradient( 90deg, #792b41, transparent ), linear-gradient( -90deg, #9b4258, transparent );
   padding: 5%;

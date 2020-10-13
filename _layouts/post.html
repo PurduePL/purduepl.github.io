@@ -27,8 +27,8 @@ layout: default
     {% endif %}
 
     {{ content }}
-    {% if page.bio %}
 
+    {% if page.bio %}
     <h2>About {{ page.speaker }}</h2>
     {{ page.bio | markdownify }}
     {% endif %}
