@@ -41,7 +41,7 @@ layout: default
     {% endif %}
     {% endfor %}
   </table>
-  <div class="seminar-footer">* Invited Talk</div>
+  <!-- <div class="seminar-footer">* Invited Talk</div> -->
 
   <h1 style="margin-left:-50pt">Past Seminars</h1>
   <table id="seminar-schedule">
@@ -120,7 +120,13 @@ layout: default
 		       {{ post.speaker }}
 	       </td>
 	       <td style="width: 38%" >
-		       {{ post.title }}
+		       {% if post.link_abstract %}
+             <a class="post-link" href="{{ post.url }}">
+               {{ post.title }}
+             </a>
+           {% else %}
+             {{ post.title }}
+           {% endif %}
 	       </td>
 		       <td style="width: 21%">
 			       {{ post.location }}
