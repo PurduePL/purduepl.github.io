@@ -1,5 +1,5 @@
 ---
 title:  "Scott A Carr"
-href: http://scottandrewcarr.com/
+href: http://scottcarr.github.io/
 img: assets/ScottCarr.jpg
 ---

@@ -1,5 +1,4 @@
 ---
-title:  "Shengwei An"
-img: assets/JamesDecker.jpg
-#href: http://jmd1011.github.io/
+title: "Shengwei An"
+href: https://www.cs.purdue.edu/homes/an93/
 ---
