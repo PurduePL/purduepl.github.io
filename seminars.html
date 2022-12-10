@@ -3,39 +3,38 @@ layout: default
 ---
 <div class="container" id="joinus-container">
   <p>
-  Subscribe to the <a
-  href="https://lists.purdue.edu/mailman/listinfo/purpl">PurPL mailing
-  list</a> for up-to-date announcements on our weekly seminar series.
+    Subscribe to the <a href="https://lists.purdue.edu/mailman/listinfo/purpl">PurPL mailing
+      list</a> for up-to-date announcements on our weekly seminar series.
   </p>
   <h1 style="margin-left:-50pt">Upcoming Seminars</h1>
-  <table id="seminar-schedule"  style="margin-bottom:20pt">
+  <table id="seminar-schedule" style="margin-bottom:20pt">
     {% assign curDate = site.time | date: '%s' | minus: 86400 | date:'%s' %}
     {% for post in site.seminars %}
     {% assign postStartDate = post.date | date: '%s' %}
     {% if postStartDate >= curDate%}
     <tr {% if post.invited %} class="invited" {% endif %}>
       <td style="width: 11%">
-	<time datetime="{{ post.date | | date: "%Y"}}">
-	{{ post.date | date: "%b %d" }}
-	</time>
+        <time datetime="{{ post.date | | date: " %Y"}}">
+          {{ post.date | date: "%b %d" }}
+        </time>
       </td>
       <td style="width: 30%">
-	{{ post.speaker }} {% if post.invited %}*{% endif %}
+        {{ post.speaker }} {% if post.invited %}*{% endif %}
       </td>
-      <td style="width: 38%" >
+      <td style="width: 38%">
         {% if post.link_abstract %}
         <a class="post-link" href="{{ post.url }}">
           {{ post.title }}
         </a>
         {% else %}
-          {{ post.title }}
+        {{ post.title }}
         {% endif %}
       </td>
       <td style="width: 21%">
-  {{ post.location }}
-  {% if post.vc_link %}
-    (<a href="{{ post.vc_link }}">join</a>)
-  {% endif %}
+        {{ post.location }}
+        {% if post.vc_link %}
+        (<a href="{{ post.vc_link }}">join</a>)
+        {% endif %}
       </td>
     </tr>
     {% endif %}
@@ -52,38 +51,32 @@ layout: default
     {% assign postMonth = post.date | date: '%m' | to_integer %}
     {% assign lastYear = site.time | date: '%Y' | minus: 1 %}
     {% assign month = site.time | date: '%m' | to_integer %}
-    {% if month < 8 %}
-    {% assign startMonth = 0 %}
-    {% assign endMonth = 7 %}
-    {% else %}
-    {% assign startMonth = 8 %}
-    {% assign endMonth = 12 %}
-    {% endif %}
-    {% if postStartDate < curDate and postYear >= lastYear and postMonth > startMonth and postMonth < endMonth %}
-    <tr {% if post.invited %} class="invited" {% endif %}>
-      <td style="width: 11%">
-	<time datetime="{{ post.date | | date: "%Y"}}">
-	{{ post.date | date: "%b %d" }}
-	</time>
-      </td>
-      <td style="width: 30%">
-	{{ post.speaker }}
-      </td>
-      <td style="width: 38%" >
-        {% if post.link_abstract %}
-        <a class="post-link" href="{{ post.url }}">
-	        {{ post.title }}
-        </a>
-        {% else %}
+    {% if month < 8 %} {% assign startMonth=0 %} {% assign endMonth=7 %} {% else %} {% assign startMonth=8 %} {% assign
+      endMonth=12 %} {% endif %} {% if postStartDate < curDate and postYear > lastYear and postMonth > startMonth and
+      postMonth < endMonth %} <tr {% if post.invited %} class="invited" {% endif %}>
+        <td style="width: 11%">
+          <time datetime="{{ post.date | date: " %Y"}}">
+            {{ post.date | date: "%b %d" }}
+          </time>
+        </td>
+        <td style="width: 30%">
+          {{ post.speaker }}
+        </td>
+        <td style="width: 38%">
+          {% if post.link_abstract %}
+          <a class="post-link" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+          {% else %}
           {{ post.title }}
+          {% endif %}
+        </td>
+        <td style="width: 21%">
+          {{ post.location }}
+        </td>
+        </tr>
         {% endif %}
-      </td>
-      <td style="width: 21%">
-	{{ post.location }}
-      </td>
-    </tr>
-    {% endif %}
-    {% endfor %}
+        {% endfor %}
   </table>
 
 
@@ -91,49 +84,43 @@ layout: default
 
 
 <div class="container" id="joinus-container">
-	<img id="table-collapse-img"
-	src="assets/maximize.png" onclick='show(1);' alt="show-table" class="center">
-<table id="seminar-schedule-old" style="display:table">
-	{% assign curDate = site.time | date: '%s' %}
-	{% for post in site.seminars reversed %}
-	{% assign postStartDate = post.date | date: '%s' %}
-	{% assign postYear = post.date | date: '%Y' | to_integer %}
-	{% assign postMonth = post.date | date: '%m' | to_integer %}
-	{% assign lastYear = site.time | date: '%Y' | minus: 1 %}
-	{% assign pastYear = site.time | date: '%Y' | minus: 2 %}
-	{% assign month = site.time | date: '%m' | to_integer %}
-	{% if month < 8 %}
-	{% assign startMonth = 0 %}
-	{% assign endMonth = 7 %}
-	{% else %}
-	{% assign startMonth = 8 %}
-	{% assign endMonth = 12 %}
-	{% endif %}
-	{% if postYear < pastYear or lastYear and postMonth <= startMonth or postMonth >= endMonth%}
-       <tr>
-	       <td style="width: 16%">
-		       <time datetime="{{ post.date | | date: "%Y"}}">
-			       {{ post.date | date: "'%y %b %d" }}
-		       </time>
-	       </td>
-	       <td style="width: 30%">
-		       {{ post.speaker }}
-	       </td>
-	       <td style="width: 38%" >
-		       {% if post.link_abstract %}
-             <a class="post-link" href="{{ post.url }}">
-               {{ post.title }}
-             </a>
-           {% else %}
-             {{ post.title }}
-           {% endif %}
-	       </td>
-		       <td style="width: 21%">
-			       {{ post.location }}
-		       </td>
-       </tr>
-       {% endif %}
-       {% endfor %}
-</table>
+  <img id="table-collapse-img" src="assets/maximize.png" onclick='show(1);' alt="show-table" class="center">
+  <table id="seminar-schedule-old" style="display:table">
+    {% assign curDate = site.time | date: '%s' %}
+    {% for post in site.seminars reversed %}
+    {% assign postStartDate = post.date | date: '%s' %}
+    {% assign postYear = post.date | date: '%Y' | to_integer %}
+    {% assign postMonth = post.date | date: '%m' | to_integer %}
+    {% assign lastYear = site.time | date: '%Y' | minus: 1 %}
+    {% assign pastYear = site.time | date: '%Y' | minus: 2 %}
+    {% assign month = site.time | date: '%m' | to_integer %}
+    {% if month < 8 %} {% assign startMonth=0 %} {% assign endMonth=7 %} {% else %} {% assign startMonth=8 %} {% assign
+      endMonth=12 %} {% endif %} {% if postYear < pastYear or lastYear and postMonth <=startMonth or postMonth>=
+      endMonth%}
+      <tr>
+        <td style="width: 16%">
+          <time datetime="{{ post.date | date: " %Y"}}">
+            {{ post.date | date: "'%y %b %d" }}
+          </time>
+        </td>
+        <td style="width: 30%">
+          {{ post.speaker }}
+        </td>
+        <td style="width: 38%">
+          {% if post.link_abstract %}
+          <a class="post-link" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+          {% else %}
+          {{ post.title }}
+          {% endif %}
+        </td>
+        <td style="width: 21%">
+          {{ post.location }}
+        </td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+  </table>
 
 </div>
