@@ -43,8 +43,6 @@ collections:
   courses:
   seminars:
     output: true
-  openings:
-  individualpostdoc:
   alumni:
 collections_dir: collections
 
