@@ -5,71 +5,87 @@ layout: index
 <div class="container">
   <div id="about">
     {% for post in site.categories.aboutpurpl %}
-      {{ post.content }}
+    {{ post.content }}
     {% endfor %}
   </div>
 
   <div class="opening" id="Openings">
-      <p><a href="/openings.html">Multiple postdoc positions available!</a></p>
+    <p><a href="/openings.html">Multiple postdoc positions available!</a></p>
   </div>
 
   <div class="wrapper" id="news">
     <h1>News</h1>
-  <div id="news_items">
-    <a style="margin-top:20px" class="twitter-timeline"
-    data-width="600" data-height="800" data-theme="light"
-    href="https://twitter.com/purdue_pl">Tweets by purdue_pl</a>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <!-- <ul> -->
-    <!--   {% for post in site.categories.news %} -->
-    <!--   <li class="news-item"> -->
-    <!--   <time datetime="{{ post.date | | date: "%Y"}}"> -->
-    <!--   {{ post.date | date: "%b %d" }} -->
-    <!--   </time> -->
-    <!--   {{ post.content }} -->
-    <!--   </li> -->
-    <!--   {% endfor %} -->
-    <!--   <li id="more" style="display:none"><a href="?more">See all News posts</a></li> -->
-    <!-- </ul> -->
-  </div>
+    <div id="news_items">
+      <a style="margin-top:20px" class="twitter-timeline" data-width="600" data-height="800" data-theme="light"
+        href="https://twitter.com/purdue_pl">Tweets by purdue_pl</a>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <!-- <ul> -->
+      <!--   {% for post in site.categories.news %} -->
+      <!--   <li class="news-item"> -->
+      <!--   <time datetime="{{ post.date | | date: "%Y"}}"> -->
+      <!--   {{ post.date | date: "%b %d" }} -->
+      <!--   </time> -->
+      <!--   {{ post.content }} -->
+      <!--   </li> -->
+      <!--   {% endfor %} -->
+      <!--   <li id="more" style="display:none"><a href="?more">See all News posts</a></li> -->
+      <!-- </ul> -->
+    </div>
   </div>
 
-  <div class= "cards" id="cards-container">
+  <div class="cards" id="cards-container">
 
     <!-- faculty -->
-  <div class="cards-title" id="people">
-    <h1>Faculty</h1>
-    <ul class="photo-list">
-      {% assign i = 0 %}
-      {% for professor in site.professors reversed %}
-      <li>
-      <a href="{{ professor.href }}">
-      <img src="{{ professor.img }}" alt="{{ professor.title }}" />
-      <span class="photo-caption">{{ professor.firstname }}<br /> {{ professor.lastname}}
-      </span>
-      </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+    <div class="cards-title" id="people">
+      <h1>Faculty</h1>
+      <ul class="photo-list">
+        {% assign i = 0 %}
+        {% for professor in site.professors reversed %}
+        <li>
+          <a href="{{ professor.href }}">
+            <img src="{{ professor.img }}" alt="{{ professor.title }}" />
+            <span class="photo-caption">{{ professor.firstname }}<br /> {{ professor.lastname}}
+            </span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 
-  <!-- post docs and grad students -->
-  <div class="cards-title">
-    <h1 style="margin-top: 15px">Grad Students</h1>
-    <ul class="name-list">
-      {% assign i = 0 %}
-      {% for student in site.students %}
-      <li>
-      <a href="{{ student.href }}">
-      <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
-      <span class="photo-caption">{{ student.title }}</span>
-      </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+    <!-- post docs and grad students -->
+    <div class="cards-title" id="students">
+      <h1 style="margin-top: 15px">Grad Students</h1>
+      <ul class="name-list">
+        {% assign i = 0 %}
+        {% for student in site.students %}
+        <li>
+          <a href="{{ student.href }}">
+            <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
+            <span class="photo-caption">{{ student.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
 
-</div>
+    <!-- alumni -->
+    <div class="cards-title" id="alumni">
+      <h1 style="margin-top: 15px;margin-right: 50%">Alumni</h1>
+      <ul class="name-list">
+        {% assign i = 0 %}
+        {% for alumni in site.alumni %}
+        <li>
+          <a href="{{ alumni.href }}">
+            <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
+            <span class="photo-caption">{{ alumni.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+  </div>
 </div>
 
 <!-- news -->
