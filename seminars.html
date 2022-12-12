@@ -14,7 +14,7 @@ layout: default
     {% if postStartDate >= curDate%}
     <tr {% if post.invited %} class="invited" {% endif %}>
       <td style="width: 11%">
-        <time datetime="{{ post.date | | date: " %Y"}}">
+        <time datetime="{{ post.date | date: " %Y"}}">
           {{ post.date | date: "%b %d" }}
         </time>
       </td>
@@ -44,7 +44,7 @@ layout: default
 
   <h1 style="margin-left:-50pt">Past Seminars</h1>
   <table id="seminar-schedule">
-    {% assign curDate = site.time | date: '%s' | minus: 86400 | date:'%s' % %}
+    {% assign curDate = site.time | date: '%s' | minus: 86400 | date:'%s' %}
     {% for post in site.seminars reversed %}
     {% assign postStartDate = post.date | date: '%s' %}
     {% assign postYear = post.date | date: '%Y' | to_integer %}
