@@ -1,7 +1,8 @@
 ---
 name: Add PurPL member
 about: Request to add a member
-title: `Add member: <title>`
+title: 'Add member: <title>'
+labels: ''
 assignees: ''
 ---
 
