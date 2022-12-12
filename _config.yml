@@ -47,3 +47,6 @@ collections:
   individualpostdoc:
   alumni:
 collections_dir: collections
+
+# https://stackoverflow.com/questions/35639303/jekyll-getting-an-error-when-i-have-paginate-in-my-project
+plugins: [jekyll-paginate]
