@@ -4,4 +4,5 @@ speaker: "Andrew Appel"
 title:  "Verifiable C, a logic and tool for deductive verification of the correctness of C programs"
 location: "LWSN 3102A/B"
 category: seminar
+invited: true
 ---
