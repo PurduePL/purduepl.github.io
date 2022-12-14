@@ -52,7 +52,7 @@ layout: default
     {% assign lastYear = site.time | date: '%Y' | minus: 1 %}
     {% assign month = site.time | date: '%m' | to_integer %}
     {% if month < 8 %} {% assign startMonth=0 %} {% assign endMonth=7 %} {% else %} {% assign startMonth=8 %} {% assign
-      endMonth=12 %} {% endif %} {% if postStartDate < curDate and postYear > lastYear and postMonth > startMonth and
+      endMonth=12 %} {% endif %} {% if postStartDate < curDate and postYear> lastYear and postMonth > startMonth and
       postMonth <= endMonth %} <tr {% if post.invited %} class="invited" {% endif %}>
         <td style="width: 11%">
           <time datetime="{{ post.date | date: " %Y"}}">
@@ -95,29 +95,28 @@ layout: default
     {% assign pastYear = site.time | date: '%Y' | minus: 2 %}
     {% assign month = site.time | date: '%m' | to_integer %}
     {% if month < 8 %} {% assign startMonth=0 %} {% assign endMonth=7 %} {% else %} {% assign startMonth=8 %} {% assign
-      endMonth=12 %} {% endif %} {% if postYear < pastYear or lastYear and postMonth <=startMonth or postMonth>
-      endMonth%}
-      <tr>
-        <td style="width: 16%">
-          <time datetime="{{ post.date | date: " %Y"}}">
-            {{ post.date | date: "'%y %b %d" }}
-          </time>
-        </td>
-        <td style="width: 30%">
-          {{ post.speaker }}
-        </td>
-        <td style="width: 38%">
-          {% if post.link_abstract %}
-          <a class="post-link" href="{{ post.url }}">
-            {{ post.title }}
-          </a>
-          {% else %}
+      endMonth=12 %} {% endif %} {% if postYear <=lastYear or postMonth < startMonth %} <tr {% if post.invited %}
+      class="invited" {% endif %}>
+      <td style="width: 16%">
+        <time datetime="{{ post.date | date: " %Y"}}">
+          {{ post.date | date: "'%y %b %d" }}
+        </time>
+      </td>
+      <td style="width: 30%">
+        {{ post.speaker }}
+      </td>
+      <td style="width: 38%">
+        {% if post.link_abstract %}
+        <a class="post-link" href="{{ post.url }}">
           {{ post.title }}
-          {% endif %}
-        </td>
-        <td style="width: 21%">
-          {{ post.location }}
-        </td>
+        </a>
+        {% else %}
+        {{ post.title }}
+        {% endif %}
+      </td>
+      <td style="width: 21%">
+        {{ post.location }}
+      </td>
       </tr>
       {% endif %}
       {% endfor %}

@@ -686,6 +686,10 @@ div.seminar-footer {
   background-color: #e4dce7;
 }
 
+#seminar-schedule-old tr.invited {
+  background-color: #e4dce7;
+}
+
 #seminar-schedule time {
   font-size: 16px;
   color: #7a259a;
