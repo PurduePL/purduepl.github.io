@@ -4,7 +4,7 @@ Welcome!
 
 ## Adding/Updating Members
 
-Open an issue! We have a template for adding new members to the website. If you want to update your information or add a picture, just open an normal issue or submit a pr. 
+Open an issue! We have a template for adding new members to the website. If you want to update your information or add a picture, just open a normal issue or submit a pr.
 
 ## Testing the Website
 
