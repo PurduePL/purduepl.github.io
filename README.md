@@ -6,6 +6,9 @@ Welcome!
 
 Open an issue! We have a template for adding new members to the website. If you want to update your information or add a picture, just open a normal issue or submit a pr.
 
+### Resizing pictures
+All images are displayed at a 120x120 ratio. Use `convert image.jpeg -resize 120x120 image_small.jpeg` to get the proper sizing.
+
 ## Testing the Website
 
 Either:
