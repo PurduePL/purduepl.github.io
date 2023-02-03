@@ -1,6 +1,6 @@
 # Jekyll configuration
 
-name: PurPL
+title: PurPL
 description: The Purdue PL Research Group
 
 # url is currently only used only for the RSS feed in feed.xml
