@@ -145,7 +145,6 @@ ul.photo-list a .photo-caption {
   z-index: 100;
   line-height: 1.0;
   height: 40px;
-  vertical-align: middle;
 }
 
 ul.name-list {
@@ -183,7 +182,6 @@ ul.name-list a .photo-caption {
   z-index: 100;
   line-height: 1.0;
   height: 40px;
-  vertical-align: middle;
 }
 
 h2 {
