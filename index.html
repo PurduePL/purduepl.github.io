@@ -55,10 +55,14 @@ layout: index
         {% assign i = 0 %}
         {% for student in site.students %}
         <li>
+          {% if student.href %}
           <a href="{{ student.href }}">
-            <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
-            <span class="photo-caption">{{ student.title }}</span>
-          </a>
+            {% else %}
+            <a href="index.html">
+              {% endif %}
+              <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
+              <span class="photo-caption">{{ student.title }}</span>
+            </a>
         </li>
         {% endfor %}
       </ul>
@@ -71,10 +75,15 @@ layout: index
         {% assign i = 0 %}
         {% for alumni in site.alumni %}
         <li>
+
+          {% if student.href %}
           <a href="{{ alumni.href }}">
-            <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
-            <span class="photo-caption">{{ alumni.title }}</span>
-          </a>
+            {% else %}
+            <a href="index.html">
+              {% endif %}
+              <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
+              <span class="photo-caption">{{ alumni.title }}</span>
+            </a>
         </li>
         {% endfor %}
       </ul>
