@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "News"
+category: news
+---
+
+Robert Dickerson will present [RHLE: Modular Deductive Verification of Relational ∀∃ Properties](https://link.springer.com/chapter/10.1007/978-3-031-21037-2_4) at APLAS'22!

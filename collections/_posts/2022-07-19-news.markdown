@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "News"
+category: news
+---
+
+Nouraldin Jaber successfully defended his thesis!
