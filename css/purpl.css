@@ -256,7 +256,7 @@ h3 {
 
 a {
   color: #7a259a;
-  text-decoration: none;
+  /* text-decoration: none; */
   transition: border-color 0.2s ease-in-out;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
@@ -574,7 +574,7 @@ div.wrapper h1 {
 
 div#news_items {
   max-height: 450px;
-  overflow-y: auto;
+  /*   overflow-y: auto; */
   padding-top: 20px;
 }
 
