@@ -16,7 +16,7 @@ layout: index
         href="https://twitter.com/purdue_pl">Tweets by purdue_pl</a>
       <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> -->
        <ul>
-         {% for post in site.categories.news limit:2 %}
+         {% for post in site.categories.news limit:8 %}
          <li class="news-item">
          <time datetime="{{ post.date | date: "%Y"}}">
          {{ post.date | date: "%b %d" }}

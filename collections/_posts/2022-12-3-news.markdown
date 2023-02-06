@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "News"
+category: news
+---
+
+Kirshanthan Sundararajah will present [UniRec: A Unimodular-Like Framework for Nested Recursions and Loops](https://dl.acm.org/doi/10.1145/3563333) at SPLASH'22!

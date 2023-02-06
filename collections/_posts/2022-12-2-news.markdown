@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "News"
+category: news
+---
+
+Ashish Mishra will present [Specification-Guided Component-Based Synthesis from Effectful Libraries](https://dl.acm.org/doi/10.1145/3563310) at SPLASH'22!
