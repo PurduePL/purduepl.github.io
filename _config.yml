@@ -39,6 +39,7 @@ future: true
 
 collections:
   students:
+  postdocs:
   professors:
   courses:
   seminars:

@@ -30,7 +30,6 @@ layout: index
   </div>
 
   <div class="cards" id="cards-container">
-
     <!-- faculty -->
     <div class="cards-title" id="people">
       <h1>Faculty</h1>
@@ -48,7 +47,33 @@ layout: index
       </ul>
     </div>
 
-    <!-- post docs and grad students -->
+    <!-- post docs-->
+    <div class="cards-title" id="postdocs">
+      <h1 style="margin-top: 15px">Postdocs</h1>
+      <ul class="photo-list">
+        {% assign i = 0 %}
+        {% for postdoc in site.postdocs %}
+        <li>
+          {% if postdoc.href %}
+          <a href="{{ postdoc.href }}">
+            {% else %}
+            <a href="index.html">
+              {% endif %}
+
+              {% if postdoc.img %}
+              <img src="{{ postdoc.img }}" alt="{{ postdoc.title }}" />
+              {% else %}
+              <img src="assets/anonymous-avatar.png" alt="{{ postdoc.title }}" />
+              {% endif %}
+
+              <span class="photo-caption">{{ postdoc.title }}</span>
+            </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- grad students -->
     <div class="cards-title" id="students">
       <h1 style="margin-top: 15px">Grad Students</h1>
       <ul class="name-list">
@@ -75,7 +100,6 @@ layout: index
         {% assign i = 0 %}
         {% for alumni in site.alumni %}
         <li>
-
           {% if alumni.href %}
           <a href="{{ alumni.href }}">
             {% else %}
@@ -88,9 +112,5 @@ layout: index
         {% endfor %}
       </ul>
     </div>
-
-
   </div>
 </div>
-
-<!-- news -->
