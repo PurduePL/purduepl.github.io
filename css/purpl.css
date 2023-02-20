@@ -20,24 +20,6 @@ body {
   color: #ee4444;
 }
 
-.sidebar h1 {
-  color: #ee4444;
-  font-size: 1.3em;
-}
-
-.sidebar a {
-  color: #428bca;
-}
-
-.sidebar li {
-  margin-top: .7em;
-  line-height: 1em;
-}
-
-.sidebar a:hover {
-  color: #3071a9;
-}
-
 .container-left {
   margin: 0;
 }
@@ -387,56 +369,6 @@ div.texture-container {
     linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
-}
-
-aside.news a {
-  color: #fbcf59;
-  text-decoration: none;
-  transition: border-color 0.2s ease-in-out;
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-aside.news a:hover {
-  color: #ffbf11;
-}
-
-aside.news h2 {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  word-wrap: break-word;
-  font-size: 5vw;
-  text-shadow: -1px -1px 1px #270a38, 2px 2px 1px #af5970;
-  margin-top: -8%;
-  color: #1a0526;
-}
-
-/*sidebar*/
-aside.news {
-  word-wrap: break-word;
-  background:
-    linear-gradient(#270a38,
-      transparent),
-    linear-gradient(90deg,
-      #792b41,
-      transparent),
-    linear-gradient(-90deg,
-      #9b4258,
-      transparent);
-
-  background-blend-mode: screen;
-  color: #f9fafb;
-  padding: 2%;
-  margin-right: -2%;
-  box-shadow: 1px 1px 5px #888888;
-  overflow: hidden;
-  position: absolute;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  right: 0;
-  top: 7%;
-  width: 38%;
-  height: auto;
-  font-size: 1.2em;
-  margin-top: 33%;
 }
 
 /* faculty */
