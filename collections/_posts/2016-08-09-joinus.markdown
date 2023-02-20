@@ -5,7 +5,6 @@ category: joinus
 ---
 
 #### Current Students ####
-+ Drop by LWSN 3162 for the [PL reading group meeting]({{ site.baseurl }}/reading-group.html) on Fridays at 2:00 PM.
 + Subscribe to the [PurPL mailing list](https://lists.purdue.edu/mailman/listinfo/purpl).
 
 
