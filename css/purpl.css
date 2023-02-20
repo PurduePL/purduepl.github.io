@@ -12,13 +12,6 @@ body {
   color: #ffffff;
 }
 
-.footer {
-  text-align: center;
-}
-
-.footer a {
-  color: #ee4444;
-}
 
 .container-left {
   margin: 0;
@@ -41,7 +34,6 @@ div,
 article,
 section,
 header,
-footer,
 nav,
 figure,
 li {
