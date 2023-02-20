@@ -93,6 +93,26 @@ layout: index
       </ul>
     </div>
 
+    <!-- undergrads -->
+    <div class="cards-title" id="undergrads">
+      <h1 style="margin-top: 15px">Undergraduates</h1>
+      <ul class="name-list">
+        {% assign i = 0 %}
+        {% for undergrad in site.undergrads %}
+        <li>
+          {% if undergrad.href %}
+          <a href="{{ undergrad.href }}">
+            {% else %}
+            <a href="index.html">
+              {% endif %}
+              <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
+              <span class="photo-caption">{{ undergrad.title }}</span>
+            </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
     <!-- alumni -->
     <div class="cards-title" id="alumni">
       <h1 style="margin-top: 15px;margin-right: 50%">Alumni</h1>

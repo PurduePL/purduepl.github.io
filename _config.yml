@@ -30,6 +30,7 @@ future: true
 
 collections:
   students:
+  undergrads:
   postdocs:
   professors:
   courses:
