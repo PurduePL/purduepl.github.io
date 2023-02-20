@@ -242,11 +242,12 @@ a {
   transition: border-color 0.2s ease-in-out;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   /*   border-bottom: 2px solid rgba(0, 0, 0, 0.1); */
+  text-decoration: none;
 }
 
 a:hover {
-  color: #341929;
-  text-decoration: none;
+  color: #7a259a;
+  text-decoration: underline;
 }
 
 section.intro-content div.about p a {
