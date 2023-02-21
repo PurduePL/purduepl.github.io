@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>{{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is the website of PurPL. PurPL is the cross-departmental umbrella group for programming languages research at Purdue University.">
+    <meta name="description"
+      content="This is the website of PurPL. PurPL is the cross-departmental umbrella group for programming languages research at Purdue University.">
     <link rel="preload" href="{{ site.baseurl }}/css/purpl.css" as="style" />
     <link href="{{ site.baseurl }}/css/purpl.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -13,54 +14,30 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#1E002DA6" />
+  </head>
 
-<!-- <script>
-    function show_more(evt) {
-    lis = document.querySelectorAll("#news_items li");
-    for (var i = 0; i < lis.length; i++) {lis[i].style.display = "block"}
-    document.getElementById("more").style.display = "none";
-    evt.preventDefault();
-    return false;
-    }
-
-    function show_less() {
-    lis = document.querySelectorAll("#news_items li");
-    for (var i = 5; i < lis.length; i++) {lis[i].style.display = "none"}
-    document.getElementById("more").style.display = "block";
-    }
-
-    function onload() {
-    show_less();
-    var more = document.querySelector("#more a");
-    more.addEventListener("click", show_more);
-    }
-
-    window.addEventListener("DOMContentLoaded", onload);
-  </script> -->
-
-</head>
-
-<body>
-  <div class="page">
-    <div class="purpl-header" id="header">
-    <div class = "logo-container">
-      <a href="{{ site.baseurl }}/index.html">
-        <img src="{{ site.baseurl }}/assets/banner.png" width="476" height="420" alt="logo">
-      </a>
+  <body>
+    <div class="page">
+      <div class="purpl-header" id="header">
+        <div class="logo-container">
+          <a href="{{ site.baseurl }}/index.html">
+            <img src="{{ site.baseurl }}/assets/banner.png" width="476" height="420" alt="logo">
+          </a>
+        </div>
+        <div class="logo-title">
+          <a href="{{ site.baseurl }}/index.html">
+            <p class="acro">
+              <span class="acronym">Pur</span>due University
+              <span class="acronym">P</span>rogramming
+              <span class="acronym">L</span>anguages Group
+            </p>
+          </a>
+        </div>
       </div>
-      <div class="logo-title">
-	<a href="{{ site.baseurl }}/index.html">
-	<p class="acro">
-	  <span class="acronym">Pur</span>due University
-	  <span class="acronym">P</span>rogramming
-	<span class="acronym">L</span>anguages Group</p>
-	</a>
-      </div>
-    </div>
       <div class="purpl-nav">
-	<a class="button" href="{{ site.baseurl }}/index.html#news">News</a>
-	<a class="button" href="{{ site.baseurl }}/index.html#people">People</a>
-	<a class="button" href="{{ site.baseurl }}/research.html">Research</a>
-	<a class="button" href="{{ site.baseurl }}/courses.html">Courses</a>
-	<a class="button" href="{{ site.baseurl }}/seminars.html">Seminars</a>
-    </div>
+        <a class="button" href="{{ site.baseurl }}/index.html#news">News</a>
+        <a class="button" href="{{ site.baseurl }}/index.html#people">People</a>
+        <a class="button" href="{{ site.baseurl }}/research.html">Research</a>
+        <a class="button" href="{{ site.baseurl }}/courses.html">Courses</a>
+        <a class="button" href="{{ site.baseurl }}/seminars.html">Seminars</a>
+      </div>
