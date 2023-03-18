@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "News"
+category: news
+---
+
+Huge shoutout to Christopher, Nour, and Roopsha on their recently accepted OOPSLA paper: <a href="https://2023.splashcon.org/details/splash-2023-oopsla/7/Enabling-Bounded-Verification-of-Doubly-Unbounded-Distributed-Agreement-Based-Systems"> Enabling Bounded Verification of Doubly-Unbounded Distributed Agreement-Based Systems via Bounded Regions </a>
