@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-Guannan Wei will present Compiling Parallel Symbolic Execution with Continuations at ICSE'23!
+Guannan Wei will present [Compiling Parallel Symbolic Execution with Continuations](https://continuation.passing.style/static/papers/icse23.pdf) at ICSE'23!
