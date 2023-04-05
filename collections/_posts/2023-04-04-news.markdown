@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "PLDI paper"
+category: news
+---
+
+Congrats to Yongwei and Roopsha on their paper [Trace-Guided Inductive Synthesis of Recursive Functional Programs](https://victoryyw.github.io/assets/pdfs/syrup.pdf) recently accepted to PLDI 2023!
