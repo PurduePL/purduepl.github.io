@@ -3,11 +3,8 @@ function show(n) {
 	if (style == "none"){
 		document.getElementById("seminar-schedule-old").style.display = "table";
 		document.getElementById("table-collapse-img").src = "assets/minimize.png";
-	}
-	else{
+	} else{
 		document.getElementById("seminar-schedule-old").style.display = "none";
 		document.getElementById("table-collapse-img").src = "assets/maximize.png";
 	}
-
-
 }
