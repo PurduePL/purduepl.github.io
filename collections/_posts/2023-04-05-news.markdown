@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "PLDI paper"
+category: news
+---
+
+Congrats to Qianchuan and Ben on their paper "Taype: A Policy-Agnostic Language for Oblivious Computation" recently accepted to PLDI 2023!
