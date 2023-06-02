@@ -1,5 +1,5 @@
 ---
 title: "Adhitha Dias"
-img: assets/adhitha.jpeg
+img: assets/adhitha.webp
 href: https://adhithadias.github.io/
 ---

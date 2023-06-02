@@ -5,7 +5,7 @@ firstname: "Milind"
 lastname: "Kulkarni"
 category: facultycard
 date: 2016-08-09 21:00:00
-img: assets/milind.jpeg
+img: assets/milind.webp
 href: https://engineering.purdue.edu/~milind/
 ---
 

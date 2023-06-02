@@ -5,7 +5,7 @@ firstname: "Samuel"
 lastname: "Midkiff"
 category: facultycard
 date: 2016-08-09 19:00:00
-img: assets/midkiff.jpg
+img: assets/midkiff.webp
 href: https://engineering.purdue.edu/~smidkiff/
 ---
 

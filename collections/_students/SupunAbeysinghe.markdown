@@ -1,5 +1,5 @@
 ---
 title: "Supun Abeysinghe"
-img: assets/supun.jpg
+img: assets/supun.webp
 href: https://www.supun.online/
 ---

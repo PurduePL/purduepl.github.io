@@ -1,5 +1,5 @@
 ---
 title: "Charitha Saumya"
-img: assets/charitha.jpg
+img: assets/charitha.webp
 href: https://charitha22.github.io
 ---

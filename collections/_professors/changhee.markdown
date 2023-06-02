@@ -5,7 +5,7 @@ firstname: "Changhee"
 lastname: "Jung"
 category: facultycard
 date: 2019-08-09 23:00:00
-img: assets/chjung-nsf.jpeg
+img: assets/chjung-nsf.webp
 href: https://www.cs.purdue.edu/homes/chjung/
 ---
 

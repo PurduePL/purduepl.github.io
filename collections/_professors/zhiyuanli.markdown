@@ -5,7 +5,7 @@ firstname: "Zhiyuan"
 lastname: "Li"
 category: facultycard
 date: 2016-08-09 20:00:00
-img: assets/zhiyuanli.jpg
+img: assets/zhiyuanli.webp
 href: https://www.cs.purdue.edu/homes/ci/
 ---
 

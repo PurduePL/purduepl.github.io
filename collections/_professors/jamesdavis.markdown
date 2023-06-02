@@ -5,7 +5,7 @@ firstname: "James"
 lastname: "Davis"
 category: facultycard
 date: 2020-08-09 23:00:00
-img: assets/JamesDavis.jpg
+img: assets/JamesDavis.webp
 href: https://davisjam.github.io/
 ---
 

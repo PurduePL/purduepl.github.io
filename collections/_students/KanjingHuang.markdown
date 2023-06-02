@@ -1,5 +1,5 @@
 ---
 title:  "Kanjing Huang"
-img: assets/JamesDecker.jpg
+img: assets/JamesDecker.webp
 #href: http://jmd1011.github.io/
 ---

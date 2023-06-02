@@ -5,7 +5,7 @@ firstname: "Tiark"
 lastname: "Rompf"
 category: facultycard
 date: 2016-08-09 16:00:00
-img: assets/tiark.jpg
+img: assets/tiark.webp
 href: https://tiarkrompf.github.io/
 ---
 

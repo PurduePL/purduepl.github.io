@@ -5,7 +5,7 @@ firstname: "Roopsha"
 lastname: "Samanta"
 category: facultycard
 date: 2016-08-09 15:00:00
-img: assets/roopsha.jpg
+img: assets/roopsha.webp
 href: https://www.cs.purdue.edu/homes/roopsha/
 ---
 

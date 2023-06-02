@@ -5,7 +5,7 @@ firstname: "Suresh"
 lastname: "Jagannathan"
 category: facultycard
 date: 2016-08-09 22:00:00
-img: assets/suresh.png
+img: assets/suresh.webp
 href: https://www.cs.purdue.edu/homes/suresh/
 ---
 

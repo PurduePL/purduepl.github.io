@@ -5,7 +5,7 @@ firstname: "Lin"
 lastname: "Tan"
 category: facultycard
 date: 2022-08-09 23:00:00
-img: assets/lintan-bw.jpg
+img: assets/lintan-bw.webp
 href: https://www.cs.purdue.edu/homes/lintan/
 ---
 

@@ -1,4 +1,4 @@
 ---
 title:  "Terry Hsu"
-img: assets/terryhsu.jpg
+img: assets/terryhsu.webp
 ---

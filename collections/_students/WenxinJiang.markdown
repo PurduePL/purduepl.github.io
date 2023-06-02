@@ -1,5 +1,5 @@
 ---
 title: "Wenxin Jiang"
-img: assets/wenxin.png
+img: assets/wenxin.webp
 href: https://wenxin-jiang.github.io/
 ---

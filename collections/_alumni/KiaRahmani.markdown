@@ -1,5 +1,5 @@
 ---
 title:  "Kia Rahmani"
-img: assets/kia.jpg
+img: assets/kia.webp
 href: https://kiarahmani.github.io/
 ---

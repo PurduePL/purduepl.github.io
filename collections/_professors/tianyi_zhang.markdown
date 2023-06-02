@@ -5,7 +5,7 @@ firstname: "Tianyi"
 lastname: "Zhang"
 category: facultycard
 date: 2019-01-09 23:00:00
-img: assets/tianyi_zhang.jpeg
+img: assets/tianyi_zhang.webp
 href: https://tianyi-zhang.github.io/
 ---
 

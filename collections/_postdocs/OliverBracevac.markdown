@@ -1,5 +1,5 @@
 ---
 title: "Oliver Bračevac"
-img: assets/bracevac.jpg
+img: assets/bracevac.webp
 href: https://bracevac.org
 ---

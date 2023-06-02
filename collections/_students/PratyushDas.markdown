@@ -1,5 +1,5 @@
 ---
 title: "Pratyush Das"
-img: assets/pratyush.jpg
+img: assets/pratyush.webp
 href: http://reikdas.github.io
 ---

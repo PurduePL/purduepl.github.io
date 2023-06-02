@@ -1,5 +1,5 @@
 ---
 title: "Caleb Helbling"
-img: assets/caleb.jpeg
+img: assets/caleb.webp
 href: https://helbli.ng/
 ---

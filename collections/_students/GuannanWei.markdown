@@ -1,5 +1,5 @@
 ---
 title: "Guannan Wei"
-img: assets/guannan.jpg
+img: assets/guannan.webp
 href: http://continuation.passing.style
 ---
