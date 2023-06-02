@@ -85,7 +85,13 @@ layout: index
             {% else %}
             <a href="index.html">
               {% endif %}
-              <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
+
+              {% if student.img %}
+              <img src="{{ student.img }}" alt="{{ student.title }}" />
+              {% else %}
+              <img src="assets/anonymous-avatar.png" alt="{{ student.title }}" />
+              {% endif %}
+
               <span class="photo-caption">{{ student.title }}</span>
             </a>
         </li>
