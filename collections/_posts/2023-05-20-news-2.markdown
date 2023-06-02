@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Zhe paper"
+category: news
+---
+
+Zhe and Ashish's paper on [Type-based Verification of Test Input Generators](https://arxiv.org/pdf/2304.03393.pdf) was recognized as a distinguished paper at PLDI 2023. Congrats!
