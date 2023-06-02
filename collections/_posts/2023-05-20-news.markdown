@@ -4,4 +4,4 @@ title:  "Vani paper"
 category: news
 ---
 
-Vani paper "RT-kNNS Unbound: Using RT Cores to Accelerate Unrestricted Neighbor Search" will be appearing at [ICS 23](https://nschiele.github.io/ICS2023/). See you in Orlando!
+Vani's paper "RT-kNNS Unbound: Using RT Cores to Accelerate Unrestricted Neighbor Search" will be appearing at [ICS 23](https://nschiele.github.io/ICS2023/). See you in Orlando!
