@@ -10,6 +10,8 @@ Open an issue! We have a template for adding new members to the website. If you 
 
 All images are displayed at a 120x120 ratio. Use `convert image.jpg -resize 120x120^ -extent 120x120 -gravity center image_small.jpg` to get the proper sizing.
 
+A more modern web format can be converted to using `cwebp -m 6 -q 80 -mt -af -progress image.jpg -o image.webp`
+
 ## Testing the Website
 
 Either:
