@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Morpheus"
+category: news
+---
+
+Ashish's work on parser verification is accepted to [ECOOP 23](https://drops.dagstuhl.de/opus/volltexte/2023/18213/)!
