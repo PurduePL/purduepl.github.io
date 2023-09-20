@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "ASE papers!"
+category: news
+---
+
+PurPL-ers will be presenting four (that's [1](https://conf.researchr.org/details/ase-2023/ase-2023-papers/113/On-the-fly-Improving-Performance-of-Deep-Code-Models-via-Input-Denoising), [2](https://conf.researchr.org/details/ase-2023/ase-2023-papers/10/Systematically-Detecting-Packet-Validation-Vulnerabilities-in-Embedded-Network-Stacks), [3](https://conf.researchr.org/details/ase-2023/ase-2023-papers/111/Vicious-Cycles-in-Distributed-Software-Systems), [4](https://conf.researchr.org/details/ase-2023/ase-2023-papers/112/Software-Entity-Recognition-with-Noise-Robust-Learning)) at [ASE'23](https://conf.researchr.org/home/ase-2023). Congrats to all the authors!
