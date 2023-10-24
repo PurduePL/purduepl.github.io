@@ -141,7 +141,6 @@ ul.name-list {
   margin-left: auto;
   margin-right: auto;
   padding-top: 15px;
-  width: 368px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -342,7 +341,6 @@ div.faculty-info {
 }
 
 div.cards {
-  display: inline-block;
   height: auto;
   margin-bottom: 30px;
   margin-left: 2%;
