@@ -18,3 +18,7 @@ Either:
 
 - Install Ruby and subsequent dependencies. Then use `./serve`
 - Install Docker and run `docker run --rm --volume="${PWD}:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:3.8 jekyll serve --incremental --drafts --config _config.yml` from the root of this project
+
+### Troubleshooting
+
+You might run into an error when attempting to build the site. The first thing to check is if you have a stale `Gem.lock` or `_site`. Nuke one or both of these and try a fresh build before anything else.
