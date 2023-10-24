@@ -29,12 +29,11 @@ layout: index
     </div>
   </div>
 
-  <div class="cards" id="cards-container">
+  <div class="cards">
     <!-- faculty -->
     <div class="cards-title" id="people">
       <h1>Faculty</h1>
       <ul class="photo-list">
-        {% assign i = 0 %}
         {% for professor in site.professors reversed %}
         <li>
           <a href="{{ professor.href }}">
@@ -51,7 +50,6 @@ layout: index
     <div class="cards-title" id="postdocs">
       <h1 style="margin-top: 15px">Postdocs</h1>
       <ul class="photo-list">
-        {% assign i = 0 %}
         {% for postdoc in site.postdocs %}
         <li>
           {% if postdoc.href %}
@@ -77,7 +75,6 @@ layout: index
     <div class="cards-title" id="students">
       <h1 style="margin-top: 15px">Grad Students</h1>
       <ul class="photo-list">
-        {% assign i = 0 %}
         {% for student in site.students %}
         <li>
           {% if student.href %}
@@ -103,7 +100,6 @@ layout: index
     <div class="cards-title" id="undergrads">
       <h1 style="margin-top: 15px">Undergraduates</h1>
       <ul class="name-list">
-        {% assign i = 0 %}
         {% for undergrad in site.undergrads %}
         <li>
           {% if undergrad.href %}
@@ -123,7 +119,6 @@ layout: index
     <div class="cards-title" id="alumni">
       <h1 style="margin-top: 15px;margin-right: 50%">Alumni</h1>
       <ul class="name-list">
-        {% assign i = 0 %}
         {% for alumni in site.alumni %}
         <li>
           {% if alumni.href %}
@@ -131,7 +126,6 @@ layout: index
             {% else %}
             <a href="index.html">
               {% endif %}
-              <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
               <span class="photo-caption">{{ alumni.title }}</span>
             </a>
         </li>
