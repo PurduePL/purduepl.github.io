@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "POPL'24 2"
+category: news
+---
+
+Guannan's paper on polymorphic reachability types will appear at [POPL](https://popl24.sigplan.org/details/POPL-2024-popl-research-papers/16/Polymorphic-Reachability-Types-Tracking-Freshness-Aliasing-and-Separation-in-Highe). Congrats to all the authors!
