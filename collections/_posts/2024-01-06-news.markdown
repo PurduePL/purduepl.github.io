@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "POPL'24 3"
+category: news
+---
+
+Yuantian will present his work on synthesizing bit-vector programs at [POPL](https://popl24.sigplan.org/details/POPL-2024-popl-research-papers/73/Enhanced-Enumeration-Techniques-for-Syntax-Guided-Synthesis-of-Bit-Vector-Manipulatio). Congrats Yuantian!
