@@ -4,7 +4,7 @@ title:  "POPL'24 1"
 category: news
 ---
 
-Supun's work on building an efficient Datalog compiler for program analysis will
-appear at
+Supun's work on building an efficient Datalog compiler for program analysis was
+recognized as a distinguished paper at
 [POPL](https://popl24.sigplan.org/details/POPL-2024-popl-research-papers/88/Flan-An-Expressive-and-Efficient-Datalog-Compiler-for-Program-Analysis).
 Congrats Supun!
