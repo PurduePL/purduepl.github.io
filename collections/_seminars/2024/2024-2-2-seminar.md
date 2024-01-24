@@ -1,6 +1,6 @@
 ---
 layout: post
-speaker: "Guannan"
+speaker: "Qianchuan Ye"
 title: ""
 time: 12p EST
 location: "LWSN 3102A/B"
