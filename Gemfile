@@ -3,4 +3,4 @@ gem 'github-pages'
 gem 'rouge'
 gem 'html-proofer'
 
-gem "jekyll"
+gem "jekyll", "~> 3.9.3"
