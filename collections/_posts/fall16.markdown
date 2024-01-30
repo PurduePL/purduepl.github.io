@@ -52,8 +52,8 @@ applying them to the real-world applications.
 
 In pursuit of high scalability and _always-on_ experience, large scale
 web services, such as Facebook and Amazon, have embraced
-[unconventional](http://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
-[storage](http://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
+[unconventional](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
+[storage](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
 [systems](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf)
 with weak consistency guarantees. The widespread adoption of
 cloud-based deployment model (i.e., deploying applications via
@@ -64,7 +64,7 @@ significantly more complicated than programming with conventional
 relational databases, and much of this complexity can be attributed to
 the lack of sufficient programming abstractions and concurrency
 control mechanisms that provide strong enough guarantees. To address
-this problem, we built [Quelea](http://gowthamk.github.io/Quelea/), a
+this problem, we built [Quelea](https://gowthamk.github.io/Quelea/), a
 programming framework
 that simplifies the task of developing highly scalable web
 applications on the top of eventually consistent NoSQL stores, such as
@@ -88,7 +88,7 @@ including the support for:
 
 An independent study on Quelea is a good opportunity to work on the
 above problems, while gaining advanced skills in Distributed Systems,
-Databases and PL. 
+Databases and PL.
 
 <h3>Irmin</h3>
 
@@ -106,18 +106,18 @@ to the Git workflow, where distributed nodes fork, fetch, merge and
 push data between each other. The general idea is that you want every
 active node to get a local (partial) copy of a global database and
 always be very explicit about how and when data is shared and
-migrated. 
+migrated.
 
 Irmin is a subject of active research at
 [Cambridge University OCaml
-Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/), and is part of an
-umbrella of projects that includes [Unikernels](http://unikernel.org/) and 
-[Mirage OS](https://mirage.io/). 
+Labs](https://www.cl.cam.ac.uk/projects/ocamllabs/), and is part of an
+umbrella of projects that includes [Unikernels](https://unikernel.org/) and
+[Mirage OS](https://mirage.io/).
 
 An independent study focused on Irmin is a great opportunity to
 explore unconventional ways of engineering a NoSQL store or an
 Internet-of-Things (IoT) based on the Git-based data model facilitated
-by Irmin. 
+by Irmin.
 <br />
 <br />
 
@@ -126,5 +126,5 @@ by Irmin.
 If you are interested in any of the aforementioned projects, please
 contact [Prof. Suresh
 Jagannathan](https://www.cs.purdue.edu/homes/suresh/) or [Gowtham
-Kaki](http://gowthamk.github.io/) with the details about yourself that
+Kaki](https://gowthamk.github.io/) with the details about yourself that
 you consider to be relevant to the project.

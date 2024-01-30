@@ -15,4 +15,4 @@ Language-based security;
 Static and dynamic binary program analysis;
 Safe runtime systems.
 
-[HexHive Group](http://hexhive.github.io/)
+[HexHive Group](https://hexhive.github.io/)

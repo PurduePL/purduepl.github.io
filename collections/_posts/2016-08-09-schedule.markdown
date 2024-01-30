@@ -7,7 +7,7 @@ category: schedule
 #### September 1, 2016 ####
 **Speaker**: Leo Osvald
 
-**Title**: 
+**Title**:
 
 **Abstract**: First-class functions dramatically increase expressiveness, at the expense of static guarantees. In ALGOL or PASCAL, functions could be passed as arguments but never escape their defining scope. Thus, function arguments could serve as temporary access tokens or capabilities, enabling callees to perform some action, but only for the duration of the call. In modern languages, such programming patterns are no longer available.
 
@@ -21,7 +21,7 @@ We implement our system as an extension of Scala, and present several case studi
 
 **Title**: Locality-aware Task-parallel Execution on GPUs
 
-**Abstract**: 
+**Abstract**:
 GPGPUs deliver high speedup for regular applications while remaining energy efficient. In recent years, there has been much focus on tuning irregular, task-parallel applications and/or the GPU architecture in order to achieve similar benefits for irregular applications running on GPUs. While most of the previous works have focused on minimizing the effect of control and memory divergence, which are prominent in irregular applications and which degrade the performance, there has been less attention paid to decreasing cache pressure and hence improving performance of applications given the small cache sizes on GPUs. In this paper we tackle two problems. First we extract data parallelism from irregular task parallel applications, which we do by subdividing each task into sub tasks at the CPU side and sending these sub tasks to the GPU for execution. By doing so we take advantage of the massive parallelism provided by the GPU. Second, to mitigate the memory demands of many tasks that access irregular data structures, we schedule these subtasks in a way to minimize the memory footprint of each warp running on the GPU. We use our framework with 3 task-parallel algorithms and show that we can achieve significant speedups over optimized GPU code.
 
 #### September 15, 2016 ####
@@ -32,7 +32,7 @@ GPGPUs deliver high speedup for regular applications while remaining energy effi
 **Abstract**:
 Considering the diverse nature of real-world distributed applications that makes it hard to identify a representative subset of distributed benchmarks, we focus on their underlying distributed algorithms. We present and characterize a new kernel benchmark suite (named IMSuite) that simulates some of the classical distributed algorithms in task parallel languages. We present multiple variations of our kernels, broadly categorized under two heads: (a) varying synchronization primitives (with and without fine grain synchronization primitives); and (b) varying forms of parallelization (data parallel and recursive task parallel). Our characterization covers interesting aspects of distributed applications such as distribution of remote communication requests, number of synchronization, task creation, task termination and atomic operations. We study the behavior (execution time) of our kernels by varying the problem size, the number of compute threads, and the input configurations. We also present an involved set of input generators and output validators.
 
-Paper link: http://www.sciencedirect.com/science/article/pii/S0743731514002032
+Paper link: https://www.sciencedirect.com/science/article/pii/S0743731514002032
 
 #### September 22, 2016 ####
 **Speakers**: Ruby Tahboub and Gegory Essertel
@@ -40,8 +40,8 @@ Paper link: http://www.sciencedirect.com/science/article/pii/S0743731514002032
 **Title**: Flare: Scale up Apache Spark with Native Compilation and Set Your Data on Fire!
 
 **Abstract**:
-The need for modern data analytics to combine relational, procedural, and map-reduce-style functional processing is widely recognized. State-of-the-art 
-systems like Spark have recognized the need to add SQL front-ends and relational query optimization. 
+The need for modern data analytics to combine relational, procedural, and map-reduce-style functional processing is widely recognized. State-of-the-art
+systems like Spark have recognized the need to add SQL front-ends and relational query optimization.
 
 But how good are these relational extensions when scaled-up on modern hardware? We present the first comparative evaluation of Spark SQL on the standard TPC-H benchmark and show that there isa significant performance gap to best-of-breed relational query engines. We present Flare, a new back-end for Spark SQL that brings performance closer to the best SQL engines, without giving up the added expressiveness of Spark. Flare leverages the fact that Spark SQL is entirely implemented in Scala, and maps Spark's internal query plans to Delite, an existing general-purpose compiler framework for embedded DSLs, also implemented in Scala.
 
@@ -50,7 +50,7 @@ But how good are these relational extensions when scaled-up on modern hardware? 
 
 **Title**: LDX: Causality Inference by Lightweight Dual Execution
 
-**Abstract**: 
+**Abstract**:
 Causality inference, such as dynamic taint anslysis, has many applications
 (e.g., information leak detection). It determines whether
 an event e is causally dependent on a preceding event c during execution.
@@ -73,12 +73,12 @@ better accuracy in causality inference.
 
 **Title**: High Performance Model Based Image Reconstruction
 
-**Abstract**: 
-Computed Tomography (CT) Image Reconstruction is an important technique used in a wide range of applications, ranging from explosive detection, medical imaging to scientific imaging. Among available reconstruction methods, Model Based Iterative Reconstruction (MBIR) produces higher quality images and allows for the use of more general CT scanner geometries than is possible with more commonly used methods. However, the high computational cost of MBIR often makes it impractical in applications for which it would otherwise be ideal. 
+**Abstract**:
+Computed Tomography (CT) Image Reconstruction is an important technique used in a wide range of applications, ranging from explosive detection, medical imaging to scientific imaging. Among available reconstruction methods, Model Based Iterative Reconstruction (MBIR) produces higher quality images and allows for the use of more general CT scanner geometries than is possible with more commonly used methods. However, the high computational cost of MBIR often makes it impractical in applications for which it would otherwise be ideal.
 
 This talk describes how our understanding in physical geometry, numerical algorithm and computer architecture can transform the highly irregular and intrinsically sequential tomographic application into a highly parallel one.
 
-This talk also describes a novel organization of the scanner data into super-voxels (SV) that, combined with a super-voxel buffer (SVB), dramatically increase locality and prefetching, enable parallelism across SVs and lead to an average speedup of 187X on 20 cores. 
+This talk also describes a novel organization of the scanner data into super-voxels (SV) that, combined with a super-voxel buffer (SVB), dramatically increase locality and prefetching, enable parallelism across SVs and lead to an average speedup of 187X on 20 cores.
 
 This application is an example of algorithm that appears to be irregular, but has sufficient regularity that with careful tuning it can achieve large speedups on both a single-core and multiple cores.   Currently, this tuning is almost entirely manual and expressed in OpenMP and MPI.  Having programming language and compiler support to aid in the tuning of this and many other applications would be of significant benefit.
 
@@ -87,7 +87,7 @@ This application is an example of algorithm that appears to be irregular, but ha
 
 **Title**: Enforcing Least Privilege Memory Views for Multithreaded Applications
 
-**Abstract**: 
+**Abstract**:
 Failing to properly isolate components in the same address space has resulted in a substantial amount of vulnerabilities. Enforcing the least privilege principle for memory accesses can selectively isolate software components to restrict attack surface and prevent unintended cross-component memory corruption. However, the boundaries and interactions between software components are hard to reason about and existing approaches have failed to stop attackers from exploiting vulnerabilities caused by poor isolation. We present the secure memory views (SMV) model: a practical and efficient model for secure and selective memory isolation in monolithic multithreaded applications. SMV is a third generation privilege separation technique that offers explicit access control of memory and allows concurrent threads within the same process to partially share or fully isolate their memory space in a controlled and parallel manner following application requirements. An evaluation of our prototype in the Linux kernel (TCB less than 1,800 LOC) shows negligible runtime performance overhead in real-world applications including Cherokee web server (less than 0.69%), Apache httpd web server (less than 0.93%), and Mozilla Firefox web browser (less than 1.89%) with at most 12 LOC changes.
 Link to paper: https://www.cs.purdue.edu/homes/hsu62/ccs16_smv.pdf
 
@@ -96,8 +96,8 @@ Link to paper: https://www.cs.purdue.edu/homes/hsu62/ccs16_smv.pdf
 
 **Title**: TypeSan: Practical Type Confusion Detection
 
-**Abstract**: 
-Typecasting is a fundamental concept in C++ to convert a pointer from one object type into another. However, downcasting has critical security implications due to potentially different object memory layouts. Due to missing type safety in C++, a downcasted pointer can violate a programmer’s intended pointer semantics, allowing an attacker to corrupt the underlying memory in a type-unsafe fashion. This vulnerability class is receiving increasing attention and is known as type confusion. Several existing approaches detect different forms of type confusion, but these solutions are limited due to both high run-time performance overhead and low detection coverage. This paper presents TypeSan, a practical type-confusion detector which provides both low run-time overhead and high detection coverage. TypeSan relies on an efficient per-object metadata storage service based on a compact memory shadowing scheme. Our experimental results confirm that TypeSan is practical, even when explicitly checking almost all the relevant typecasts in a given C++ program. Compared to the state of the art, TypeSan yields orders of magnitude higher coverage at 4–10 times lower performance overhead on SPEC and 2 times on Firefox. 
+**Abstract**:
+Typecasting is a fundamental concept in C++ to convert a pointer from one object type into another. However, downcasting has critical security implications due to potentially different object memory layouts. Due to missing type safety in C++, a downcasted pointer can violate a programmer’s intended pointer semantics, allowing an attacker to corrupt the underlying memory in a type-unsafe fashion. This vulnerability class is receiving increasing attention and is known as type confusion. Several existing approaches detect different forms of type confusion, but these solutions are limited due to both high run-time performance overhead and low detection coverage. This paper presents TypeSan, a practical type-confusion detector which provides both low run-time overhead and high detection coverage. TypeSan relies on an efficient per-object metadata storage service based on a compact memory shadowing scheme. Our experimental results confirm that TypeSan is practical, even when explicitly checking almost all the relevant typecasts in a given C++ program. Compared to the state of the art, TypeSan yields orders of magnitude higher coverage at 4–10 times lower performance overhead on SPEC and 2 times on Firefox.
 
 #### October 27, 2016 ####
 **Speaker**: James Decker
@@ -111,7 +111,7 @@ Typecasting is a fundamental concept in C++ to convert a pointer from one object
 
 **Title**: Prepping for the Job Hunt
 
-**Abstract**: 
+**Abstract**:
 Dr. Samanta will speak about good practices before and after graduation for entering professional academia.
 
 #### November 10, 2016 ####
