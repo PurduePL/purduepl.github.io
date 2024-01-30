@@ -16,7 +16,6 @@ baseurl: ''
 github: ''
 
 permalink: /:year/:month/:title
-paginate: 10
 excerpt_separator: <!--more-->
 
 highlighter: rouge
