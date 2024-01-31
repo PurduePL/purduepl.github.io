@@ -1,4 +1,5 @@
 ---
 title: "David M. Perry"
-href: https://www.davidmitchelperry.com/
+href: https://github.com/davidmitchelperry
+# https://www.davidmitchelperry.com/
 ---
