@@ -16,7 +16,6 @@ baseurl: ''
 github: ''
 
 permalink: /:year/:month/:title
-paginate: 10
 excerpt_separator: <!--more-->
 
 highlighter: rouge
@@ -24,7 +23,7 @@ highlighter: rouge
 # redcarpet:
 #   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
-exclude: ['README.md', 'LICENSE', 'purplblog']
+exclude: ['README.md', 'LICENSE', 'purplblog', 'Gemfile', 'Gemfile.lock', 'vendor']
 
 future: true
 

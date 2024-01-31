@@ -13,8 +13,8 @@ Functional Programming, Program Verification, Weak and Eventual
 Consistency, Program Analysis via Machine Learning, Memory Models,
 Verified Compilation.
 
-[Quelea](http://gowthamk.github.io/Quelea),
+[Quelea](https://gowthamk.github.io/Quelea),
 [DOrder](https://github.com/rowangithub/DOrder),
-[MultiMLton](http://multimlton.cs.purdue.edu/mML/Welcome.html).
-<!-- [CompCertTSO](http://www.cl.cam.ac.uk/~pes20/CompCertTSO/doc/),
+[MultiMLton](https://multimlton.cs.purdue.edu/mML/Welcome.html).
+<!-- [CompCertTSO](https://www.cl.cam.ac.uk/~pes20/CompCertTSO/doc/),
 [Catalyst](https://github.com/gowthamk/catalyst). -->

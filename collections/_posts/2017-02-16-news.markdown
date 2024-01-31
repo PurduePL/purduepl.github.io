@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-Kirshanthan, Laith, and Milind's paper on Locality Transformations for Nested Recursive Iteration Spaces has been accepted to [ASPLOS 2017](http://novel.ict.ac.cn/ASPLOS2017/program.html).
+Kirshanthan, Laith, and Milind's paper on Locality Transformations for Nested Recursive Iteration Spaces has been accepted to [ASPLOS 2017](https://dl.acm.org/doi/proceedings/10.1145/3037697).
