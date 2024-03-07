@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Taypsi Accepted!"
+title:  "Taypsi Accepted!"
 category: news
 ---
 

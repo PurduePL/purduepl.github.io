@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "ParDiff Accepted!"
+category: news
+---
+
+Mingwei's paper on analysis of protocol parsers has been accepted to [OOPSLA'24](https://2024.splashcon.org/details/splash-2024-oopsla/44/ParDiff-Practical-Static-Differential-Analysis-of-Network-Protocol-Parsers)! Congrats to all the authors!
