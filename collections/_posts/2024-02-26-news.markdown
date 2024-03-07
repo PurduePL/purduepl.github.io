@@ -1,0 +1,7 @@
+---
+layout: post
+title:  Taypsi Accepted!"
+category: news
+---
+
+Qianchuan's work on deriving performant [privacy-preserving MPC programs](https://arxiv.org/pdf/2311.09393.pdf) will appear at [OOPSLA'24](https://2024.splashcon.org/track/splash-2024-oopsla#event-overview). Congratulations Qianchuan!
