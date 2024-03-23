@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import gspread
 import json
 from dateutil.parser import *
