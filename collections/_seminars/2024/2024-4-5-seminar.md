@@ -1,12 +1,16 @@
 ---
 layout: post
 speaker: "Jenna DiVincenzo"
-title: "Gradual Verification of Recursive Heap Data Structures"
+title: "Gradual Verification: Assuring Programs Incrementally"
 time: 12p EST
 location: "LWSN 3102A/B"
 category: seminar
 invited: false
 link_abstract: true
-bio: "TBA"
+bio: "Jenna DiVincenzo (previously, Jenna Wise) is an Assistant Professor in the Elmore Family School of Electrical and Computer Engineering at Purdue University. She holds a PhD in Software Engineering from Carnegie Mellon University, where she was co-advised by Jonathan Aldrich and Joshua Sunshine. She also holds a B.S. in Mathematics and Computer Science from Youngstown State University (YSU). Her research interests lie at the intersection of formal methods, programming languages, and software engineering; and she is particularly interested in research outcomes that make it easier for developers to write secure software! During her PhD, she was a Google PhD Fellow, an NSF GRFP Fellow, and a 2022 Rising Star in EECS. Previously, she interned at IBM Research, the MIT Lincoln Laboratory, and the Software Engineering Research and Empirical Studies Lab at YSU. She also previously contributed to the language designs of Penrose—which generates diagrams from mathematical prose—and Obsidian—a programming language that facilitates the development of secure blockchain applications."
 ---
-TBA
+Current static verification tools burden their users by requiring them to write inductively complete specifications involving many extraneous details. Worse, such specifications must be written in an all or nothing fashion, because static verification tools do not provide good support for incrementality. To overcome these limitations, this talk introduces the idea of gradual verification, which handles complete, partial, or missing specifications by soundly combining static and dynamic checking. As a result, gradual verification allows users to specify and verify only the properties and components of their system that they care about and increase the scope of verification gradually over time.
+
+This talk primarily discusses my thesis work, which extends gradual verification to programs manipulating recursive, mutable data structures on the heap. I outline the formal foundations for such gradual verification systems and present the design of a gradual verifier derived from these foundations that can be used on real programs, called Gradual C0. Gradual C0 is implemented on top of the Viper static verifier and supports the C0 programming language—which is a safer, smaller subset of C taught at Carnegie Mellon University. Additionally, I present some of the key results from two studies using Gradual C0. The first study quantitatively evaluates how the partialness of specifications impacts the degree of static and dynamic verification in Gradual C0, and thus, the run-time overhead of programs. The second study qualitatively evaluates how Gradual C0 can be used to verify real application code via a case study. Gradual C0 on average decreases run-time overhead by 11-34% compared to dynamic verification alone. Qualitatively, Gradual C0 exhibits earlier error detection for incorrect specifications and code than static verification alone.
+
+I end the talk with new lines of work in gradual verification that my research lab is pursuing. This new work has implications in software security and CS education.
