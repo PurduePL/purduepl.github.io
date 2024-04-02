@@ -14,13 +14,15 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-seminar_info = args.seminar_file.readlines()
+seminar_info = args.seminar_file.read()
 
-## todo Abstract does not support multi-line abstracts
-abstract = seminar_info[-1]
+seminar_sections = seminar_info.split("---")
+assert(len(seminar_sections[0]) == 0)
+abstract = seminar_sections[-1]
+seminar_info = "".join(seminar_sections[1:-1])
 
 speaker, title, time, location, bio = None, None, None, None, None
-for line in seminar_info:
+for line in seminar_info.split("\n"):
     if line.startswith("title:"):
         title = line.split(":")[1].strip()
     if line.startswith("speaker:"):
@@ -31,7 +33,7 @@ for line in seminar_info:
         location = line.split(":")[1].strip()
     ## todo Bio does not support multi-line bios
     if line.startswith("bio:"):
-        bio = line.split(":")[1].strip()
+        bio = line.split(":")[1].strip().strip('\"')
 
 assert speaker is not None
 assert title is not None
