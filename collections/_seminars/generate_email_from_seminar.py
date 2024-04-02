@@ -54,7 +54,7 @@ Hello All,
 If you are planning to attend this week, RSVP via the calendar invite so that we can estimate attendance to order food.
 
 Address: {location}
-Time: 12:00-1:30 pm (12-12:30 lunch | 12:30 - 1:30 presentation)
+Time: 12:00-1:30 pm (12-12:30 lunch | 12:30-1:30 presentation)
 
 Title:
 {title}
