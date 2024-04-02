@@ -18,7 +18,7 @@ seminar_info = args.seminar_file.read()
 
 seminar_sections = seminar_info.split("---")
 assert(len(seminar_sections[0]) == 0)
-abstract = seminar_sections[-1]
+abstract = seminar_sections[-1].strip()
 seminar_info = "".join(seminar_sections[1:-1])
 
 speaker, title, time, location, bio = None, None, None, None, None
