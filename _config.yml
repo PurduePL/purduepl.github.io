@@ -15,7 +15,7 @@ baseurl: ''
 # This can be '' to hide the Github nav button
 github: ''
 
-permalink: /:year/:month/:title
+permalink: /:year/:month/:day/:title
 excerpt_separator: <!--more-->
 
 highlighter: rouge
