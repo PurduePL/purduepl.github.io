@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-Tiark receives a [Google Faculty Research Award](https://research.google.com/research-outreach.html#/research-outreach/faculty-engagement/faculty-research-awards).
+Tiark receives a [Google Faculty Research Award](https://research.google/programs-and-events/faculty-engagement/).
