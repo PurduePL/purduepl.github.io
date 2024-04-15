@@ -17,23 +17,23 @@ args = parser.parse_args()
 seminar_info = args.seminar_file.read()
 
 seminar_sections = seminar_info.split("---")
-assert(len(seminar_sections[0]) == 0)
+assert len(seminar_sections[0]) == 0
 abstract = seminar_sections[-1].strip()
 seminar_info = "".join(seminar_sections[1:-1])
 
 speaker, title, time, location, bio = None, None, None, None, None
 for line in seminar_info.split("\n"):
     if line.startswith("title:"):
-        title = line.split(":")[1].strip()
+        title = line.split(":", maxsplit=1)[1].strip()
     if line.startswith("speaker:"):
-        speaker = line.split(":")[1].strip()
+        speaker = line.split(":", maxsplit=1)[1].strip()
     if line.startswith("time:"):
-        time = line.split(":")[1].strip()
+        time = line.split(":", maxsplit=1)[1].strip()
     if line.startswith("location:"):
-        location = line.split(":")[1].strip()
+        location = line.split(":", maxsplit=1)[1].strip()
     ## todo Bio does not support multi-line bios
     if line.startswith("bio:"):
-        bio = line.split(":")[1].strip().strip('\"')
+        bio = line.split(":", maxsplit=1)[1].strip().strip('"')
 
 assert speaker is not None
 assert title is not None
