@@ -71,3 +71,25 @@ Patrick LaFontaine
 
 print(email_title)
 print(email)
+
+food_email = """
+Hello,
+
+We have <X> people who signed up for this week's seminar. Please find the details below.
+
+Lunch for <X> / PurPL Seminar
+Address: <LOCATION
+Contact: <STUDENT CONTACT>
+
+Speaker: <SPEAKER
+Title: <TITLE>
+
+RSVPed List:
+<PEOPLE>
+
+Thanks,
+Patrick
+"""
+
+print("\n\n\n\n\n")
+print(food_email)
