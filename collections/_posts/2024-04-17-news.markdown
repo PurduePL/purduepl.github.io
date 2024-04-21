@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "ICS'24 paper"
+category: news
+---
+
+[Durga](https://mdurgakeerthi.github.io/), [Vani](https://sites.google.com/view/vani-nagarajan/home), and [Artem's](https://a.pelenitsyn.top/) paper on implementing k-nearest neighbor search using ray tracing will appear at [ICS'24](https://ics2024.github.io/)! Congrats to all the authors!
