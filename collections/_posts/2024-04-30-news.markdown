@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Julia on Julia"
+category: news
+---
+
+Congrats to [Julia](https://julbinb.github.io/) (Belyakova) on her upcoming
+[PLDI paper](https://doi.org/10.1145/3656421) on subtyping in
+[Julia](https://julialang.org/) (the language)!
