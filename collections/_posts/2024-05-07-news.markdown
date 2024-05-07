@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "PLDI"
+category: news
+---
+
+Congrats to [Zhe](https://zhezhouzz.github.io/) and [Qianchuan](https://ccyip.xyz/) on their upcoming [PLDI paper](https://doi.org/10.1145/3656433) on HATS-- a new technique for automatically reasoning about clients of effectful data structure libraries using a combination automata and refinement types.
