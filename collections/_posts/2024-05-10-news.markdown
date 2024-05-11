@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Last PLDI Announcement"
+category: news
+---
+
+Congrats to [Guannan](https://continuation.passing.style/),
+[Danning](https://dnxie.github.io/), [Yongwei](https://victoryyw.github.io/) and
+their co-authors on their upcoming [PLDI paper](https://doi.org/10.1145/3656416)
+on making smart contracts safer by integrating behavioral contracts into
+Solidity!
