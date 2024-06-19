@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Durga Wins Best Paper!"
+category: news
+---
+
+[Durga's](https://mdurgakeerthi.github.io/) paper on [GPU ray tracing
+acceleration for nearest
+neighbor](https://dl.acm.org/doi/10.1145/3577193.3593738) won best paper at ICS!
+Congrats Durga!
