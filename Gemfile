@@ -5,4 +5,4 @@ gem 'nokogiri', "~> 1.16.7"
 gem 'webrick'
 gem 'html-proofer', require: false
 
-gem "jekyll", "~> 3.9"
+gem "jekyll", "~> 3.10"
