@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Congrats to Adithia!"
+category: news
+---
+
+[Adhitha's](https://adhithadias.github.io/) paper on generating optimal schedules for sparse tensor computations has been accepted to [OOPSLA '24](https://2024.splashcon.org/details/splash-2024-oopsla/73/SparseAuto-An-Auto-Scheduler-for-Sparse-Tensor-Computations-Using-Recursive-Loop-Nes). Congratulations to [all](https://kirshanthans.github.io/) [the](https://a.pelenitsyn.top/) [authors](https://engineering.purdue.edu/~milind/)!
