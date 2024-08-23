@@ -1,6 +1,6 @@
 ---
 name: Seminar Talk Info
-about: Information for an upcoming seminar talkd
+about: Information for an upcoming seminar talk
 title: 'Seminar Talk: <title>'
 labels: ''
 assignees: ''
