@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Congrats to Anmol et al!"
+category: news
+---
+
+Congratulations to [Anmol](https://anmolsahoo25.github.io/),
+[Suresh](https://www.cs.purdue.edu/homes/suresh/), and their co-authors on their
+upcoming [OOPSLA'24](https://2024.splashcon.org/) paper on [verifying concurrent
+data
+structures](https://2024.splashcon.org/details/splash-2024-oopsla/145/Automated-Robustness-Verification-of-Concurrent-Data-Structure-Libraries-Against-Rela)!
