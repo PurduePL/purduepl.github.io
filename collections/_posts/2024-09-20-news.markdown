@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "PALM Published!"
+category: news
+---
+
+Minghai's paper on using LLMs to automatically generate proofs in Coq to appear at [ASE'24](https://conf.researchr.org/track/ase-2024/ase-2024-research). Congratulations Minghai!
