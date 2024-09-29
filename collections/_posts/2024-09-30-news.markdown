@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Qianchuan is Movin' On"
+category: news
+---
+
+Qianchuan has joined the [University at Buffalo](https://engineering.buffalo.edu/computer-science-engineering.html) as an assistant professor. Congratulations [Professor Ye](https://ccyip.xyz)!
