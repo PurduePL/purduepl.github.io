@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Congrats to Pratyush"
+category: news
+---
+
+Congratulations to Pratyush on his upcoming [GPCE paper](https://2024.splashcon.org/details/gpce-2024-papers/10/Specializing-Data-Access-in-a-Distributed-File-System-Generative-Pearl-) on using staging to optimize distributed file systems!
