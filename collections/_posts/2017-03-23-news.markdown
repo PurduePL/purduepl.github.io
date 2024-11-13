@@ -4,4 +4,4 @@ title:  "News"
 category: news
 ---
 
-Ben's paper with collaborators at MIT and CMU on proof assistants as the ultimate DSL implementation engine accepted to [SNAPL 2017](https://snapl.org/2017/index.html).
+Ben's paper with collaborators at MIT and CMU on proof assistants as the ultimate DSL implementation engine accepted to [SNAPL 2017](http://snapl.cs.berkeley.edu/2017/index.html).
