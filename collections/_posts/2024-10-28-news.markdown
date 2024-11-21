@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Craig Takes First at SRC"
+category: news
+---
+
+
+Craig Liu won 🥇first place🥇 at the [OOPSLA'24 Student Research Competition](https://2024.splashcon.org/track/splash-2024-SRC) for his work on [gradual verification](https://2024.splashcon.org/details/splash-2024-SRC/7/Design-of-Fractional-Permissions-for-a-Gradual-Verifier)!
