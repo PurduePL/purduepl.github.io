@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "PurPL @ MWPLS 2024"
+category: news
+---
+
+Multiple PurPL students presented their work at the [Midwest PL Summit](https://pl.cs.uchicago.edu/PLSummit/2024/) held at the University of Chicago.
