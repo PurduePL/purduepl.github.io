@@ -27,4 +27,4 @@ jobs:
         run: bundle exec jekyll build --drafts
       - name: Check for broken links
         run: |
-          bundle exec htmlproofer --ignore-urls "/https://www.linkedin.com/,/snapl.cs.berkeley.edu/" --log-level :debug ./_site
+          bundle exec htmlproofer --ignore-urls "/https://www.linkedin.com/,https://snapl.cs.berkeley.edu/,https://pl.cs.uchicago.edu/PLSummit/2024/" --log-level :debug ./_site
