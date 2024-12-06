@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "A POPL paper has HATCHed"
+category: news
+---
+
+Yongwei's
+[paper](https://popl25.sigplan.org/details/POPL-2025-popl-research-papers/50/Derivative-Guided-Symbolic-Execution)
+on using derivatives to intelligently drive symbolic execution will appear at
+POPL. Congrats to [Yongwei](https://yongweiy.github.io/),
+[Zhe](https://zhezhouzz.github.io/), and [Julia](https://julbinb.github.io/)!
