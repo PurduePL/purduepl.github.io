@@ -54,8 +54,8 @@ layout: default
     {% assign postMonth = post.date | date: '%m' | to_integer %}
     {% assign lastYear = site.time | date: '%Y' | minus: 1 %}
     {% assign month = site.time | date: '%m' | to_integer %}
-    {% if month < 8 %} {% assign startMonth=0 %} {% assign endMonth=7 %} {% else %} {% assign startMonth=8 %} {% assign
-      endMonth=12 %} {% endif %} {% if postStartDate < curDate and postYear> lastYear and postMonth > startMonth and
+    {% if month < 8 %} {% assign startMonth=1 %} {% assign endMonth=7 %} {% else %} {% assign startMonth=8 %} {% assign
+      endMonth=12 %} {% endif %} {% if postStartDate < curDate and postYear > lastYear and postMonth >= startMonth and
       postMonth <= endMonth %} <tr {% if post.invited %} class="invited" {% endif %}>
         <td style="width: 11%">
           <time datetime="{{ post.date | date: " %Y"}}">
