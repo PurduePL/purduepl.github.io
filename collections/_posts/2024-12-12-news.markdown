@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Congratulations Dr. Wagner!"
+category: news
+---
+
+Chris successfully defended his dissertation on using property-driven reductions
+to automatically verify distributed systems. Congratulations Dr. Wagner!
