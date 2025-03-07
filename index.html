@@ -99,7 +99,7 @@ layout: index
     <!-- undergrads -->
     <div class="cards-title" id="undergrads">
       <h1 style="margin-top: 15px">Undergraduates</h1>
-      <ul class="name-list">
+      <ul class="photo-list">
         {% for undergrad in site.undergrads %}
         <li>
           {% if undergrad.href %}
@@ -107,7 +107,13 @@ layout: index
             {% else %}
             <a href="index.html">
               {% endif %}
-              <!-- <img src="{{ post.img }}" alt="{{ post.title }}" /> -->
+
+              {% if undergrad.img %}
+              <img src="{{ undergrad.img }}" alt="{{ undergrad.title }}" />
+              {% else %}
+              <img src="assets/anonymous-avatar.webp" alt="{{ undergrad.title }}" />
+              {% endif %}
+              
               <span class="photo-caption">{{ undergrad.title }}</span>
             </a>
         </li>
