@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "OOPSLA 2025 acceptance!"
+category: news
+---
+
+[Rob](https://robd.io/)'s paper on relational reasoning using e-graphs has been accepted to [OOPSLA'25](https://2025.splashcon.org/track/OOPSLA). Congratulations to Rob and Prasita!
