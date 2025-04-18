@@ -93,6 +93,9 @@ subprocess.run(
     [
         "git",
         "push",
+        "--set-upstream",
+        "origin",
+        f"issue-{issue_number}",
     ],
     check=True,
 )
