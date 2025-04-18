@@ -89,6 +89,24 @@ subprocess.run(["git", "add", filename], check=True)
 
 subprocess.run(["git", "commit", "-m", f"Fix #{issue_number}"], check=True)
 
-subprocess.run([
-    "gh", "pr", "create", "--fill", "--base", "master", "--head", "$(git branch --show-current)"
-], check=True)
+subprocess.run(
+    [
+        "git",
+        "push",
+    ],
+    check=True,
+)
+
+subprocess.run(
+    [
+        "gh",
+        "pr",
+        "create",
+        "--fill",
+        "--base",
+        "master",
+        "--head",
+        "$(git branch --show-current)",
+    ],
+    check=True,
+)
