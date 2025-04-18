@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Test Post 8"
+category: news
+---
+
+THe 8th test post which uses an explicit branch name for gh pr create
