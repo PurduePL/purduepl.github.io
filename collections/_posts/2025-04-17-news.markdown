@@ -1,0 +1,7 @@
+---
+layout: post
+title: "COATL Accepted to PLDI"
+category: news
+---
+
+[Raghav's](https://raghav198.github.io/) work on a compiler that uses arithmetic table lookups to optimize secure FHE computations will appear at [PLDI](https://pldi25.sigplan.org/). Congratulations Raghav!
