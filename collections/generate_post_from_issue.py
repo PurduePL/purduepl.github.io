@@ -73,8 +73,10 @@ assert not os.path.exists(
     filename
 ), f"File {filename} already exists. Please delete it or choose a different date."
 
+branch_name = f"issue-{issue_number}"
+
 # Create new branch for issue
-subprocess.run(["git", "checkout", "-b", f"issue-{issue_number}"], check=True)
+subprocess.run(["git", "checkout", "-b", branch_name], check=True)
 
 ## make a post in _posts/{data}-news.markdown
 with open(filename, "w") as f:
@@ -109,7 +111,7 @@ subprocess.run(
         "--base",
         "master",
         "--head",
-        "$(git branch --show-current)",
+        branch_name,
     ],
     check=True,
 )
