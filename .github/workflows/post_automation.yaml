@@ -1,0 +1,16 @@
+name: Post Automation
+on:
+    issues:
+        types:
+            - opened
+
+jobs:
+    convert_to_pr:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Create Pr if necessary
+              working-directory: ./collections
+              run: python generate_post_from_issue.py ${{ github.event.issue.number }}
