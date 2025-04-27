@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 import gspread
 import json
 from dateutil.parser import *
@@ -42,10 +43,19 @@ def presenter_filter(x):
 
     return result
 
+def spring_break_filter(x):
+    result = x["Location"] != "Bahamas" and x["Title"] != "Spring Break"
+
+    if not result:
+        print("Spring break filtered out:\n", json.dumps(x, indent=2))
+
+    return result
+
 
 print(json.dumps(records, indent=2))
 records = filter(date_filter, records)
 records = filter(presenter_filter, records)
+records = filter(spring_break_filter, records)
 """ print(json.dumps(list(records), indent=2)) """
 for record in list(records):
     date = parse(record["Date"])
@@ -68,4 +78,5 @@ TBA
 """
     print(file_name)
     print(file_contents)
-    open(file_name, mode="w").write(file_contents)
+    if not os.path.exists(file_name):
+        open(file_name, mode="w").write(file_contents)
