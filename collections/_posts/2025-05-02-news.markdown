@@ -1,0 +1,9 @@
+---
+layout: post
+title: "News:"
+category: news
+---
+
+[Yuantian](https://github.com/YuantianDing)'s paper on syntax guided synthesis has been accepted to [PLDI](https://pldi25.sigplan.org/). Congrats Yuantian!
+
+<!-- Links can be in either markdown or html style -->
