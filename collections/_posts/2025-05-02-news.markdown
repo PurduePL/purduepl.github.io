@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "News:"
+title: "Congrats Yuantian!"
 category: news
 ---
 
