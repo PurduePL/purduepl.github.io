@@ -34,8 +34,8 @@ data = json.loads(json_string)
 
 title = data["title"]
 
-if title.startswith("News: "):
-    title = title[6:]
+if title.startswith("News:"):
+    title = title[6:].strip()
 
 assert (
     title != ""
