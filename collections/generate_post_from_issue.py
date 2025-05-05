@@ -37,6 +37,9 @@ title = data["title"]
 if title.startswith("News:"):
     title = title[6:].strip()
 
+if title == "":
+    title = "PurPL News!"
+
 assert (
     title != ""
 ), "Title not found in issue body. Please ensure the issue body contains a title in the format 'News: <title>' or '<title>'"
