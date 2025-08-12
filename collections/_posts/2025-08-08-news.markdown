@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Three New Grads"
+category: news
+---
+
+Hearty congratulations to Dr. [Durga](https://mdurgakeerthi.github.io/), Dr. [Rob](https://robd.io/), and Dr. [Zhe](https://zhezhouzz.github.io/) on their successful PhD defenses!
