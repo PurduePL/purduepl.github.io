@@ -17,7 +17,7 @@ assignees:
 
 <!--
 What section you would like to be listed under:
-Alumni, Grad Student, Postdoc, Faculty
+Alumni, Undergraduate, Grad Student, Postdoc, Faculty
 -->
 
 ### Website Link
