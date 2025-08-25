@@ -3,7 +3,8 @@ name: Add PurPL member
 about: Request to add a member
 title: 'Add member: <title>'
 labels: ''
-assignees: ''
+assignees:
+- Pat-Lafon
 ---
 
 ### Name
@@ -19,13 +20,14 @@ What section you would like to be listed under:
 Alumni, Grad Student, Postdoc, Faculty
 -->
 
-
-### Optional website link
-
-
-
-### Optional image
+### Website Link
 
 <!--
-Provide a link to or open a pr with the imagein in `assests/imaage`
+Provide a link to your website
+-->
+
+### Profile Image
+
+<!--
+Provide a link to or open a pr with the image in in `assets/image`
 -->
