@@ -1,7 +1,7 @@
 ---
 name: News Post
 about: A news post to be put on the website
-title: 'News: <title>'
+title: 'News: <put your title>'
 labels: 'post'
 assignees: ''
 ---
