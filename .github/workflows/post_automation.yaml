@@ -5,7 +5,7 @@ on:
             - opened
 
 jobs:
-    convert_to_pr:
+    convert_news_to_pr:
         runs-on: ubuntu-latest
         if: contains(github.event.issue.labels.*.name, 'news')
         steps:
@@ -14,11 +14,29 @@ jobs:
               with:
                 fetch-depth: 0
 
-            - name: Create Pr if necessary
+            - name: Create PR for news post
               working-directory: ./collections
               run: |
                 git config user.name "github-actions[bot]"
                 git config user.email ""
                 python generate_post_from_issue.py ${{ github.event.issue.number }}
+              env:
+                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    convert_member_to_pr:
+        runs-on: ubuntu-latest
+        if: contains(github.event.issue.labels.*.name, 'member')
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v5
+              with:
+                fetch-depth: 0
+
+            - name: Create PR for member addition
+              working-directory: ./collections
+              run: |
+                git config user.name "github-actions[bot]"
+                git config user.email ""
+                python generate_member_from_issue.py ${{ github.event.issue.number }}
               env:
                 GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -2,7 +2,7 @@
 name: Add PurPL member
 about: Request to add a member to the PurPL website
 title: 'Add member: [Your Name]'
-labels: ''
+labels: 'member'
 assignees:
 - Pat-Lafon
 ---

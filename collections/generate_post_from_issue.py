@@ -20,8 +20,10 @@ check_labels = json.loads(
 
 print(check_labels.get("labels"))
 
-if not (any(lambda x: x["name"] == "post") for x in check_labels.get("labels")):
-    print("This issue has no labels. Please add a label to the issue and try again.")
+if not any(x["name"] == "news" for x in check_labels.get("labels", [])):
+    print(
+        "This issue does not have the 'news' label. Please add the 'news' label to the issue and try again."
+    )
     sys.exit(1)
 
 json_string = subprocess.run(
