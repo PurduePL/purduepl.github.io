@@ -8,9 +8,12 @@ Open an issue! We have a template for adding new members to the website. If you 
 
 ### Resizing pictures
 
-All images are displayed at a 120x120 ratio. Use `convert image.jpg -resize 120x120^ -extent 120x120 -gravity center image_small.jpg` to get the proper sizing.
+All images are displayed at a 120x120 ratio. To resize and center images:
 
-A more modern web format can be converted to using `cwebp -m 6 -q 80 -mt -af -progress image.jpg -o image.webp`
+```bash
+magick image.jpg -resize 120x120^ -gravity center -extent 120x120 image_small.jpg
+cwebp -m 6 -q 80 -mt -af -progress image_small.jpg -o image_small.webp
+```
 
 ## Testing the Website
 
