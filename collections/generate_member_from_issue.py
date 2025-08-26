@@ -249,7 +249,26 @@ print(filename)
 
 print(branch_name)
 
-# Create new branch for issue
+# Create new branch for issue - first check if it exists and delete it if so
+try:
+    # Try to delete the branch if it exists (both locally and remotely)
+    subprocess.run(["git", "branch", "-D", branch_name], capture_output=True)
+    print(f"Deleted existing local branch: {branch_name}")
+except subprocess.CalledProcessError:
+    # Branch doesn't exist locally, that's fine
+    pass
+
+try:
+    # Try to delete the remote branch if it exists
+    subprocess.run(
+        ["git", "push", "origin", "--delete", branch_name], capture_output=True
+    )
+    print(f"Deleted existing remote branch: {branch_name}")
+except subprocess.CalledProcessError:
+    # Remote branch doesn't exist, that's fine
+    pass
+
+# Now create the new branch
 subprocess.run(["git", "checkout", "-b", branch_name], check=True)
 
 # Create the member file
