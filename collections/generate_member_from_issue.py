@@ -177,6 +177,9 @@ print(f"Profile Image: {profile_image}")
 
 # Handle profile image download if it's a GitHub attachment
 downloaded_image_path = None
+image_url = None
+
+# Check for markdown format first
 if profile_image and profile_image.startswith(
     "![Image](https://github.com/user-attachments/"
 ):
@@ -186,39 +189,51 @@ if profile_image and profile_image.startswith(
     )
     if image_url_match:
         image_url = image_url_match.group(1)
-        print(f"Found GitHub attachment URL: {image_url}")
+        print(f"Found GitHub attachment URL (markdown): {image_url}")
 
-        # Create filename based on member name
-        image_filename_base = sanitize_name_for_filename(
-            name, use_underscores=True, lowercase=True
+# Check for HTML img tag format
+elif profile_image and "<img" in profile_image:
+    # Extract the URL from HTML img tag src attribute
+    image_url_match = re.search(
+        r'<img[^>]+src=["\']?(https://github\.com/user-attachments/[^"\'>\s]+)["\']?[^>]*>',
+        profile_image,
+    )
+    if image_url_match:
+        image_url = image_url_match.group(1)
+        print(f"Found GitHub attachment URL (HTML): {image_url}")
+
+if image_url:
+    # Create filename based on member name
+    image_filename_base = sanitize_name_for_filename(
+        name, use_underscores=True, lowercase=True
+    )
+
+    # Get file extension from URL (default to .jpg if not found)
+    parsed_url = urllib.parse.urlparse(image_url)
+    file_extension = os.path.splitext(parsed_url.path)[1]
+    if not file_extension:
+        file_extension = ".jpg"
+
+    image_filename = f"{image_filename_base}{file_extension}"
+    assets_path = "../assets/" + image_filename
+
+    try:
+        print(f"Downloading image to {assets_path}")
+        urllib.request.urlretrieve(image_url, assets_path)
+        profile_image = f"assets/{image_filename}"
+        downloaded_image_path = assets_path
+        print(
+            f"Successfully downloaded image. Updated profile_image to: {profile_image}"
         )
 
-        # Get file extension from URL (default to .jpg if not found)
-        parsed_url = urllib.parse.urlparse(image_url)
-        file_extension = os.path.splitext(parsed_url.path)[1]
-        if not file_extension:
-            file_extension = ".jpg"
-
-        image_filename = f"{image_filename_base}{file_extension}"
-        assets_path = "../assets/" + image_filename
-
-        try:
-            print(f"Downloading image to {assets_path}")
-            urllib.request.urlretrieve(image_url, assets_path)
-            profile_image = f"assets/{image_filename}"
-            downloaded_image_path = assets_path
-            print(
-                f"Successfully downloaded image. Updated profile_image to: {profile_image}"
-            )
-
-        except Exception as e:
-            assert (
-                False
-            ), f"Failed to download image from {image_url}: {e}. Please check the URL and try again."
-    else:
+    except Exception as e:
         assert (
             False
-        ), f"Could not extract URL from GitHub image markdown: {profile_image}. Expected format: ![Image](https://github.com/user-attachments/...)"
+        ), f"Failed to download image from {image_url}: {e}. Please check the URL and try again."
+else:
+    assert (
+        False
+    ), f"Could not extract URL from GitHub image. Expected markdown format: ![Image](https://github.com/user-attachments/...) or HTML format: <img src='https://github.com/user-attachments/...' />. Got: {profile_image}"
 
 # Create filename from name (sanitize for filesystem)
 filename_base = sanitize_name_for_filename(name, use_underscores=False, lowercase=False)
