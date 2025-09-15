@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Cyclic Reachability Types"
+category: news
+---
+
+David's [work](https://arxiv.org/abs/2503.07328) on adding support for cyclic references to reachability types has been accepted to [OOPSLA'25](https://2025.splashcon.org/)!
