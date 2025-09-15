@@ -1,0 +1,52 @@
+name: Issue Edit Automation
+"on":
+    issues:
+        types:
+            - edited
+
+jobs:
+    handle_news_edit:
+        runs-on: ubuntu-latest
+        if: contains(github.event.issue.labels.*.name, 'news')
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v5
+              with:
+                fetch-depth: 0
+
+            - name: Delete existing branch and recreate PR for news post
+              working-directory: ./collections
+              run: |
+                git config user.name "github-actions[bot]"
+                git config user.email ""
+
+                # Close existing PR and delete branch
+                gh pr close "issue-${{ github.event.issue.number }}" --delete-branch || true
+
+                # Regenerate the post
+                python generate_post_from_issue.py ${{ github.event.issue.number }}
+              env:
+                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    handle_member_edit:
+        runs-on: ubuntu-latest
+        if: contains(github.event.issue.labels.*.name, 'member')
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v5
+              with:
+                fetch-depth: 0
+
+            - name: Delete existing branch and recreate PR for member addition
+              working-directory: ./collections
+              run: |
+                git config user.name "github-actions[bot]"
+                git config user.email ""
+
+                # Close existing PR and delete branch
+                gh pr close "member-issue-${{ github.event.issue.number }}" --delete-branch || true
+
+                # Regenerate the member
+                python generate_member_from_issue.py ${{ github.event.issue.number }}
+              env:
+                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
