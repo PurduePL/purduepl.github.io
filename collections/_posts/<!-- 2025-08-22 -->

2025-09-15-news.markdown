@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Cobb is Spinning Up"
+category: news
+---
+
+[Patrick](https://pat-lafon.github.io/)'s [paper](https://doi.org/10.1145/3763158) on automatically repairing coverage gaps in PBT input generators has been accepted to [OOPSLA'25](https://2025.splashcon.org/). Congrats to [all](https://pat-lafon.github.io/) [the](https://zhezhouzz.github.io/) [authors](https://aegis-iisc.github.io/)!
