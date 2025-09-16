@@ -9,32 +9,16 @@ assignees:
 
 ### Name
 
-<!--
-    How you would like to be referred to on the website
--->
+<!-- Replace this comment with how you would like to be referred to on the website -->
 
 ### Current Status
 
-<!--
-What section you would like to be listed under. Choose one:
-- Alumni
-- Undergraduate
-- Grad Student
-- Postdoc
-- Faculty
--->
+<!-- Replace this comment with one of: Alumni, Undergraduate, Grad Student, Postdoc, or Faculty -->
 
 ### Website Link
 
-<!--
-Provide a link to your website
--->
+<!-- Replace this comment with a link to your website -->
 
 ### Profile Image
 
-<!--
-Please either:
-1. Upload an image file to this issue, OR
-2. Provide a link to a high-quality image, OR
-3. Open a PR adding the image to `assets/` folder
--->
+<!-- Replace this comment by either uploading an image file to this issue, providing a link to a high-quality image, or opening a PR adding the image to the assets/ folder -->

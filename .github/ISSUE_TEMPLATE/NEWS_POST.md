@@ -8,8 +8,8 @@ assignees: ''
 
 ### DATE
 
-<!-- YYYY-MM-DD -->
+<!-- Replace this comment with your date in YYYY-MM-DD format (e.g., 2025-09-16) -->
 
 ### Content
 
-<!-- Links can be in either markdown or html style -->
+<!-- Replace this comment with your news content. Links can be in either markdown or html style -->
