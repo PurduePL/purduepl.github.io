@@ -3,6 +3,7 @@ import json
 import shutil
 import os
 import sys
+import re
 
 assert (
     shutil.which("gh") is not None
@@ -57,10 +58,22 @@ assert (
 if date.startswith("DATE"):
     date = date[5:].strip()
 
+# Remove HTML comments and other unwanted characters from the date
+date = re.sub(r"<!--.*?-->", "", date, flags=re.DOTALL).strip()
+# Extract just the date pattern YYYY-MM-DD
+date_match = re.search(r"\d{4}-\d{2}-\d{2}", date)
+if date_match:
+    date = date_match.group(0)
+else:
+    assert False, f"Could not find valid date format (YYYY-MM-DD) in: '{date}'"
+
 body = data[2].strip()
 
 if body.startswith("Content"):
     body = body[8:].strip()
+
+# Remove HTML comments from body content
+body = re.sub(r"<!--.*?-->", "", body, flags=re.DOTALL).strip()
 
 assert (
     body != ""
