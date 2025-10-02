@@ -1,0 +1,7 @@
+---
+layout: post
+title: "It's Dr. Raghav Now"
+category: news
+---
+
+Congratulations to newly minted Dr. [Raghav](https://raghav198.github.io/) on successfully defending his dissertation!
