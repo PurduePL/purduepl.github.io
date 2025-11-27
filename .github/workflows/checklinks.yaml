@@ -13,7 +13,7 @@ jobs:
     name: Linux
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Ruby
         uses: ruby/setup-ruby@v1
         with:
