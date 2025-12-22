@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Boolean Kinded Types to Appear at POPL"
+category: news
+---
+
+Joseph's paper on [Boolean-Kinded Type Systems](https://doi.org/10.1145/3776644) has been accepted to [POPL 2026](https://popl26.sigplan.org/details/POPL-2026-popl-research-papers/4/Let-Generalization-Polymorphic-Recursion-and-Variable-Minimization-in-Boolean-Kinde). Congratulations Joseph!
