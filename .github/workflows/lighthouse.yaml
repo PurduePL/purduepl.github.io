@@ -14,10 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Get GitHub Pages Ruby version
+        id: ghp
+        run: |
+          RUBY_VER=$(curl -s https://pages.github.com/versions.json | jq -r '.ruby')
+          echo "ruby_version=$RUBY_VER" >> "$GITHUB_OUTPUT"
+
       - name: Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: ${{ steps.ghp.outputs.ruby_version }}
           bundler-cache: true
 
       - name: Install dependencies
@@ -41,10 +47,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Get GitHub Pages Ruby version
+        id: ghp
+        run: |
+          RUBY_VER=$(curl -s https://pages.github.com/versions.json | jq -r '.ruby')
+          echo "ruby_version=$RUBY_VER" >> "$GITHUB_OUTPUT"
+
       - name: Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: ${{ steps.ghp.outputs.ruby_version }}
           bundler-cache: true
 
       - name: Install dependencies
