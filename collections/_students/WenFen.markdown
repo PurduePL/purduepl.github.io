@@ -1,5 +1,5 @@
 ---
 title: "Wen Fan"
-img: assets/WenFan.jpg
+img: assets/WenFan.webp
 href: https://fanweneddie.github.io/
 ---
