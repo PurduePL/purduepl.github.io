@@ -620,6 +620,14 @@ div.wrapper h1 {
   text-transform: uppercase
 }
 
+#postdocs,
+#students,
+#undergrads,
+#alumni {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
 .section-heading {
   margin-top: 15px;
 }
