@@ -2,6 +2,7 @@
   "ci": {
     "collect": {
       "staticDistDir": "./_site",
+      "numberOfRuns": 3,
       "url": [
         "/index.html",
         "/seminars.html",
@@ -11,9 +12,9 @@
     },
     "assert": {
       "assertions": {
-        "categories:performance": ["error", { "minScore": 0.95 }],
-        "categories:accessibility": ["error", { "minScore": 0.95 }],
-        "categories:seo": ["error", { "minScore": 0.95 }]
+        "categories:performance": ["error", { "minScore": 0.95, "aggregationMethod": "median" }],
+        "categories:accessibility": ["error", { "minScore": 0.95, "aggregationMethod": "median" }],
+        "categories:seo": ["error", { "minScore": 0.95, "aggregationMethod": "median" }]
       }
     }
   }
