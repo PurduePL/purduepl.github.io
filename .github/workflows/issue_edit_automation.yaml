@@ -4,6 +4,11 @@ name: Issue Edit Automation
         types:
             - edited
 
+permissions:
+    contents: write
+    pull-requests: write
+    issues: read
+
 jobs:
     handle_news_edit:
         runs-on: ubuntu-latest

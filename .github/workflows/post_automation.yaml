@@ -4,6 +4,11 @@ on:
         types:
             - opened
 
+permissions:
+    contents: write
+    pull-requests: write
+    issues: read
+
 jobs:
     convert_news_to_pr:
         runs-on: ubuntu-latest
