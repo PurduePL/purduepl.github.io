@@ -280,23 +280,23 @@ with open(filename, "w") as f:
 
         f.write(f"---\n")
         f.write(f"layout: post\n")
-        f.write(f'title: "{name}"\n')
-        f.write(f'firstname: "{first_name}"\n')
-        f.write(f'lastname: "{last_name}"\n')
+        f.write(f"title: {json.dumps(name)}\n")
+        f.write(f"firstname: {json.dumps(first_name)}\n")
+        f.write(f"lastname: {json.dumps(last_name)}\n")
         f.write(f"category: facultycard\n")
         f.write(
             f"date: {subprocess.run(['date', '+%Y-%m-%d %H:%M:%S'], capture_output=True, text=True).stdout.strip()}\n"
         )
-        f.write(f"img: {profile_image}\n")
-        f.write(f"href: {website_link}\n")
+        f.write(f"img: {json.dumps(profile_image)}\n")
+        f.write(f"href: {json.dumps(website_link)}\n")
         f.write(f"---\n\n")
         f.write(f"<!-- Add research interests and bio here -->\n")
     else:
         # Simpler format for other member types
         f.write(f"---\n")
-        f.write(f'title: "{name}"\n')
-        f.write(f"img: {profile_image}\n")
-        f.write(f"href: {website_link}\n")
+        f.write(f"title: {json.dumps(name)}\n")
+        f.write(f"img: {json.dumps(profile_image)}\n")
+        f.write(f"href: {json.dumps(website_link)}\n")
         f.write(f"---\n\n")
 
 subprocess.run(["git", "add", filename], check=True)

@@ -100,7 +100,7 @@ subprocess.run(["git", "checkout", "-b", branch_name], check=True)
 with open(filename, "w") as f:
     f.write(f"---\n")
     f.write(f"layout: post\n")
-    f.write(f'title: "{title}"\n')
+    f.write(f"title: {json.dumps(title)}\n")
     f.write(f"category: news\n")
     f.write(f"---\n\n")
     f.write(f"{body}\n")
