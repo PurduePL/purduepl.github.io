@@ -5,11 +5,42 @@ import os
 import sys
 import re
 import urllib.request
+import urllib.parse
 import io
+import ipaddress
+import socket
 
 from PIL import Image, ImageOps
 
 MAX_IMAGE_BYTES = 10 * 1024 * 1024
+
+
+def validate_image_url(url):
+    """Reject non-https URLs and URLs that resolve to non-public IPs (SSRF guard)."""
+    parsed = urllib.parse.urlparse(url)
+    assert parsed.scheme == "https", f"Image URL must use https://; got: {url!r}"
+    assert parsed.hostname, f"Image URL has no hostname: {url!r}"
+
+    hostname = parsed.hostname.lower()
+    assert hostname != "localhost" and not hostname.endswith(
+        (".local", ".internal", ".localhost")
+    ), f"Image URL hostname {hostname!r} looks local/internal."
+
+    try:
+        addrinfo = socket.getaddrinfo(parsed.hostname, None)
+    except socket.gaierror as e:
+        assert False, f"Could not resolve hostname {parsed.hostname!r}: {e}"
+
+    for info in addrinfo:
+        ip = ipaddress.ip_address(info[4][0])
+        assert not (
+            ip.is_private
+            or ip.is_loopback
+            or ip.is_link_local
+            or ip.is_reserved
+            or ip.is_multicast
+            or ip.is_unspecified
+        ), f"Hostname {parsed.hostname!r} resolves to non-public IP {ip}; refusing to fetch."
 
 
 def sanitize_name_for_filename(name, use_underscores=True, lowercase=True):
@@ -179,34 +210,31 @@ print(f"Status: {current_status}")
 print(f"Website: {website_link}")
 print(f"Profile Image: {profile_image}")
 
-# Handle profile image download if it's a GitHub attachment
+# Extract a URL from the Profile Image section (markdown, HTML, or bare URL).
 downloaded_image_path = None
 image_url = None
 
-# Check for Markdown format first
-if profile_image and profile_image.startswith(
-    "![Image](https://github.com/user-attachments/"
-):
-    # Extract the URL from the Markdown image syntax
-    image_url_match = re.search(
-        r"!\[Image\]\((https://github\.com/user-attachments/[^)]+)\)", profile_image
-    )
-    if image_url_match:
-        image_url = image_url_match.group(1)
-        print(f"Found GitHub attachment URL (markdown): {image_url}")
-
-# Check for HTML img tag format
-elif profile_image and "<img" in profile_image:
-    # Extract the URL from HTML img tag src attribute
-    image_url_match = re.search(
-        r'<img[^>]+src=["\']?(https://github\.com/user-attachments/[^"\'>\s]+)["\']?[^>]*>',
-        profile_image,
-    )
-    if image_url_match:
-        image_url = image_url_match.group(1)
-        print(f"Found GitHub attachment URL (HTML): {image_url}")
+if profile_image:
+    md_match = re.search(r"!\[[^\]]*\]\((\S+?)\)", profile_image)
+    if md_match:
+        image_url = md_match.group(1)
+        print(f"Extracted URL from markdown image: {image_url}")
+    elif "<img" in profile_image:
+        html_match = re.search(
+            r"""<img[^>]+src=["']?([^"'\s>]+)""", profile_image
+        )
+        if html_match:
+            image_url = html_match.group(1)
+            print(f"Extracted URL from HTML img tag: {image_url}")
+    else:
+        candidate = profile_image.strip()
+        if candidate.startswith(("http://", "https://")):
+            image_url = candidate
+            print(f"Using bare URL: {image_url}")
 
 if image_url:
+    validate_image_url(image_url)
+
     image_filename_base = sanitize_name_for_filename(
         name, use_underscores=True, lowercase=True
     )
@@ -236,9 +264,11 @@ if image_url:
             False
         ), f"Failed to process image from {image_url}: {e}. Please check the URL and try again."
 else:
-    assert (
-        False
-    ), f"Could not extract URL from GitHub image. Expected markdown format: ![Image](https://github.com/user-attachments/...) or HTML format: <img src='https://github.com/user-attachments/...' />. Got: {profile_image}"
+    assert False, (
+        "Could not extract a URL from the Profile Image section. Provide one of: "
+        "a markdown image `![alt](https://...)`, an HTML `<img src=\"https://...\">`, "
+        f"or a plain https:// URL. Got: {profile_image!r}"
+    )
 
 # Create filename from name (sanitize for filesystem)
 filename_base = sanitize_name_for_filename(name, use_underscores=False, lowercase=False)

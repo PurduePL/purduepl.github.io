@@ -21,4 +21,8 @@ assignees:
 
 ### Profile Image
 
-<!-- Replace this comment by either uploading an image file to this issue, providing a link to a high-quality image, or opening a PR adding the image to the assets/ folder -->
+<!-- Replace this comment with one of:
+     - Drag-and-drop an image file into this issue (GitHub will upload it for you).
+     - Paste an https:// URL to a publicly accessible image.
+     - Open a PR adding the image to the assets/ folder. -->
+
