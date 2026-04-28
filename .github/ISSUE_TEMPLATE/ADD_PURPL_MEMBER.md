@@ -25,4 +25,3 @@ assignees:
      - Drag-and-drop an image file into this issue (GitHub will upload it for you).
      - Paste an https:// URL to a publicly accessible image.
      - Open a PR adding the image to the assets/ folder. -->
-

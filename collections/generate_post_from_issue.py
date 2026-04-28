@@ -47,9 +47,14 @@ assert (
     title != ""
 ), "Title not found in issue body. Please ensure the issue body contains a title in the format 'News: <title>' or '<title>'"
 
-data = data["body"].split("###")
+sections = data["body"].split("###")
 
-date = data[1].strip()
+assert len(sections) >= 3, (
+    "Issue body is missing required sections. Expected '### DATE' and '### Content' "
+    f"headings; found {max(0, len(sections) - 1)} '###' section(s). Please use the News Post template."
+)
+
+date = sections[1].strip()
 
 assert (
     date != ""
@@ -67,7 +72,7 @@ if date_match:
 else:
     assert False, f"Could not find valid date format (YYYY-MM-DD) in: '{date}'"
 
-body = data[2].strip()
+body = sections[2].strip()
 
 if body.startswith("Content"):
     body = body[8:].strip()
