@@ -1,16 +1,23 @@
-import subprocess
-import json
-import shutil
-import os
-import sys
-import re
-import urllib.request
-import urllib.parse
 import io
 import ipaddress
+import json
+import os
+import re
 import socket
+import subprocess
+import sys
+import urllib.parse
+import urllib.request
 
 from PIL import Image, ImageOps
+
+from utils import (
+    commit_and_open_pr,
+    create_branch,
+    fetch_issue,
+    require_gh,
+    strip_html_comments,
+)
 
 MAX_IMAGE_BYTES = 10 * 1024 * 1024
 
@@ -44,105 +51,53 @@ def validate_image_url(url):
 
 
 def sanitize_name_for_filename(name, use_underscores=True, lowercase=True):
-    """Sanitize a name for use in filenames"""
-    # Remove special characters, keep alphanumeric and spaces
     sanitized = re.sub(r"[^a-zA-Z0-9\s]", "", name)
-
     if use_underscores:
-        # Replace spaces with underscores
         sanitized = re.sub(r"\s+", "_", sanitized)
     else:
-        # Remove spaces entirely
         sanitized = re.sub(r"\s+", "", sanitized)
-
     if lowercase:
         sanitized = sanitized.lower()
-
     return sanitized
 
 
-assert (
-    shutil.which("gh") is not None
-), "GitHub CLI (gh) is not installed. Please install it from https://cli.github.com/ and try again."
-
+require_gh()
 issue_number = sys.argv[1]
-
-check_labels = json.loads(
-    subprocess.run(
-        ["gh", "issue", "view", issue_number, "--json", "labels"],
-        check=True,
-        capture_output=True,
-    ).stdout
-)
-
-print(f"Labels found: {check_labels.get('labels')}")
-
-if not any(label["name"] == "member" for label in check_labels.get("labels", [])):
-    print(
-        "This issue does not have the 'member' label. Please add the 'member' label to the issue and try again."
-    )
-    sys.exit(1)
-
-json_string = subprocess.run(
-    ["gh", "issue", "view", issue_number, "--json", "title,body"],
-    check=True,
-    capture_output=True,
-).stdout
-
-data = json.loads(json_string)
-
-title = data["title"]
-body = data["body"]
-
+title, body = fetch_issue(issue_number, "member")
 print(f"Issue title: {title}")
 
 # Extract name from title
-# TODO: Lets not get it from the body then?
 name_match = re.search(r"Add member:\s*(.+)", title)
 if name_match:
     name = name_match.group(1).strip()
 else:
     # Fallback: try to extract from body
-    sections = body.split("###")
-    name_section = None
-    for section in sections:
-        if "Name" in section:
-            name_section = section
-            break
+    name_section = next(
+        (section for section in body.split("###") if "Name" in section), None
+    )
+    assert name_section is not None, (
+        "Name section not found in issue body. Please ensure the issue follows the template format."
+    )
+    name = strip_html_comments(name_section.replace("Name", ""))
 
-    assert (
-        name_section is not None
-    ), "Name section not found in issue body. Please ensure the issue follows the template format."
-
-    # Extract name from the section (remove "Name" and clean up)
-    name = name_section.replace("Name", "").strip()
-    # Remove HTML comments
-    name = re.sub(r"<!--.*?-->", "", name, flags=re.DOTALL).strip()
-
-assert (
-    name != "" and name != "[Your Name]"
-), "Name not found or is placeholder. Please provide a valid name in the issue title or body."
+assert name != "" and name != "[Your Name]", (
+    "Name not found or is placeholder. Please provide a valid name in the issue title or body."
+)
 
 # Parse the body to extract information
 sections = body.split("###")
 
-# Extract Current Status
 current_status = None
 website_link = None
 profile_image = None
 
-for i, section in enumerate(sections):
+for section in sections:
     section_clean = section.strip()
 
     if "Current Status" in section_clean:
-        # Get the content after "Current Status"
-        status_content = section_clean.replace("Current Status", "").strip()
-        # Remove HTML comments
-        status_content = re.sub(
-            r"<!--.*?-->", "", status_content, flags=re.DOTALL
-        ).strip()
-
-        # Look for status keywords
+        status_content = strip_html_comments(
+            section_clean.replace("Current Status", "")
+        )
         status_mapping = {
             "alumni": "_alumni",
             "undergraduate": "_undergrads",
@@ -153,26 +108,21 @@ for i, section in enumerate(sections):
             "postdoc": "_postdocs",
             "faculty": "_professors",
         }
-
         for key, folder in status_mapping.items():
             if key.lower() in status_content.lower():
                 current_status = folder
                 break
-
         if current_status is None:
             print(f"Status content found: '{status_content}'")
-            assert (
-                False
-            ), f"Could not determine member status from: '{status_content}'. Please specify one of: Alumni, Undergraduate, Grad Student, Postdoc, Faculty"
+            assert False, (
+                f"Could not determine member status from: '{status_content}'. "
+                "Please specify one of: Alumni, Undergraduate, Grad Student, Postdoc, Faculty"
+            )
 
     elif "Website Link" in section_clean:
-        website_content = section_clean.replace("Website Link", "").strip()
-        # Remove HTML comments
-        website_content = re.sub(
-            r"<!--.*?-->", "", website_content, flags=re.DOTALL
-        ).strip()
-
-        # Extract URL - look for any URL pattern
+        website_content = strip_html_comments(
+            section_clean.replace("Website Link", "")
+        )
         url_match = re.search(
             r"(?:https?://)?(?:www\.)?[^\s]+\.[^\s]+", website_content
         )
@@ -181,29 +131,21 @@ for i, section in enumerate(sections):
             print(f"Found URL: {website_link}")
 
     elif "Profile Image" in section_clean:
-        image_content = section_clean.replace("Profile Image", "").strip()
-        # Remove HTML comments
-        image_content = re.sub(
-            r"<!--.*?-->", "", image_content, flags=re.DOTALL
-        ).strip()
-
-        # Look for uploaded images or URLs
+        image_content = strip_html_comments(
+            section_clean.replace("Profile Image", "")
+        )
         if image_content and not image_content.startswith("Please either"):
             profile_image = image_content
 
-assert (
-    current_status is not None
-), "Current Status not found or invalid. Please specify one of: Alumni, Undergraduate, Grad Student, Postdoc, Faculty"
-
-# Require website link
-assert (
-    website_link is not None
-), "Website Link not found or invalid. Please provide a valid website URL in the issue."
-
-# Require profile image
-assert (
-    profile_image is not None
-), "Profile Image not found or invalid. Please upload an image or provide a URL in the issue."
+assert current_status is not None, (
+    "Current Status not found or invalid. Please specify one of: Alumni, Undergraduate, Grad Student, Postdoc, Faculty"
+)
+assert website_link is not None, (
+    "Website Link not found or invalid. Please provide a valid website URL in the issue."
+)
+assert profile_image is not None, (
+    "Profile Image not found or invalid. Please upload an image or provide a URL in the issue."
+)
 
 print(f"Name: {name}")
 print(f"Status: {current_status}")
@@ -260,9 +202,9 @@ if image_url:
         print(f"Saved 120x120 WebP to {profile_image}")
 
     except Exception as e:
-        assert (
-            False
-        ), f"Failed to process image from {image_url}: {e}. Please check the URL and try again."
+        assert False, (
+            f"Failed to process image from {image_url}: {e}. Please check the URL and try again."
+        )
 else:
     assert False, (
         "Could not extract a URL from the Profile Image section. Provide one of: "
@@ -270,105 +212,51 @@ else:
         f"or a plain https:// URL. Got: {profile_image!r}"
     )
 
-# Create filename from name (sanitize for filesystem)
 filename_base = sanitize_name_for_filename(name, use_underscores=False, lowercase=False)
 filename = f"{current_status}/{filename_base}.markdown"
 
-assert not os.path.exists(
-    filename
-), f"File {filename} already exists. Please delete it or choose a different name."
+assert not os.path.exists(filename), (
+    f"File {filename} already exists. Please delete it or choose a different name."
+)
 
 branch_name = f"member-issue-{issue_number}"
-
 print(filename)
-
 print(branch_name)
 
-# Create new branch for issue - first check if it exists and delete it if so
-try:
-    # Try to delete the branch if it exists (both locally and remotely)
-    subprocess.run(["git", "branch", "-D", branch_name], capture_output=True)
-    print(f"Deleted existing local branch: {branch_name}")
-except subprocess.CalledProcessError:
-    # Branch doesn't exist locally, that's fine
-    pass
+create_branch(branch_name, reset=True)
 
-try:
-    # Try to delete the remote branch if it exists
-    subprocess.run(
-        ["git", "push", "origin", "--delete", branch_name], capture_output=True
-    )
-    print(f"Deleted existing remote branch: {branch_name}")
-except subprocess.CalledProcessError:
-    # Remote branch doesn't exist, that's fine
-    pass
-
-# Now create the new branch
-subprocess.run(["git", "checkout", "-b", branch_name], check=True)
-
-# Create the member file
 with open(filename, "w") as f:
     if current_status == "_professors":
-        # Professors have a more detailed format
         first_name = name.split()[0] if len(name.split()) > 0 else name
         last_name = " ".join(name.split()[1:]) if len(name.split()) > 1 else ""
+        date_str = subprocess.run(
+            ["date", "+%Y-%m-%d %H:%M:%S"], capture_output=True, text=True
+        ).stdout.strip()
 
-        f.write(f"---\n")
-        f.write(f"layout: post\n")
+        f.write("---\n")
+        f.write("layout: post\n")
         f.write(f"title: {json.dumps(name)}\n")
         f.write(f"firstname: {json.dumps(first_name)}\n")
         f.write(f"lastname: {json.dumps(last_name)}\n")
-        f.write(f"category: facultycard\n")
-        f.write(
-            f"date: {subprocess.run(['date', '+%Y-%m-%d %H:%M:%S'], capture_output=True, text=True).stdout.strip()}\n"
-        )
+        f.write("category: facultycard\n")
+        f.write(f"date: {date_str}\n")
         f.write(f"img: {json.dumps(profile_image)}\n")
         f.write(f"href: {json.dumps(website_link)}\n")
-        f.write(f"---\n\n")
-        f.write(f"<!-- Add research interests and bio here -->\n")
+        f.write("---\n\n")
+        f.write("<!-- Add research interests and bio here -->\n")
     else:
-        # Simpler format for other member types
-        f.write(f"---\n")
+        f.write("---\n")
         f.write(f"title: {json.dumps(name)}\n")
         f.write(f"img: {json.dumps(profile_image)}\n")
         f.write(f"href: {json.dumps(website_link)}\n")
-        f.write(f"---\n\n")
+        f.write("---\n\n")
 
-subprocess.run(["git", "add", filename], check=True)
-
-# Add downloaded image to git if one was downloaded
+paths = [filename]
 if downloaded_image_path:
-    subprocess.run(["git", "add", downloaded_image_path], check=True)
-    print(f"Added image file to git: {downloaded_image_path}")
+    paths.append(downloaded_image_path)
+    print(f"Including image file in PR: {downloaded_image_path}")
 
-subprocess.run(
-    ["git", "commit", "-m", f"Add member {name} - Fix #{issue_number}"], check=True
-)
-
-subprocess.run(
-    [
-        "git",
-        "push",
-        "--set-upstream",
-        "origin",
-        branch_name,
-    ],
-    check=True,
-)
-
-subprocess.run(
-    [
-        "gh",
-        "pr",
-        "create",
-        "--fill",
-        "--base",
-        "master",
-        "--head",
-        branch_name,
-    ],
-    check=True,
-)
+commit_and_open_pr(paths, f"Add member {name} - Fix #{issue_number}", branch_name)
 
 print(
     f"Successfully created member file {filename} and opened PR for issue #{issue_number}"
