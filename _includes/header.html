@@ -5,9 +5,8 @@
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>{% if page.page_title %}{{ page.page_title }} | {{ site.title }}{% elsif page.title and page.title != site.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description"
-      content="This is the website of PurPL. PurPL is the cross-departmental umbrella group for programming languages research at Purdue University.">
+    {% seo %}
+    {% feed_meta %}
     <link rel="preload" href="{{ site.baseurl }}/css/purpl.css" as="style" />
     <link href="{{ site.baseurl }}/css/purpl.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -15,12 +14,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#1E002DA6" />
-    <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:description" content="PurPL is the cross-departmental umbrella group for programming languages research at Purdue University.">
-    <meta property="og:image" content="{{ site.url }}/assets/banner.webp">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <script type="text/javascript" src="/assets/js/scripts.js" defer></script>
   </head>
 

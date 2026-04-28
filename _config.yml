@@ -2,8 +2,8 @@
 
 title: PurPL
 description: The Purdue PL Research Group
+image: /assets/banner.webp
 
-# url is currently only used only for the RSS feed in feed.xml
 url: https://purduepl.github.io/
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
@@ -39,4 +39,4 @@ collections:
 collections_dir: collections
 
 # https://stackoverflow.com/questions/35639303/jekyll-getting-an-error-when-i-have-paginate-in-my-project
-plugins: [jekyll-paginate, jekyll-sitemap]
+plugins: [jekyll-paginate, jekyll-sitemap, jekyll-seo-tag, jekyll-feed]
