@@ -26,11 +26,6 @@ jobs:
           ruby-version: ${{ steps.ghp.outputs.ruby_version }}
           bundler-cache: true
 
-      - name: Install dependencies
-        run: |
-          gem install jekyll bundler
-          bundle install
-
       - name: Build site
         run: bundle exec jekyll build --drafts
 
@@ -58,11 +53,6 @@ jobs:
         with:
           ruby-version: ${{ steps.ghp.outputs.ruby_version }}
           bundler-cache: true
-
-      - name: Install dependencies
-        run: |
-          gem install jekyll bundler
-          bundle install
 
       - name: Build site
         run: bundle exec jekyll build --drafts
