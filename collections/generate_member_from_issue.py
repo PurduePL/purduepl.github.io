@@ -5,7 +5,11 @@ import os
 import sys
 import re
 import urllib.request
-import urllib.parse
+import io
+
+from PIL import Image, ImageOps
+
+MAX_IMAGE_BYTES = 10 * 1024 * 1024
 
 
 def sanitize_name_for_filename(name, use_underscores=True, lowercase=True):
@@ -179,11 +183,11 @@ print(f"Profile Image: {profile_image}")
 downloaded_image_path = None
 image_url = None
 
-# Check for markdown format first
+# Check for Markdown format first
 if profile_image and profile_image.startswith(
     "![Image](https://github.com/user-attachments/"
 ):
-    # Extract the URL from the markdown image syntax
+    # Extract the URL from the Markdown image syntax
     image_url_match = re.search(
         r"!\[Image\]\((https://github\.com/user-attachments/[^)]+)\)", profile_image
     )
@@ -203,33 +207,34 @@ elif profile_image and "<img" in profile_image:
         print(f"Found GitHub attachment URL (HTML): {image_url}")
 
 if image_url:
-    # Create filename based on member name
     image_filename_base = sanitize_name_for_filename(
         name, use_underscores=True, lowercase=True
     )
-
-    # Get file extension from URL (default to .jpg if not found)
-    parsed_url = urllib.parse.urlparse(image_url)
-    file_extension = os.path.splitext(parsed_url.path)[1]
-    if not file_extension:
-        file_extension = ".jpg"
-
-    image_filename = f"{image_filename_base}{file_extension}"
+    image_filename = f"{image_filename_base}.webp"
     assets_path = "../assets/" + image_filename
 
     try:
-        print(f"Downloading image to {assets_path}")
-        urllib.request.urlretrieve(image_url, assets_path)
+        print(f"Downloading image from {image_url}")
+        with urllib.request.urlopen(image_url, timeout=30) as resp:
+            image_bytes = resp.read(MAX_IMAGE_BYTES + 1)
+        assert len(image_bytes) <= MAX_IMAGE_BYTES, (
+            f"Image exceeds {MAX_IMAGE_BYTES} bytes; refusing to download."
+        )
+
+        with Image.open(io.BytesIO(image_bytes)) as img:
+            img.load()
+            img = img.convert("RGB")
+            img = ImageOps.fit(img, (120, 120), method=Image.Resampling.LANCZOS)
+            img.save(assets_path, "WEBP", quality=80, method=6)
+
         profile_image = f"assets/{image_filename}"
         downloaded_image_path = assets_path
-        print(
-            f"Successfully downloaded image. Updated profile_image to: {profile_image}"
-        )
+        print(f"Saved 120x120 WebP to {profile_image}")
 
     except Exception as e:
         assert (
             False
-        ), f"Failed to download image from {image_url}: {e}. Please check the URL and try again."
+        ), f"Failed to process image from {image_url}: {e}. Please check the URL and try again."
 else:
     assert (
         False
