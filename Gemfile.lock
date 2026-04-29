@@ -319,12 +319,15 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  github-pages
+  github-pages (= 232)
   html-proofer
-  jekyll (~> 3.10)
+  jekyll (= 3.10.0)
   nokogiri (~> 1.19.3)
   rouge
   webrick
+
+RUBY VERSION
+   ruby 3.3.4p94
 
 BUNDLED WITH
    2.3.25
