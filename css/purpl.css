@@ -194,8 +194,8 @@ ul.name-list li a:hover {
 ul.name-list .alumni-employer {
   color: #999;
   font-size: 90%;
-  white-space: nowrap;
   margin-left: auto;
+  text-align: right;
 }
 
 h2,
