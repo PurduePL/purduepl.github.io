@@ -3,4 +3,4 @@ name = "purpl-automation"
 version = "0"
 description = "Scripts that turn labeled GitHub issues into PRs for the PurPL site."
 requires-python = ">=3.11"
-dependencies = ["Pillow>=10,<12"]
+dependencies = ["Pillow>=12.2,<13"]
