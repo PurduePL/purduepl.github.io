@@ -21,6 +21,10 @@ from utils import (
 
 MAX_IMAGE_BYTES = 10 * 1024 * 1024
 
+# Bot filters (Cloudflare's Browser Integrity Check among them) reject the default
+# "Python-urllib/x.y" agent by name, so identify the site instead.
+USER_AGENT = "purduepl-site-bot/1.0 (+https://purduepl.github.io/)"
+
 
 def validate_image_url(url):
     """Reject non-https URLs and URLs that resolve to non-public IPs (SSRF guard)."""
@@ -185,7 +189,8 @@ if image_url:
 
     try:
         print(f"Downloading image from {image_url}")
-        with urllib.request.urlopen(image_url, timeout=30) as resp:
+        req = urllib.request.Request(image_url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(req, timeout=30) as resp:
             image_bytes = resp.read(MAX_IMAGE_BYTES + 1)
         assert len(image_bytes) <= MAX_IMAGE_BYTES, (
             f"Image exceeds {MAX_IMAGE_BYTES} bytes; refusing to download."
@@ -203,7 +208,9 @@ if image_url:
 
     except Exception as e:
         assert False, (
-            f"Failed to process image from {image_url}: {e}. Please check the URL and try again."
+            f"Failed to process image from {image_url}: {e}. "
+            "If that URL opens fine in a browser, the host is refusing automated "
+            "requests; attach the image to the issue instead and re-run."
         )
 else:
     assert False, (
