@@ -18,8 +18,5 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: Build jekyll website with drafts
-        run: bundle exec jekyll build --drafts
-      - name: Check for broken links
-        run: |
-          bundle exec htmlproofer --ignore-status-codes "403" --ignore-urls "/https://www.linkedin.com/,https://snapl.cs.berkeley.edu/2017/index.html,https://pl.cs.uchicago.edu/PLSummit/2024/,ve0x10.in,http://www.nebelwelt.net/,/https://www.cs.purdue.edu/homes/roopsha//" --log-level :debug ./_site
+      - name: Build site and check for broken links
+        run: ./check
