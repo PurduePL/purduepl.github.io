@@ -386,22 +386,6 @@ div.cards {
   width: auto
 }
 
-div.facultycard {
-  background: rgba(255, 255, 255, 0.95);
-  float: left;
-  height: auto;
-  margin-right: 30px;
-  margin-top: 30px;
-  overflow: hidden;
-  padding: 5px;
-  width: auto
-}
-
-div.facultycard h4 {
-  padding-top: 15px;
-  text-transform: uppercase
-}
-
 div.wrapper p {
   display: block;
   font-size: 16px;
@@ -448,7 +432,6 @@ div#news_items {
 }
 
 div.about,
-div.facultycard,
 div.container {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15)
 }
@@ -458,22 +441,6 @@ div.container {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.9), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: auto;
   width: 100%
-}
-
-.student-card {
-  background: hsla(0, 0%, 0%, .1);
-  background-image: radial-gradient(circle at bottom right, #dfdbd6, #cfc7c1 90%);
-  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
-  display: flex;
-  margin: 1em;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 1em;
-  text-align: center
-}
-
-.student-card a {
-  font-size: 18px
 }
 
 div.purpl-nav {
@@ -632,15 +599,6 @@ div.wrapper h1 {
 .courses-wrapper {
   overflow-x: auto;
   margin-top: 20pt;
-}
-
-div.facultycard img,
-.student-card img {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  display: block;
-  height: 150px;
-  margin: auto;
-  width: 150px
 }
 
 #seminar-schedule {
