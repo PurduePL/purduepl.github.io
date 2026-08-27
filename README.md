@@ -19,9 +19,9 @@ cwebp -m 6 -q 80 -mt -af -progress image_small.jpg -o image_small.webp
 
 Either:
 
-- Install Ruby and subsequent dependencies. Then use `./serve`
+- Install Ruby 3.3.4 and run `bundle install`. Then use `./serve` to preview, and `./check` to build and validate links the way CI does.
 - Install Docker and run `docker run --rm --volume="${PWD}:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:3.8 jekyll serve --incremental --drafts --config _config.yml` from the root of this project
 
 ### Troubleshooting
 
-You might run into an error when attempting to build the site. The first thing to check is if you have a stale `Gem.lock` or `_site`. Nuke one or both of these and try a fresh build before anything else.
+You might run into an error when attempting to build the site. The first thing to check is `ruby -v` — the `Gemfile` requires 3.3.4, and a mismatch fails with a missing-bundler error that reads as unrelated. After that, check for a stale `Gemfile.lock` or `_site`.
