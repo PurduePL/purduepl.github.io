@@ -4,7 +4,7 @@ title: PurPL
 description: The Purdue PL Research Group
 image: /assets/banner.webp
 
-url: https://purduepl.github.io/
+url: https://purduepl.github.io
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
