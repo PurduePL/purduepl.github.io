@@ -1,6 +1,6 @@
 #!/bin/sh
 # Build the site and validate its links. CI runs this same script, so the
-# ignore lists below are the only copy.
+# proofer config below is the only copy.
 set -e
 
 bundle exec jekyll build --drafts
@@ -9,7 +9,11 @@ bundle exec jekyll build --drafts
 #   linkedin.com          403s all non-browser traffic
 #   snapl, PLSummit, ve0x10.in, nebelwelt.net, roopsha's homepage
 #                         reachable in a browser, unreachable from CI
+#
+# Each page's canonical and feed link is absolute; swap-urls resolves them
+# against this build, which has pages the deployed site has not published yet.
 bundle exec htmlproofer ./_site \
   --ignore-status-codes "403" \
   --ignore-urls "/https://www.linkedin.com/,https://snapl.cs.berkeley.edu/2017/index.html,https://pl.cs.uchicago.edu/PLSummit/2024/,ve0x10.in,http://www.nebelwelt.net/,/https://www.cs.purdue.edu/homes/roopsha//" \
+  --swap-urls "^https\://purduepl.github.io/:/" \
   --log-level :debug
