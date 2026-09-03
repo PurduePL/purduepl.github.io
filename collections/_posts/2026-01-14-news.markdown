@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Songlin, PLDI 2026"
+category: news
+---
+
+Congratulations to Songlin — his [paper](https://pldi26.sigplan.org/track/pldi-2026-papers) on bidirectional type inference for reachability types has been accepted to [PLDI 2026](https://pldi26.sigplan.org/)!
