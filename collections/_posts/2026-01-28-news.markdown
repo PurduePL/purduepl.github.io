@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Zhe, PLDI 2026"
+category: news
+---
+
+Congratulations to Zhe — his paper on Clouseau, a tool that automatically writes property-based test generators for programs with side effects, has been accepted to [PLDI 2026](https://pldi26.sigplan.org/)!
