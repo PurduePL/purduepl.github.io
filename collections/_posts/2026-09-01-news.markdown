@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Aaryan, ICFP SRC"
+category: news
+---
+
+Congratulations to Aaryan, who won second place in the [ICFP 2026](https://icfp26.sigplan.org/) Student Research Competition for his work on coverage types modulo equivalences!
