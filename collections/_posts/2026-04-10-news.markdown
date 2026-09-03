@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Siyuan/Songlin/Yuyan, OOPSLA 2026"
+category: news
+---
+
+Congratulations to Siyuan, Songlin, and Yuyan: their paper on safe arena-based memory management via reachability types has been accepted to [OOPSLA 2026](https://2026.splashcon.org/track/oopsla-2026)!
