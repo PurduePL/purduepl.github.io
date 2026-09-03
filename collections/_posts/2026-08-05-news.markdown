@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Minghai, ASE 2026"
+category: news
+---
+
+Minghai's paper on LLM-guided proof strategy selection has been accepted to ASE 2026. Congratulations, Minghai!
