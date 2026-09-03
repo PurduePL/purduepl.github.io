@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Songlin/Craig/Siyuan/Haotian, PLDI 2026"
+category: news
+---
+
+Songlin, Craig, Siyuan, and Haotian's paper on using revocable capabilities to enforce typestate has been accepted to [PLDI 2026](https://pldi26.sigplan.org/). Congratulations!
