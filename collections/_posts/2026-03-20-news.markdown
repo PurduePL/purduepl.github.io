@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Vidush/Borkowski, ICFP 2026"
+category: news
+---
+
+Vidush and Michael Borkowski's paper on type-directed serialization for content-addressable memory has been accepted to [ICFP 2026](https://icfp26.sigplan.org/). Congratulations!
