@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Prasita/Minghai, ASE 2025"
+category: news
+---
+
+Prasita and Minghai's [paper](https://prasitagit.github.io/papers/SynverPreprint.pdf) on SynVer, which uses LLMs to generate C programs together with machine-checked proofs of their correctness, has been accepted to [ASE '25](https://conf.researchr.org/home/ase-2025). Congratulations!
