@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Mathias Payer"
+degree: "Prof"
 firstname: "Mathias"
 lastname: "Payer"
 category: facultycard

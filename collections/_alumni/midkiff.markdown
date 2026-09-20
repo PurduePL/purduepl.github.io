@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Samuel Midkiff"
+degree: "Prof"
 firstname: "Samuel"
 lastname: "Midkiff"
 category: facultycard
