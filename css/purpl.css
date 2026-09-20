@@ -198,6 +198,12 @@ ul.name-list .alumni-employer {
   text-align: right;
 }
 
+ul.name-list .alumni-degree {
+  color: #999;
+  font-size: 90%;
+  white-space: nowrap;
+}
+
 h2,
 h3 {
   color: #333;

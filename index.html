@@ -124,7 +124,7 @@ layout: index
       <ul class="name-list">
         {% for alumni in site.alumni %}
         <li>
-          {% if alumni.href %}<a href="{{ alumni.href }}">{{ alumni.title }}</a>{% else %}{{ alumni.title }}{% endif %}{% if alumni.employer %}<span class="alumni-employer">{{ alumni.employer }}</span>{% endif %}
+          <span class="alumni-name">{% if alumni.href %}<a href="{{ alumni.href }}">{{ alumni.title }}</a>{% else %}{{ alumni.title }}{% endif %}{% if alumni.degree %} <span class="alumni-degree">({{ alumni.degree }})</span>{% endif %}</span>{% if alumni.employer %}<span class="alumni-employer">{{ alumni.employer }}</span>{% endif %}
         </li>
         {% endfor %}
       </ul>
