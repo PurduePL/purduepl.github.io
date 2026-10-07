@@ -1,0 +1,7 @@
+---
+layout: post
+title: "<put your title>"
+category: news
+---
+
+Pratyush’s paper on accelerating computations over matrices with structured sparsity has been accepted to [CGO 2026](https://2027.cgo.org/). Congratulations, Pratyush!
