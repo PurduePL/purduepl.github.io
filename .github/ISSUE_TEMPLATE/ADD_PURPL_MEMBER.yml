@@ -1,0 +1,34 @@
+name: Add PurPL member
+description: Request to add a member to the PurPL website
+title: "Add member: "
+labels: [member]
+assignees: [Pat-Lafon]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: How you would like to be referred to on the website.
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Current Status
+      options: [Alumni, Undergraduate, Grad Student, Postdoc, Faculty]
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Website Link
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: image
+    attributes:
+      label: Profile Image
+      description: Drag an image file in, or paste an https:// URL to a public image.
+    validations:
+      required: true
