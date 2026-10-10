@@ -11,13 +11,9 @@ import urllib.request
 
 from PIL import Image, ImageOps
 
-from utils import commit_and_open_pr, fetch_form
+from utils import USER_AGENT, commit_and_open_pr, fetch_form
 
 MAX_IMAGE_BYTES = 10 * 1024 * 1024
-
-# Bot filters (Cloudflare's Browser Integrity Check among them) reject the default
-# "Python-urllib/x.y" agent by name, so identify the site instead.
-USER_AGENT = "purduepl-site-bot/1.0 (+https://purduepl.github.io/)"
 
 
 def validate_image_url(url):

@@ -1,10 +1,11 @@
 """Shared helpers for the issue-to-PR generator scripts."""
 
-import itertools
 import json
-import os
 import subprocess
 
+# Bot filters (Cloudflare's Browser Integrity Check among them) reject the default
+# "Python-urllib/x.y" agent by name, so identify the site instead.
+USER_AGENT = "purduepl-site-bot/1.0 (+https://purduepl.github.io/)"
 
 def fetch_form(issue_number, *required):
     """Return the issue form's fields as {label: value}, asserting `required` are filled."""
@@ -32,12 +33,12 @@ def fetch_form(issue_number, *required):
 
 
 def commit_and_open_pr(paths, commit_message, branch_name):
-    """Commit `paths` to a fresh `branch_name` and open a PR against master.
+    """Commit `paths` to a fresh `branch_name` off origin/master and open a PR against it.
     Deleting any remote branch by that name first closes its PR, so an edited
     issue regenerates cleanly."""
     subprocess.run(["git", "push", "origin", "--delete", branch_name], capture_output=True)
     for args in (
-        ["checkout", "-b", branch_name],
+        ["checkout", "-b", branch_name, "origin/master"],
         ["add", *paths],
         ["commit", "-m", commit_message],
         ["push", "origin", branch_name],
@@ -49,17 +50,13 @@ def commit_and_open_pr(paths, commit_message, branch_name):
     )
 
 
-def write_post(date, title, body):
-    """Write a news post for `date` under _posts/ and return its path.
+def write_post(date, issue_number, title, body):
+    """Write the news post for issue `issue_number` under _posts/ and return its path.
 
-    A second post on the same day gets a numbered suffix, as
-    2016-08-15-news2.markdown does."""
-    path = f"_posts/{date}-news.markdown"
-    for n in itertools.count(2):
-        if not os.path.exists(path):
-            break
-        path = f"_posts/{date}-news{n}.markdown"
-    with open(path, "w") as f:
+    The issue number keeps same-day posts from two PRs, each branched from master,
+    out of one path."""
+    path = f"_posts/{date}-news-{issue_number}.markdown"
+    with open(path, "x") as f:
         f.write(
             "---\n"
             "layout: post\n"
