@@ -1,2 +1,4 @@
 #!/bin/sh
+# Homebrew's default ruby is newer than the Gemfile allows; use ruby@3.3 where installed.
+[ -d /opt/homebrew/opt/ruby@3.3/bin ] && PATH=/opt/homebrew/opt/ruby@3.3/bin:$PATH
 bundle exec jekyll serve --drafts --config _config.yml

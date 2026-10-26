@@ -3,6 +3,9 @@
 # proofer config below is the only copy.
 set -e
 
+# Homebrew's default ruby is newer than the Gemfile allows; use ruby@3.3 where installed.
+[ -d /opt/homebrew/opt/ruby@3.3/bin ] && PATH=/opt/homebrew/opt/ruby@3.3/bin:$PATH
+
 bundle exec jekyll build --drafts
 
 # Sites that reject the proofer rather than serving a bad link:
