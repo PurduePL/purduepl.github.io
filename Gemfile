@@ -5,6 +5,6 @@ gem 'github-pages', '= 232', group: :jekyll_plugins
 gem 'jekyll', '= 3.10.0'
 
 gem 'rouge'
-gem 'nokogiri', "~> 1.19.4"
+gem 'nokogiri', "~> 1.19.7"
 gem 'webrick'
 gem 'html-proofer', require: false
