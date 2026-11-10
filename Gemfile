@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '~> 3.3'
 
-gem 'github-pages', '= 232', group: :jekyll_plugins
+gem 'github-pages', '233', group: :jekyll_plugins
 gem 'jekyll', '= 3.10.0'
 
 gem 'rouge'
